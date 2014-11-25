@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC561EE71A131EDC005692A4 /* ImgShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC561EE51A131EDC005692A4 /* ImgShareViewController.swift */; };
+		DC561EE81A131EDC005692A4 /* ImgShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC561EE61A131EDC005692A4 /* ImgShareViewController.xib */; };
+		DC561EEB1A132222005692A4 /* ImgShareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC561EE91A132222005692A4 /* ImgShareTableViewController.swift */; };
+		DC561EEC1A132222005692A4 /* ImgShareTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC561EEA1A132222005692A4 /* ImgShareTableViewController.xib */; };
+		DC5FE4DC1A1C4F0D00CCA442 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5FE4DB1A1C4F0D00CCA442 /* CloudKit.framework */; };
+		DC5FE4E51A1C5D5600CCA442 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */; };
+		DC5FE4E61A1C5D5600CCA442 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */; };
+		DCB290C01A1979E300E8C55A /* ImgResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290BF1A1979E300E8C55A /* ImgResource.swift */; };
+		DCB290C31A198F9200E8C55A /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290C21A198F9200E8C55A /* ImageService.swift */; };
+		DCB5C0591A1D916D006490AC /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5C0571A1D916D006490AC /* CalculatorViewController.swift */; };
+		DCB5C05A1A1D916D006490AC /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB5C0581A1D916D006490AC /* CalculatorViewController.xib */; };
+		DCD1C70E1A05F46E000ACDED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C70D1A05F46E000ACDED /* AppDelegate.swift */; };
+		DCD1C7111A05F46E000ACDED /* ImageShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C70F1A05F46E000ACDED /* ImageShare.xcdatamodeld */; };
+		DCD1C7161A05F46E000ACDED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD1C7141A05F46E000ACDED /* Main.storyboard */; };
+		DCD1C7181A05F46E000ACDED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD1C7171A05F46E000ACDED /* Images.xcassets */; };
+		DCD1C71B1A05F46E000ACDED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD1C7191A05F46E000ACDED /* LaunchScreen.xib */; };
+		DCD1C7271A05F46E000ACDED /* ImageShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C7261A05F46E000ACDED /* ImageShareTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCD1C7211A05F46E000ACDED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCD1C7001A05F46E000ACDED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCD1C7071A05F46E000ACDED;
+			remoteInfo = ImageShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC561EE51A131EDC005692A4 /* ImgShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgShareViewController.swift; sourceTree = "<group>"; };
+		DC561EE61A131EDC005692A4 /* ImgShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImgShareViewController.xib; sourceTree = "<group>"; };
+		DC561EE91A132222005692A4 /* ImgShareTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgShareTableViewController.swift; sourceTree = "<group>"; };
+		DC561EEA1A132222005692A4 /* ImgShareTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImgShareTableViewController.xib; sourceTree = "<group>"; };
+		DC5FE4DA1A1C4EFF00CCA442 /* ImageShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ImageShare.entitlements; sourceTree = "<group>"; };
+		DC5FE4DB1A1C4F0D00CCA442 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
+		DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Controllers/MainViewController.xib; sourceTree = "<group>"; };
+		DCB290BF1A1979E300E8C55A /* ImgResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgResource.swift; sourceTree = "<group>"; };
+		DCB290C21A198F9200E8C55A /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		DCB5C0571A1D916D006490AC /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculatorViewController.swift; path = Controllers/CalculatorViewController.swift; sourceTree = "<group>"; };
+		DCB5C0581A1D916D006490AC /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalculatorViewController.xib; path = Controllers/CalculatorViewController.xib; sourceTree = "<group>"; };
+		DCD1C7081A05F46E000ACDED /* ImageShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD1C70C1A05F46E000ACDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD1C70D1A05F46E000ACDED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCD1C7101A05F46E000ACDED /* ImageShare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageShare.xcdatamodel; sourceTree = "<group>"; };
+		DCD1C7151A05F46E000ACDED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCD1C7171A05F46E000ACDED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCD1C71A1A05F46E000ACDED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DCD1C7201A05F46E000ACDED /* ImageShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD1C7251A05F46E000ACDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD1C7261A05F46E000ACDED /* ImageShareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageShareTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCD1C7051A05F46E000ACDED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5FE4DC1A1C4F0D00CCA442 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD1C71D1A05F46E000ACDED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCB290BE1A1979BE00E8C55A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCB290BF1A1979E300E8C55A /* ImgResource.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DCB290C11A198F7700E8C55A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DCB290C21A198F9200E8C55A /* ImageService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		DCB5C0561A1D9052006490AC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC561EE51A131EDC005692A4 /* ImgShareViewController.swift */,
+				DC561EE61A131EDC005692A4 /* ImgShareViewController.xib */,
+				DC561EE91A132222005692A4 /* ImgShareTableViewController.swift */,
+				DC561EEA1A132222005692A4 /* ImgShareTableViewController.xib */,
+				DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */,
+				DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */,
+				DCB5C0571A1D916D006490AC /* CalculatorViewController.swift */,
+				DCB5C0581A1D916D006490AC /* CalculatorViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DCD1C6FF1A05F46E000ACDED = {
+			isa = PBXGroup;
+			children = (
+				DC5FE4DB1A1C4F0D00CCA442 /* CloudKit.framework */,
+				DCD1C70A1A05F46E000ACDED /* ImageShare */,
+				DCD1C7231A05F46E000ACDED /* ImageShareTests */,
+				DCD1C7091A05F46E000ACDED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCD1C7091A05F46E000ACDED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCD1C7081A05F46E000ACDED /* ImageShare.app */,
+				DCD1C7201A05F46E000ACDED /* ImageShareTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCD1C70A1A05F46E000ACDED /* ImageShare */ = {
+			isa = PBXGroup;
+			children = (
+				DCB5C0561A1D9052006490AC /* Controllers */,
+				DC5FE4DA1A1C4EFF00CCA442 /* ImageShare.entitlements */,
+				DCB290C11A198F7700E8C55A /* Services */,
+				DCB290BE1A1979BE00E8C55A /* Models */,
+				DCD1C70D1A05F46E000ACDED /* AppDelegate.swift */,
+				DCD1C7141A05F46E000ACDED /* Main.storyboard */,
+				DCD1C7171A05F46E000ACDED /* Images.xcassets */,
+				DCD1C7191A05F46E000ACDED /* LaunchScreen.xib */,
+				DCD1C70F1A05F46E000ACDED /* ImageShare.xcdatamodeld */,
+				DCD1C70B1A05F46E000ACDED /* Supporting Files */,
+			);
+			path = ImageShare;
+			sourceTree = "<group>";
+		};
+		DCD1C70B1A05F46E000ACDED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCD1C70C1A05F46E000ACDED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCD1C7231A05F46E000ACDED /* ImageShareTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCD1C7261A05F46E000ACDED /* ImageShareTests.swift */,
+				DCD1C7241A05F46E000ACDED /* Supporting Files */,
+			);
+			path = ImageShareTests;
+			sourceTree = "<group>";
+		};
+		DCD1C7241A05F46E000ACDED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCD1C7251A05F46E000ACDED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCD1C7071A05F46E000ACDED /* ImageShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCD1C72A1A05F46E000ACDED /* Build configuration list for PBXNativeTarget "ImageShare" */;
+			buildPhases = (
+				DCD1C7041A05F46E000ACDED /* Sources */,
+				DCD1C7051A05F46E000ACDED /* Frameworks */,
+				DCD1C7061A05F46E000ACDED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageShare;
+			productName = ImageShare;
+			productReference = DCD1C7081A05F46E000ACDED /* ImageShare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCD1C71F1A05F46E000ACDED /* ImageShareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCD1C72D1A05F46E000ACDED /* Build configuration list for PBXNativeTarget "ImageShareTests" */;
+			buildPhases = (
+				DCD1C71C1A05F46E000ACDED /* Sources */,
+				DCD1C71D1A05F46E000ACDED /* Frameworks */,
+				DCD1C71E1A05F46E000ACDED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCD1C7221A05F46E000ACDED /* PBXTargetDependency */,
+			);
+			name = ImageShareTests;
+			productName = ImageShareTests;
+			productReference = DCD1C7201A05F46E000ACDED /* ImageShareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCD1C7001A05F46E000ACDED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jeff Jin";
+				TargetAttributes = {
+					DCD1C7071A05F46E000ACDED = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = U8397397DT;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					DCD1C71F1A05F46E000ACDED = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = DCD1C7071A05F46E000ACDED;
+					};
+				};
+			};
+			buildConfigurationList = DCD1C7031A05F46E000ACDED /* Build configuration list for PBXProject "ImageShare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCD1C6FF1A05F46E000ACDED;
+			productRefGroup = DCD1C7091A05F46E000ACDED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCD1C7071A05F46E000ACDED /* ImageShare */,
+				DCD1C71F1A05F46E000ACDED /* ImageShareTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCD1C7061A05F46E000ACDED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD1C7161A05F46E000ACDED /* Main.storyboard in Resources */,
+				DC5FE4E61A1C5D5600CCA442 /* MainViewController.xib in Resources */,
+				DC561EEC1A132222005692A4 /* ImgShareTableViewController.xib in Resources */,
+				DCD1C71B1A05F46E000ACDED /* LaunchScreen.xib in Resources */,
+				DC561EE81A131EDC005692A4 /* ImgShareViewController.xib in Resources */,
+				DCD1C7181A05F46E000ACDED /* Images.xcassets in Resources */,
+				DCB5C05A1A1D916D006490AC /* CalculatorViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD1C71E1A05F46E000ACDED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCD1C7041A05F46E000ACDED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5FE4E51A1C5D5600CCA442 /* MainViewController.swift in Sources */,
+				DCB290C01A1979E300E8C55A /* ImgResource.swift in Sources */,
+				DCB5C0591A1D916D006490AC /* CalculatorViewController.swift in Sources */,
+				DC561EEB1A132222005692A4 /* ImgShareTableViewController.swift in Sources */,
+				DCD1C70E1A05F46E000ACDED /* AppDelegate.swift in Sources */,
+				DC561EE71A131EDC005692A4 /* ImgShareViewController.swift in Sources */,
+				DCD1C7111A05F46E000ACDED /* ImageShare.xcdatamodeld in Sources */,
+				DCB290C31A198F9200E8C55A /* ImageService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD1C71C1A05F46E000ACDED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD1C7271A05F46E000ACDED /* ImageShareTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCD1C7221A05F46E000ACDED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCD1C7071A05F46E000ACDED /* ImageShare */;
+			targetProxy = DCD1C7211A05F46E000ACDED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCD1C7141A05F46E000ACDED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCD1C7151A05F46E000ACDED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCD1C7191A05F46E000ACDED /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCD1C71A1A05F46E000ACDED /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCD1C7281A05F46E000ACDED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCD1C7291A05F46E000ACDED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCD1C72B1A05F46E000ACDED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageShare/ImageShare.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ImageShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		DCD1C72C1A05F46E000ACDED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageShare/ImageShare.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ImageShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		DCD1C72E1A05F46E000ACDED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ImageShareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageShare.app/ImageShare";
+			};
+			name = Debug;
+		};
+		DCD1C72F1A05F46E000ACDED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ImageShareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageShare.app/ImageShare";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCD1C7031A05F46E000ACDED /* Build configuration list for PBXProject "ImageShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD1C7281A05F46E000ACDED /* Debug */,
+				DCD1C7291A05F46E000ACDED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCD1C72A1A05F46E000ACDED /* Build configuration list for PBXNativeTarget "ImageShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD1C72B1A05F46E000ACDED /* Debug */,
+				DCD1C72C1A05F46E000ACDED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCD1C72D1A05F46E000ACDED /* Build configuration list for PBXNativeTarget "ImageShareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD1C72E1A05F46E000ACDED /* Debug */,
+				DCD1C72F1A05F46E000ACDED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCD1C70F1A05F46E000ACDED /* ImageShare.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCD1C7101A05F46E000ACDED /* ImageShare.xcdatamodel */,
+			);
+			currentVersion = DCD1C7101A05F46E000ACDED /* ImageShare.xcdatamodel */;
+			path = ImageShare.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DCD1C7001A05F46E000ACDED /* Project object */;
+}
