@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="-563" y="2562"/>
         </scene>
-        <!--Calculator View Controller-->
+        <!--Tip Calculator View Controller-->
         <scene sceneID="FZ1-2A-d4a">
             <objects>
-                <viewController id="O67-j0-IRa" customClass="CalculatorViewController" customModule="ImageShare" sceneMemberID="viewController">
+                <viewController id="O67-j0-IRa" customClass="TipCalculatorViewController" customModule="ImageShare" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MKF-O6-Nob"/>
                         <viewControllerLayoutGuide type="bottom" id="Zs6-I6-iCR"/>
@@ -160,11 +160,50 @@
                                     <segue destination="3oV-q6-BRU" kind="show" id="2MN-Ra-tZr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keywords" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTa-lh-Fze">
+                                <rect key="frame" x="33" y="58" width="127" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5g-OA-a18">
+                                <rect key="frame" x="158" y="60" width="426" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image Scale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-pW-deo">
+                                <rect key="frame" x="33" y="98" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I5w-Ma-M42">
+                                <rect key="frame" x="156" y="94" width="430" height="31"/>
+                                <connections>
+                                    <action selector="scalePercentageChanged:" destination="O67-j0-IRa" eventType="valueChanged" id="2Mr-GL-EQS"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ct8-w4-vs0">
+                                <rect key="frame" x="33" y="132" width="551" height="448"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WK6-4X-vLV" appends="YES" id="F9V-Mz-l1R"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="keywordField" destination="j5g-OA-a18" id="9Bi-j8-h0W"/>
+                        <outlet property="scalePctSlider" destination="I5w-Ma-M42" id="64K-8c-EhX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Up-sQ-OHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WK6-4X-vLV">
+                    <connections>
+                        <action selector="viewTapped:" destination="O67-j0-IRa" id="VMt-7w-rVl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-534" y="3322"/>
         </scene>

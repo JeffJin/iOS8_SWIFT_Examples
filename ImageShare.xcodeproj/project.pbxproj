@@ -14,10 +14,10 @@
 		DC5FE4DC1A1C4F0D00CCA442 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5FE4DB1A1C4F0D00CCA442 /* CloudKit.framework */; };
 		DC5FE4E51A1C5D5600CCA442 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */; };
 		DC5FE4E61A1C5D5600CCA442 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */; };
+		DC7B0A0E1A2440B000A9E4C8 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0C1A2440B000A9E4C8 /* TipCalculatorModel.swift */; };
+		DC7B0A0F1A2440B000A9E4C8 /* TipCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0D1A2440B000A9E4C8 /* TipCalculatorViewController.swift */; };
 		DCB290C01A1979E300E8C55A /* ImgResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290BF1A1979E300E8C55A /* ImgResource.swift */; };
 		DCB290C31A198F9200E8C55A /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290C21A198F9200E8C55A /* ImageService.swift */; };
-		DCB5C0591A1D916D006490AC /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5C0571A1D916D006490AC /* CalculatorViewController.swift */; };
-		DCB5C05A1A1D916D006490AC /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB5C0581A1D916D006490AC /* CalculatorViewController.xib */; };
 		DCD1C70E1A05F46E000ACDED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C70D1A05F46E000ACDED /* AppDelegate.swift */; };
 		DCD1C7111A05F46E000ACDED /* ImageShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C70F1A05F46E000ACDED /* ImageShare.xcdatamodeld */; };
 		DCD1C7161A05F46E000ACDED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD1C7141A05F46E000ACDED /* Main.storyboard */; };
@@ -45,10 +45,10 @@
 		DC5FE4DB1A1C4F0D00CCA442 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Controllers/MainViewController.xib; sourceTree = "<group>"; };
+		DC7B0A0C1A2440B000A9E4C8 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
+		DC7B0A0D1A2440B000A9E4C8 /* TipCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorViewController.swift; sourceTree = "<group>"; };
 		DCB290BF1A1979E300E8C55A /* ImgResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgResource.swift; sourceTree = "<group>"; };
 		DCB290C21A198F9200E8C55A /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		DCB5C0571A1D916D006490AC /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculatorViewController.swift; path = Controllers/CalculatorViewController.swift; sourceTree = "<group>"; };
-		DCB5C0581A1D916D006490AC /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalculatorViewController.xib; path = Controllers/CalculatorViewController.xib; sourceTree = "<group>"; };
 		DCD1C7081A05F46E000ACDED /* ImageShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD1C70C1A05F46E000ACDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD1C70D1A05F46E000ACDED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +83,7 @@
 		DCB290BE1A1979BE00E8C55A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DC7B0A0C1A2440B000A9E4C8 /* TipCalculatorModel.swift */,
 				DCB290BF1A1979E300E8C55A /* ImgResource.swift */,
 			);
 			name = Models;
@@ -99,14 +100,13 @@
 		DCB5C0561A1D9052006490AC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC7B0A0D1A2440B000A9E4C8 /* TipCalculatorViewController.swift */,
 				DC561EE51A131EDC005692A4 /* ImgShareViewController.swift */,
 				DC561EE61A131EDC005692A4 /* ImgShareViewController.xib */,
 				DC561EE91A132222005692A4 /* ImgShareTableViewController.swift */,
 				DC561EEA1A132222005692A4 /* ImgShareTableViewController.xib */,
 				DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */,
 				DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */,
-				DCB5C0571A1D916D006490AC /* CalculatorViewController.swift */,
-				DCB5C0581A1D916D006490AC /* CalculatorViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -264,7 +264,6 @@
 				DCD1C71B1A05F46E000ACDED /* LaunchScreen.xib in Resources */,
 				DC561EE81A131EDC005692A4 /* ImgShareViewController.xib in Resources */,
 				DCD1C7181A05F46E000ACDED /* Images.xcassets in Resources */,
-				DCB5C05A1A1D916D006490AC /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7B0A0F1A2440B000A9E4C8 /* TipCalculatorViewController.swift in Sources */,
+				DC7B0A0E1A2440B000A9E4C8 /* TipCalculatorModel.swift in Sources */,
 				DC5FE4E51A1C5D5600CCA442 /* MainViewController.swift in Sources */,
 				DCB290C01A1979E300E8C55A /* ImgResource.swift in Sources */,
-				DCB5C0591A1D916D006490AC /* CalculatorViewController.swift in Sources */,
 				DC561EEB1A132222005692A4 /* ImgShareTableViewController.swift in Sources */,
 				DCD1C70E1A05F46E000ACDED /* AppDelegate.swift in Sources */,
 				DC561EE71A131EDC005692A4 /* ImgShareViewController.swift in Sources */,
