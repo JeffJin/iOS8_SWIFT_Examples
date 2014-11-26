@@ -123,7 +123,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEM-bN-Uxa">
                                 <rect key="frame" x="232" y="198" width="137" height="30"/>
-                                <state key="normal" title="Calculator">
+                                <state key="normal" title="Google Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="-563" y="2562"/>
         </scene>
-        <!--Tip Calculator View Controller-->
+        <!--Image Search View Controller-->
         <scene sceneID="FZ1-2A-d4a">
             <objects>
-                <viewController id="O67-j0-IRa" customClass="TipCalculatorViewController" customModule="ImageShare" sceneMemberID="viewController">
+                <viewController id="O67-j0-IRa" customClass="ImageSearchViewController" customModule="ImageShare" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MKF-O6-Nob"/>
                         <viewControllerLayoutGuide type="bottom" id="Zs6-I6-iCR"/>
@@ -183,8 +183,18 @@
                                     <action selector="scalePercentageChanged:" destination="O67-j0-IRa" eventType="valueChanged" id="2Mr-GL-EQS"/>
                                 </connections>
                             </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ct8-w4-vs0">
-                                <rect key="frame" x="33" y="132" width="551" height="448"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ct8-w4-vs0"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bW-dw-4od">
+                                <rect key="frame" x="505" y="28" width="79" height="30"/>
+                                <state key="normal" title="SEARCH">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchClicked:" destination="O67-j0-IRa" eventType="touchUpInside" id="i6O-1T-lPZ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bA-bS-cjV">
+                                <rect key="frame" x="33" y="132" width="551" height="460"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,6 +205,7 @@
                     </view>
                     <connections>
                         <outlet property="keywordField" destination="j5g-OA-a18" id="9Bi-j8-h0W"/>
+                        <outlet property="resultImageView" destination="3bA-bS-cjV" id="Dy0-ME-e2L"/>
                         <outlet property="scalePctSlider" destination="I5w-Ma-M42" id="64K-8c-EhX"/>
                     </connections>
                 </viewController>

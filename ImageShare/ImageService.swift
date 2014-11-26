@@ -9,9 +9,13 @@
 import Foundation
 import UIKit
 
-class ImageService{
+class ImageService : IImageService{
     
-    var config:String
+    let config:String
+    
+    init(conf:String){
+        self.config = conf
+    }
     
     func getImages()-> Array<ImgResource> {
         var imgs = Array<ImgResource>()
@@ -26,8 +30,10 @@ class ImageService{
         return imgs
     }
     
-    init(conf:String){
-        self.config = conf
+    func searchImageFromGoogle(keyword:String) -> UIImage{
+        var resource = ImgResource(title:"Image 1", url: "http://upload.wikimedia.org/wikipedia/commons/b/b2/SNSD_Cooky_Phone.jpg")
+        return resource.uiImage
     }
+
 
 }

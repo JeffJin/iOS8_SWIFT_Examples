@@ -15,7 +15,8 @@
 		DC5FE4E51A1C5D5600CCA442 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */; };
 		DC5FE4E61A1C5D5600CCA442 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */; };
 		DC7B0A0E1A2440B000A9E4C8 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0C1A2440B000A9E4C8 /* TipCalculatorModel.swift */; };
-		DC7B0A0F1A2440B000A9E4C8 /* TipCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0D1A2440B000A9E4C8 /* TipCalculatorViewController.swift */; };
+		DC7B0A0F1A2440B000A9E4C8 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0D1A2440B000A9E4C8 /* ImageSearchViewController.swift */; };
+		DC7B0A111A258DBB00A9E4C8 /* IImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A101A258DBB00A9E4C8 /* IImageService.swift */; };
 		DCB290C01A1979E300E8C55A /* ImgResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290BF1A1979E300E8C55A /* ImgResource.swift */; };
 		DCB290C31A198F9200E8C55A /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290C21A198F9200E8C55A /* ImageService.swift */; };
 		DCD1C70E1A05F46E000ACDED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C70D1A05F46E000ACDED /* AppDelegate.swift */; };
@@ -46,7 +47,8 @@
 		DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Controllers/MainViewController.xib; sourceTree = "<group>"; };
 		DC7B0A0C1A2440B000A9E4C8 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
-		DC7B0A0D1A2440B000A9E4C8 /* TipCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorViewController.swift; sourceTree = "<group>"; };
+		DC7B0A0D1A2440B000A9E4C8 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
+		DC7B0A101A258DBB00A9E4C8 /* IImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IImageService.swift; sourceTree = "<group>"; };
 		DCB290BF1A1979E300E8C55A /* ImgResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgResource.swift; sourceTree = "<group>"; };
 		DCB290C21A198F9200E8C55A /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		DCD1C7081A05F46E000ACDED /* ImageShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				DCB290C21A198F9200E8C55A /* ImageService.swift */,
+				DC7B0A101A258DBB00A9E4C8 /* IImageService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -100,7 +103,7 @@
 		DCB5C0561A1D9052006490AC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DC7B0A0D1A2440B000A9E4C8 /* TipCalculatorViewController.swift */,
+				DC7B0A0D1A2440B000A9E4C8 /* ImageSearchViewController.swift */,
 				DC561EE51A131EDC005692A4 /* ImgShareViewController.swift */,
 				DC561EE61A131EDC005692A4 /* ImgShareViewController.xib */,
 				DC561EE91A132222005692A4 /* ImgShareTableViewController.swift */,
@@ -281,11 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC7B0A0F1A2440B000A9E4C8 /* TipCalculatorViewController.swift in Sources */,
+				DC7B0A0F1A2440B000A9E4C8 /* ImageSearchViewController.swift in Sources */,
 				DC7B0A0E1A2440B000A9E4C8 /* TipCalculatorModel.swift in Sources */,
 				DC5FE4E51A1C5D5600CCA442 /* MainViewController.swift in Sources */,
 				DCB290C01A1979E300E8C55A /* ImgResource.swift in Sources */,
 				DC561EEB1A132222005692A4 /* ImgShareTableViewController.swift in Sources */,
+				DC7B0A111A258DBB00A9E4C8 /* IImageService.swift in Sources */,
 				DCD1C70E1A05F46E000ACDED /* AppDelegate.swift in Sources */,
 				DC561EE71A131EDC005692A4 /* ImgShareViewController.swift in Sources */,
 				DCD1C7111A05F46E000ACDED /* ImageShare.xcdatamodeld in Sources */,

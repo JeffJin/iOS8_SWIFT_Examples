@@ -8,13 +8,13 @@
 
 import UIKit
 
-class TipCalculatorViewController: UIViewController {
+class ImageSearchViewController: UIViewController {
   
   @IBOutlet var keywordField : UITextField!
 @IBOutlet var scalePctSlider : UISlider!
 
 
-  let imgService = ImageService(conf: "")
+    let imgService:IImageService = ImageService(conf: "")
     
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,11 +28,19 @@ class TipCalculatorViewController: UIViewController {
   
   @IBAction func scalePercentageChanged(sender : AnyObject) {
        println("Percentage slider changed \(scalePctSlider.value)")
+    
   }
   @IBAction func viewTapped(sender : AnyObject) {
     println("View tapped")
     keywordField.resignFirstResponder()
   }
 
+    @IBAction func searchClicked(sender: AnyObject) {
+        println("Search clicked")
+        var imgView = imgService.searchImageFromGoogle!(keywordField.text)
+        resultImageView.image = imgView
+    }
+    
+    @IBOutlet var resultImageView: UIImageView!
 }
 
