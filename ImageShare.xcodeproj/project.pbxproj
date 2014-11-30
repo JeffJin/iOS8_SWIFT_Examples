@@ -14,11 +14,13 @@
 		DC5FE4DC1A1C4F0D00CCA442 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5FE4DB1A1C4F0D00CCA442 /* CloudKit.framework */; };
 		DC5FE4E51A1C5D5600CCA442 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */; };
 		DC5FE4E61A1C5D5600CCA442 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */; };
-		DC7B0A0E1A2440B000A9E4C8 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0C1A2440B000A9E4C8 /* TipCalculatorModel.swift */; };
+		DC7B0A0E1A2440B000A9E4C8 /* ImgeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0C1A2440B000A9E4C8 /* ImgeTableViewModel.swift */; };
 		DC7B0A0F1A2440B000A9E4C8 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0D1A2440B000A9E4C8 /* ImageSearchViewController.swift */; };
 		DC7B0A111A258DBB00A9E4C8 /* IImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A101A258DBB00A9E4C8 /* IImageService.swift */; };
 		DCB290C01A1979E300E8C55A /* ImgResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290BF1A1979E300E8C55A /* ImgResource.swift */; };
 		DCB290C31A198F9200E8C55A /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290C21A198F9200E8C55A /* ImageService.swift */; };
+		DCCB5CDB1A2B97F400332511 /* apple-watch-0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCCB5CDA1A2B97F400332511 /* apple-watch-0.jpg */; };
+		DCCB5CDE1A2B9E1900332511 /* girls-generation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCCB5CDD1A2B9E1900332511 /* girls-generation.jpg */; };
 		DCD1C70E1A05F46E000ACDED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C70D1A05F46E000ACDED /* AppDelegate.swift */; };
 		DCD1C7111A05F46E000ACDED /* ImageShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C70F1A05F46E000ACDED /* ImageShare.xcdatamodeld */; };
 		DCD1C7161A05F46E000ACDED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD1C7141A05F46E000ACDED /* Main.storyboard */; };
@@ -46,11 +48,13 @@
 		DC5FE4DB1A1C4F0D00CCA442 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DC5FE4E31A1C5D5600CCA442 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		DC5FE4E41A1C5D5600CCA442 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Controllers/MainViewController.xib; sourceTree = "<group>"; };
-		DC7B0A0C1A2440B000A9E4C8 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
+		DC7B0A0C1A2440B000A9E4C8 /* ImgeTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgeTableViewModel.swift; sourceTree = "<group>"; };
 		DC7B0A0D1A2440B000A9E4C8 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
 		DC7B0A101A258DBB00A9E4C8 /* IImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IImageService.swift; sourceTree = "<group>"; };
 		DCB290BF1A1979E300E8C55A /* ImgResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgResource.swift; sourceTree = "<group>"; };
 		DCB290C21A198F9200E8C55A /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		DCCB5CDA1A2B97F400332511 /* apple-watch-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple-watch-0.jpg"; sourceTree = "<group>"; };
+		DCCB5CDD1A2B9E1900332511 /* girls-generation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "girls-generation.jpg"; sourceTree = "<group>"; };
 		DCD1C7081A05F46E000ACDED /* ImageShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD1C70C1A05F46E000ACDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD1C70D1A05F46E000ACDED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +89,7 @@
 		DCB290BE1A1979BE00E8C55A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DC7B0A0C1A2440B000A9E4C8 /* TipCalculatorModel.swift */,
+				DC7B0A0C1A2440B000A9E4C8 /* ImgeTableViewModel.swift */,
 				DCB290BF1A1979E300E8C55A /* ImgResource.swift */,
 			);
 			name = Models;
@@ -114,6 +118,15 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		DCCB5CDC1A2B97FF00332511 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DCCB5CDD1A2B9E1900332511 /* girls-generation.jpg */,
+				DCCB5CDA1A2B97F400332511 /* apple-watch-0.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		DCD1C6FF1A05F46E000ACDED = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +149,7 @@
 		DCD1C70A1A05F46E000ACDED /* ImageShare */ = {
 			isa = PBXGroup;
 			children = (
+				DCCB5CDC1A2B97FF00332511 /* Images */,
 				DCB5C0561A1D9052006490AC /* Controllers */,
 				DC5FE4DA1A1C4EFF00CCA442 /* ImageShare.entitlements */,
 				DCB290C11A198F7700E8C55A /* Services */,
@@ -263,8 +277,10 @@
 			files = (
 				DCD1C7161A05F46E000ACDED /* Main.storyboard in Resources */,
 				DC5FE4E61A1C5D5600CCA442 /* MainViewController.xib in Resources */,
+				DCCB5CDB1A2B97F400332511 /* apple-watch-0.jpg in Resources */,
 				DC561EEC1A132222005692A4 /* ImgShareTableViewController.xib in Resources */,
 				DCD1C71B1A05F46E000ACDED /* LaunchScreen.xib in Resources */,
+				DCCB5CDE1A2B9E1900332511 /* girls-generation.jpg in Resources */,
 				DC561EE81A131EDC005692A4 /* ImgShareViewController.xib in Resources */,
 				DCD1C7181A05F46E000ACDED /* Images.xcassets in Resources */,
 			);
@@ -285,7 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7B0A0F1A2440B000A9E4C8 /* ImageSearchViewController.swift in Sources */,
-				DC7B0A0E1A2440B000A9E4C8 /* TipCalculatorModel.swift in Sources */,
+				DC7B0A0E1A2440B000A9E4C8 /* ImgeTableViewModel.swift in Sources */,
 				DC5FE4E51A1C5D5600CCA442 /* MainViewController.swift in Sources */,
 				DCB290C01A1979E300E8C55A /* ImgResource.swift in Sources */,
 				DC561EEB1A132222005692A4 /* ImgShareTableViewController.swift in Sources */,
