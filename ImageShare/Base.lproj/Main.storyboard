@@ -163,7 +163,6 @@
                                                 <segue destination="3oV-q6-BRU" kind="show" id="edh-Uh-RPk"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="k8I-9B-Lzq"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -206,6 +205,8 @@
                     </view>
                     <connections>
                         <outlet property="keywordField" destination="nMg-3y-pNT" id="3n7-1A-xJY"/>
+                        <outlet property="navigationBar" destination="8Vk-hq-zCQ" id="uYc-DK-0rA"/>
+                        <outlet property="navigationItem" destination="6bh-XF-u9v" id="Nth-RL-PUd"/>
                         <outlet property="resultImageView" destination="Yyg-YN-35b" id="zsQ-iH-70W"/>
                         <outlet property="scalePctSlider" destination="I5w-Ma-M42" id="64K-8c-EhX"/>
                     </connections>
