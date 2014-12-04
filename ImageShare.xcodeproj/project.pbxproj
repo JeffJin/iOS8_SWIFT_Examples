@@ -17,9 +17,12 @@
 		DC7B0A0E1A2440B000A9E4C8 /* ImgeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0C1A2440B000A9E4C8 /* ImgeTableViewModel.swift */; };
 		DC7B0A0F1A2440B000A9E4C8 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A0D1A2440B000A9E4C8 /* ImageSearchViewController.swift */; };
 		DC7B0A111A258DBB00A9E4C8 /* IImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B0A101A258DBB00A9E4C8 /* IImageService.swift */; };
+		DCAB50CE1A302324002F368A /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCAB50CD1A302324002F368A /* background.jpg */; };
+		DCAB50D01A302391002F368A /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCAB50CF1A302391002F368A /* background1.jpg */; };
+		DCAB50D21A30247A002F368A /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCAB50D11A30247A002F368A /* background2.jpg */; };
 		DCB290C01A1979E300E8C55A /* ImgResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290BF1A1979E300E8C55A /* ImgResource.swift */; };
 		DCB290C31A198F9200E8C55A /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB290C21A198F9200E8C55A /* ImageService.swift */; };
-		DCCB5CDB1A2B97F400332511 /* apple-watch-0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCCB5CDA1A2B97F400332511 /* apple-watch-0.jpg */; };
+		DCCB5CDB1A2B97F400332511 /* apple-watch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCCB5CDA1A2B97F400332511 /* apple-watch.jpg */; };
 		DCCB5CDE1A2B9E1900332511 /* girls-generation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCCB5CDD1A2B9E1900332511 /* girls-generation.jpg */; };
 		DCD1C70E1A05F46E000ACDED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C70D1A05F46E000ACDED /* AppDelegate.swift */; };
 		DCD1C7111A05F46E000ACDED /* ImageShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCD1C70F1A05F46E000ACDED /* ImageShare.xcdatamodeld */; };
@@ -51,9 +54,12 @@
 		DC7B0A0C1A2440B000A9E4C8 /* ImgeTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgeTableViewModel.swift; sourceTree = "<group>"; };
 		DC7B0A0D1A2440B000A9E4C8 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
 		DC7B0A101A258DBB00A9E4C8 /* IImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IImageService.swift; sourceTree = "<group>"; };
+		DCAB50CD1A302324002F368A /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		DCAB50CF1A302391002F368A /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		DCAB50D11A30247A002F368A /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
 		DCB290BF1A1979E300E8C55A /* ImgResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgResource.swift; sourceTree = "<group>"; };
 		DCB290C21A198F9200E8C55A /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		DCCB5CDA1A2B97F400332511 /* apple-watch-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple-watch-0.jpg"; sourceTree = "<group>"; };
+		DCCB5CDA1A2B97F400332511 /* apple-watch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple-watch.jpg"; sourceTree = "<group>"; };
 		DCCB5CDD1A2B9E1900332511 /* girls-generation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "girls-generation.jpg"; sourceTree = "<group>"; };
 		DCD1C7081A05F46E000ACDED /* ImageShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD1C70C1A05F46E000ACDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,8 +127,11 @@
 		DCCB5CDC1A2B97FF00332511 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DCAB50D11A30247A002F368A /* background2.jpg */,
+				DCAB50CF1A302391002F368A /* background1.jpg */,
+				DCAB50CD1A302324002F368A /* background.jpg */,
 				DCCB5CDD1A2B9E1900332511 /* girls-generation.jpg */,
-				DCCB5CDA1A2B97F400332511 /* apple-watch-0.jpg */,
+				DCCB5CDA1A2B97F400332511 /* apple-watch.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -275,9 +284,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAB50CE1A302324002F368A /* background.jpg in Resources */,
+				DCAB50D21A30247A002F368A /* background2.jpg in Resources */,
 				DCD1C7161A05F46E000ACDED /* Main.storyboard in Resources */,
 				DC5FE4E61A1C5D5600CCA442 /* MainViewController.xib in Resources */,
-				DCCB5CDB1A2B97F400332511 /* apple-watch-0.jpg in Resources */,
+				DCAB50D01A302391002F368A /* background1.jpg in Resources */,
+				DCCB5CDB1A2B97F400332511 /* apple-watch.jpg in Resources */,
 				DC561EEC1A132222005692A4 /* ImgShareTableViewController.xib in Resources */,
 				DCD1C71B1A05F46E000ACDED /* LaunchScreen.xib in Resources */,
 				DCCB5CDE1A2B9E1900332511 /* girls-generation.jpg in Resources */,

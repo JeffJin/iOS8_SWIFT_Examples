@@ -15,7 +15,7 @@ class MainViewController: UIViewController, UIDocumentMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background2.jpg")!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +23,7 @@ class MainViewController: UIViewController, UIDocumentMenuDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func documentMenu(_ documentMenu: UIDocumentMenuViewController,
+    func documentMenu(documentMenu: UIDocumentMenuViewController,
         didPickDocumentPicker documentPicker: UIDocumentPickerViewController){
 
     }

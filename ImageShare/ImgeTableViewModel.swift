@@ -19,7 +19,7 @@ class ImageTableViewModel : NSObject, UITableViewDataSource {
         // 3
         let row = indexPath.row
         
-        cell.textLabel.text = "Index Row\(row)"
+        cell.textLabel?.text = "Index Row\(row)"
         cell.detailTextLabel?.text = "Detail Text Label\(indexPath.row)"
         return cell
     }
