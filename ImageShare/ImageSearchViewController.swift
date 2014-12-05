@@ -11,6 +11,7 @@ class ImageSearchViewController: UIViewController {
     var isPlaying:Bool = false
     var stopButton: UIBarButtonItem!
     var playButton: UIBarButtonItem!
+    var timer: NSTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +41,27 @@ class ImageSearchViewController: UIViewController {
         resultImageView.image = imgView
     }
     
+    @IBAction func stopShowImages(sender: AnyObject) {
+        if((timer) != nil){
+            timer.invalidate()
+        }
+        self.navigationItem.rightBarButtonItem = playButton
+        isPlaying = false
+    }
+    
     func showRandomImage() {
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("updateImage"), userInfo: nil, repeats: true)
-        if(isPlaying){
+        println("is playing ... \(isPlaying)")
+        if(!isPlaying){
             self.navigationItem.rightBarButtonItem = stopButton
+            timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("updateImage"), userInfo: nil, repeats: true)
         }
         else{
             self.navigationItem.rightBarButtonItem = playButton
+            if((timer) != nil){
+                timer.invalidate()
+            }
         }
         isPlaying = !isPlaying
-        println("is playing ... \(isPlaying)")
     }
     
     func updateImage(){
