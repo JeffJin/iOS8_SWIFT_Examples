@@ -154,8 +154,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Vk-hq-zCQ">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Vk-hq-zCQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="409"/>
                                 <items>
                                     <navigationItem title="Imge Search" id="6bh-XF-u9v">
                                         <barButtonItem key="leftBarButtonItem" title="Main" id="bXK-VD-7xk">
@@ -166,17 +166,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I5w-Ma-M42">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I5w-Ma-M42">
                                 <rect key="frame" x="14" y="64" width="572" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ma6-A0-4MA"/>
+                                </constraints>
                                 <connections>
                                     <action selector="scalePercentageChanged:" destination="O67-j0-IRa" eventType="valueChanged" id="2Mr-GL-EQS"/>
                                 </connections>
                             </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girls-generation.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yyg-YN-35b">
+                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="girls-generation.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yyg-YN-35b">
                                 <rect key="frame" x="16" y="102" width="568" height="448"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yyg-YN-35b" secondAttribute="height" multiplier="71:56" id="P7y-VJ-GSu"/>
+                                </constraints>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySF-Z3-MbI">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySF-Z3-MbI">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tGY-Cb-fCH"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="search" id="lE7-Wz-6ZK">
                                         <connections>
@@ -199,6 +208,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ySF-Z3-MbI" firstAttribute="leading" secondItem="kfv-l8-cc3" secondAttribute="leadingMargin" id="3Nu-n3-at3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ySF-Z3-MbI" secondAttribute="trailing" id="8GJ-Er-o5v"/>
+                            <constraint firstItem="Yyg-YN-35b" firstAttribute="trailing" secondItem="kfv-l8-cc3" secondAttribute="trailingMargin" constant="50" id="9Wz-0X-mFv"/>
+                            <constraint firstItem="Zs6-I6-iCR" firstAttribute="top" secondItem="ySF-Z3-MbI" secondAttribute="bottom" constant="1" id="SDh-Qg-IRu"/>
+                            <constraint firstItem="I5w-Ma-M42" firstAttribute="trailing" secondItem="kfv-l8-cc3" secondAttribute="trailingMargin" constant="1" id="Tsn-aD-p5n"/>
+                            <constraint firstItem="I5w-Ma-M42" firstAttribute="leading" secondItem="kfv-l8-cc3" secondAttribute="leadingMargin" constant="1" id="Zvz-Hl-6ef"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Vk-hq-zCQ" secondAttribute="trailing" id="fI3-Hf-rRw"/>
+                            <constraint firstItem="Yyg-YN-35b" firstAttribute="leading" secondItem="kfv-l8-cc3" secondAttribute="leadingMargin" constant="50" id="hfc-iH-sHb"/>
+                            <constraint firstItem="8Vk-hq-zCQ" firstAttribute="leading" secondItem="kfv-l8-cc3" secondAttribute="leadingMargin" id="hzB-oL-Uge"/>
+                            <constraint firstItem="I5w-Ma-M42" firstAttribute="top" secondItem="8Vk-hq-zCQ" secondAttribute="bottom" constant="10" id="kbU-Ue-LPi"/>
+                            <constraint firstItem="8Vk-hq-zCQ" firstAttribute="top" secondItem="kfv-l8-cc3" secondAttribute="topMargin" constant="20" id="vCI-6v-pEb"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="WK6-4X-vLV" appends="YES" id="F9V-Mz-l1R"/>
                         </connections>
