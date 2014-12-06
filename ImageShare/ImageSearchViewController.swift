@@ -45,7 +45,7 @@ class ImageSearchViewController: UIViewController {
         
         NSUserDefaults.standardUserDefaults().synchronize()
     }
-    
+
     @IBAction func stopShowImages(sender: AnyObject) {
         if((timer) != nil){
             timer.invalidate()

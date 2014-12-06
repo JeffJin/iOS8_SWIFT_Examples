@@ -145,16 +145,6 @@
                                     <segue destination="7eg-UA-PwV" kind="show" id="emz-eL-nhM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-Vu-RFo">
-                                <rect key="frame" x="55" y="126" width="175" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Document Picker">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="openDocMenu:" destination="3oV-q6-BRU" eventType="touchUpInside" id="Miu-yC-cPJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kg4-Iw-FFT">
                                 <rect key="frame" x="55" y="79" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -165,10 +155,18 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="b6C-Ba-0d3"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILd-OI-F3p">
+                                <rect key="frame" x="27" y="202" width="546" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3oV-q6-BRU" id="2Hg-Kr-8jx"/>
+                                </connections>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEM-bN-Uxa">
-                                <rect key="frame" x="55" y="171" width="146" height="30"/>
+                                <rect key="frame" x="55" y="122" width="146" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Google Search">
+                                <state key="normal" title="Google Image Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -177,7 +175,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ILd-OI-F3p" secondAttribute="trailing" constant="5" id="8AC-UR-rjK"/>
+                            <constraint firstItem="ILd-OI-F3p" firstAttribute="leading" secondItem="drN-GO-8mf" secondAttribute="leadingMargin" constant="5" id="Vxj-Vw-Ikm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainText" destination="ILd-OI-F3p" id="b1H-MZ-NjM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAH-eV-Gz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -345,6 +350,6 @@
         <image name="girls-generation.jpg" width="617" height="409"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gVb-NR-5l4"/>
+        <segue reference="edh-Uh-RPk"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,9 +8,11 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UIDocumentMenuDelegate {
+class MainViewController: UIViewController, UITextFieldDelegate {
 
     let UTIs:Array<String> = [".jpg", ".pdf"]
+    
+    @IBOutlet weak var mainText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +25,15 @@ class MainViewController: UIViewController, UIDocumentMenuDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func documentMenu(documentMenu: UIDocumentMenuViewController,
-        didPickDocumentPicker documentPicker: UIDocumentPickerViewController){
-
-    }
-
     
-    func documentMenuWasCancelled(documentMenu: UIDocumentMenuViewController){
-        println("documentMenuWasCancelled")
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        mainText.resignFirstResponder()
+        return true
     }
     
-    @IBAction func openDocMenu(sender: AnyObject) {
-        println("Opening document menu")
-        let importMenu = UIDocumentMenuViewController(documentTypes: self.UTIs, inMode: .Import)
-        importMenu.delegate = self
-        self.presentViewController(importMenu, animated: true, completion: nil)
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        println("touches Began")
+        self.view.endEditing(true)
     }
 
     /*
