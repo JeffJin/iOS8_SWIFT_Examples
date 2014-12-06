@@ -37,8 +37,13 @@ class ImageSearchViewController: UIViewController {
     
     @IBAction func searchClicked(sender: AnyObject) {
         println("Search clicked")
-        var imgView = imgService.searchImageFromGoogle!(keywordField.text)
-        resultImageView.image = imgView
+        var imgView = imgService.searchImageFromGoogle(keywordField.text)
+        resultImageView.image = imgView.uiImage
+        
+        //save the image into local storage
+        NSUserDefaults.standardUserDefaults().setObject(imgView.url, forKey: imgView.title)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     @IBAction func stopShowImages(sender: AnyObject) {
@@ -66,8 +71,8 @@ class ImageSearchViewController: UIViewController {
     
     func updateImage(){
         println("searching for random image...")
-        var imgView = imgService.searchImageFromGoogle!(keywordField.text)
-        resultImageView.image = imgView
+        var imgView = imgService.searchImageFromGoogle(keywordField.text)
+        resultImageView.image = imgView.uiImage
     }
 }
 

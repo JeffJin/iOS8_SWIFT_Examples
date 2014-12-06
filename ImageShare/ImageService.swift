@@ -37,10 +37,10 @@ class ImageService : IImageService{
         return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
     }
     
-    func searchImageFromGoogle(keyword:String) -> UIImage{
+    func searchImageFromGoogle(keyword:String) -> ImgResource{
         var images = getImages()
         var num = randomNumber(0, upper: 8)
-        return images[num].uiImage
+        return images[num]
     }
 
 

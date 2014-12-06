@@ -17,6 +17,12 @@ class ImgResource{
         return "The image resource title is \(title), "
     }
     var uiImage: UIImage {
+        //check persistent storage
+        var cachedUrl: AnyObject! = NSUserDefaults.standardUserDefaults().objectForKey(self.title)
+        if(cachedUrl != nil){
+            println("fetching url for \(self.title) from cache")
+            return UIImage(data: NSData(contentsOfURL: NSURL(string:  cachedUrl as String)!)!)!
+        }
         return UIImage(data: NSData(contentsOfURL: NSURL(string:  self.url)!)!)!
     }
     

@@ -7,13 +7,11 @@
 //
 
 import Foundation
-import UIKit
 
-
-@objc protocol IImageService {
+protocol IImageService {
     
     func getImages()-> Array<ImgResource>
     
-    optional func searchImageFromGoogle(keyword:String) -> UIImage
+    func searchImageFromGoogle(keyword:String) -> ImgResource
     
 }
