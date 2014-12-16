@@ -8,7 +8,11 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+var favImageList:[String] = []
+
+class FirstViewController: UIViewController, UITableViewDelegate {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,59 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        
+        return favImageList.count
+        
+    }
+    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        
+        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        
+        cell.textLabel?.text = favImageList[indexPath.row]
+        
+        return cell
+        
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("toDoItems") {
+            
+            favImageList = []
+            
+            for var i = 0; i < storedtoDoItems.count; ++i {
+                
+                favImageList.append(storedtoDoItems[i] as NSString)
+                
+            }
+            
+            
+        }
+        
+        
+        tasksTable.reloadData()
+        
+    }
+    
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            
+            favImageList.removeAtIndex(indexPath.row)
+            
+            let fixedFavImageList = favImageList
+            NSUserDefaults.standardUserDefaults().setObject(fixedFavImageList, forKey: "fixedFavImageList")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
+            tasksTable.reloadData()
+            
+        }
+        
+        
+    }
 
 }
 
