@@ -14,6 +14,14 @@
 		D89DB0A71A32DDA0002A1093 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89DB0A61A32DDA0002A1093 /* Images.xcassets */; };
 		D89DB0AA1A32DDA0002A1093 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89DB0A81A32DDA0002A1093 /* LaunchScreen.xib */; };
 		D89DB0B61A32DDA0002A1093 /* ImageVIewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DB0B51A32DDA0002A1093 /* ImageVIewerTests.swift */; };
+		DCB3BF2D1A428F0C00E1CE4E /* girl1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCB3BF291A428F0C00E1CE4E /* girl1.jpg */; };
+		DCB3BF2E1A428F0C00E1CE4E /* girl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCB3BF2A1A428F0C00E1CE4E /* girl2.jpg */; };
+		DCB3BF2F1A428F0C00E1CE4E /* girl3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCB3BF2B1A428F0C00E1CE4E /* girl3.jpg */; };
+		DCB3BF301A428F0C00E1CE4E /* girl4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCB3BF2C1A428F0C00E1CE4E /* girl4.jpg */; };
+		DCB3BF321A42926B00E1CE4E /* ImageNotFound.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCB3BF311A42926B00E1CE4E /* ImageNotFound.jpg */; };
+		DCB3BF361A42A30700E1CE4E /* IImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3BF341A42A30700E1CE4E /* IImageService.swift */; };
+		DCB3BF371A42A30700E1CE4E /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3BF351A42A30700E1CE4E /* ImageService.swift */; };
+		DCB3BF3A1A42A33700E1CE4E /* ImgResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3BF391A42A33700E1CE4E /* ImgResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,14 @@
 		D89DB0AF1A32DDA0002A1093 /* ImageVIewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageVIewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89DB0B41A32DDA0002A1093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D89DB0B51A32DDA0002A1093 /* ImageVIewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVIewerTests.swift; sourceTree = "<group>"; };
+		DCB3BF291A428F0C00E1CE4E /* girl1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl1.jpg; sourceTree = "<group>"; };
+		DCB3BF2A1A428F0C00E1CE4E /* girl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl2.jpg; sourceTree = "<group>"; };
+		DCB3BF2B1A428F0C00E1CE4E /* girl3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl3.jpg; sourceTree = "<group>"; };
+		DCB3BF2C1A428F0C00E1CE4E /* girl4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl4.jpg; sourceTree = "<group>"; };
+		DCB3BF311A42926B00E1CE4E /* ImageNotFound.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ImageNotFound.jpg; sourceTree = "<group>"; };
+		DCB3BF341A42A30700E1CE4E /* IImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IImageService.swift; sourceTree = "<group>"; };
+		DCB3BF351A42A30700E1CE4E /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		DCB3BF391A42A33700E1CE4E /* ImgResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +95,9 @@
 		D89DB09A1A32DDA0002A1093 /* ImageVIewer */ = {
 			isa = PBXGroup;
 			children = (
+				DCB3BF381A42A31B00E1CE4E /* models */,
+				DCB3BF331A42A2B900E1CE4E /* services */,
+				DCB3BF281A428EDE00E1CE4E /* resources */,
 				D89DB09D1A32DDA0002A1093 /* AppDelegate.swift */,
 				D89DB09F1A32DDA0002A1093 /* FirstViewController.swift */,
 				D89DB0A11A32DDA0002A1093 /* SecondViewController.swift */,
@@ -113,6 +132,35 @@
 				D89DB0B41A32DDA0002A1093 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCB3BF281A428EDE00E1CE4E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3BF311A42926B00E1CE4E /* ImageNotFound.jpg */,
+				DCB3BF291A428F0C00E1CE4E /* girl1.jpg */,
+				DCB3BF2A1A428F0C00E1CE4E /* girl2.jpg */,
+				DCB3BF2B1A428F0C00E1CE4E /* girl3.jpg */,
+				DCB3BF2C1A428F0C00E1CE4E /* girl4.jpg */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		DCB3BF331A42A2B900E1CE4E /* services */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3BF341A42A30700E1CE4E /* IImageService.swift */,
+				DCB3BF351A42A30700E1CE4E /* ImageService.swift */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		DCB3BF381A42A31B00E1CE4E /* models */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3BF391A42A33700E1CE4E /* ImgResource.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +244,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB3BF321A42926B00E1CE4E /* ImageNotFound.jpg in Resources */,
 				D89DB0A51A32DDA0002A1093 /* Main.storyboard in Resources */,
+				DCB3BF2F1A428F0C00E1CE4E /* girl3.jpg in Resources */,
+				DCB3BF301A428F0C00E1CE4E /* girl4.jpg in Resources */,
 				D89DB0AA1A32DDA0002A1093 /* LaunchScreen.xib in Resources */,
 				D89DB0A71A32DDA0002A1093 /* Images.xcassets in Resources */,
+				DCB3BF2E1A428F0C00E1CE4E /* girl2.jpg in Resources */,
+				DCB3BF2D1A428F0C00E1CE4E /* girl1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +272,9 @@
 				D89DB0A21A32DDA0002A1093 /* SecondViewController.swift in Sources */,
 				D89DB09E1A32DDA0002A1093 /* AppDelegate.swift in Sources */,
 				D89DB0A01A32DDA0002A1093 /* FirstViewController.swift in Sources */,
+				DCB3BF371A42A30700E1CE4E /* ImageService.swift in Sources */,
+				DCB3BF361A42A30700E1CE4E /* IImageService.swift in Sources */,
+				DCB3BF3A1A42A33700E1CE4E /* ImgResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +472,7 @@
 				D89DB0BB1A32DDA0002A1093 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D89DB0BC1A32DDA0002A1093 /* Build configuration list for PBXNativeTarget "ImageVIewerTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +481,7 @@
 				D89DB0BE1A32DDA0002A1093 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

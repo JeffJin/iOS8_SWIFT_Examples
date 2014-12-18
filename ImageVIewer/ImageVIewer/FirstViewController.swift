@@ -13,7 +13,10 @@ var favImageList:[String] = []
 class FirstViewController: UIViewController, UITableViewDelegate {
     
     
-
+    @IBOutlet var imagesTable: UITableView!
+    
+    @IBOutlet var previewImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,7 +43,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
         
     }
-    
+
     override func viewWillAppear(animated: Bool) {
         
         if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("toDoItems") {
@@ -52,13 +55,9 @@ class FirstViewController: UIViewController, UITableViewDelegate {
                 favImageList.append(storedtoDoItems[i] as NSString)
                 
             }
-            
-            
         }
         
-        
-        tasksTable.reloadData()
-        
+        imagesTable.reloadData()
     }
     
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
@@ -71,7 +70,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             NSUserDefaults.standardUserDefaults().setObject(fixedFavImageList, forKey: "fixedFavImageList")
             NSUserDefaults.standardUserDefaults().synchronize()
             
-            tasksTable.reloadData()
+            imagesTable.reloadData()
             
         }
         
