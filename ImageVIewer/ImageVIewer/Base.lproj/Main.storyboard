@@ -86,23 +86,13 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agm-ZL-IJL">
-                                <rect key="frame" x="16" y="111" width="568" height="425"/>
-                                <connections>
-                                    <segue destination="bf2-tx-oJc" kind="embed" id="Iht-QZ-H0D"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SoW-gQ-up1" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="10" id="1I5-55-6hm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SoW-gQ-up1" secondAttribute="trailing" constant="10" id="Adt-XT-ORU"/>
-                            <constraint firstItem="agm-ZL-IJL" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" constant="1" id="TAW-CT-iKM"/>
                             <constraint firstItem="SoW-gQ-up1" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="13" id="gpN-Yp-rZH"/>
                             <constraint firstItem="uov-sO-zhG" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="10" id="lC1-7R-sYb"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="agm-ZL-IJL" secondAttribute="bottom" id="pZV-6n-Gdt"/>
-                            <constraint firstItem="agm-ZL-IJL" firstAttribute="top" secondItem="SoW-gQ-up1" secondAttribute="bottom" constant="61" id="s04-6j-yG6"/>
-                            <constraint firstItem="agm-ZL-IJL" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="1" id="syx-Uc-Mpc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search Image" image="second" id="cPa-gy-q4n"/>
@@ -164,7 +154,7 @@
                         <viewControllerLayoutGuide type="bottom" id="foj-Pe-gTc"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gKv-XQ-bma">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="425"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
