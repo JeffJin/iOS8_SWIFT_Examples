@@ -14,6 +14,7 @@
 		D89DB0A71A32DDA0002A1093 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89DB0A61A32DDA0002A1093 /* Images.xcassets */; };
 		D89DB0AA1A32DDA0002A1093 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89DB0A81A32DDA0002A1093 /* LaunchScreen.xib */; };
 		D89DB0B61A32DDA0002A1093 /* ImageVIewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DB0B51A32DDA0002A1093 /* ImageVIewerTests.swift */; };
+		DC4BEEF01A469FA5008AE929 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4BEEE91A469DAC008AE929 /* SwiftHTTP.framework */; };
 		DCB3BF2D1A428F0C00E1CE4E /* girl1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCB3BF291A428F0C00E1CE4E /* girl1.jpg */; };
 		DCB3BF2E1A428F0C00E1CE4E /* girl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCB3BF2A1A428F0C00E1CE4E /* girl2.jpg */; };
 		DCB3BF2F1A428F0C00E1CE4E /* girl3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCB3BF2B1A428F0C00E1CE4E /* girl3.jpg */; };
@@ -32,6 +33,34 @@
 			remoteGlobalIDString = D89DB0971A32DDA0002A1093;
 			remoteInfo = ImageVIewer;
 		};
+		DC4BEEE81A469DAC008AE929 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC4BEEE11A469DAC008AE929 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		DC4BEEEA1A469DAC008AE929 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC4BEEE11A469DAC008AE929 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
+			remoteInfo = SwiftHTTPTests;
+		};
+		DC4BEEEC1A469DAC008AE929 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC4BEEE11A469DAC008AE929 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958025919E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSX;
+		};
+		DC4BEEEE1A469DAC008AE929 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC4BEEE11A469DAC008AE929 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958026319E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSXTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +75,7 @@
 		D89DB0AF1A32DDA0002A1093 /* ImageVIewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageVIewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89DB0B41A32DDA0002A1093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D89DB0B51A32DDA0002A1093 /* ImageVIewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVIewerTests.swift; sourceTree = "<group>"; };
+		DC4BEEE11A469DAC008AE929 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		DCB3BF291A428F0C00E1CE4E /* girl1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl1.jpg; sourceTree = "<group>"; };
 		DCB3BF2A1A428F0C00E1CE4E /* girl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl2.jpg; sourceTree = "<group>"; };
 		DCB3BF2B1A428F0C00E1CE4E /* girl3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl3.jpg; sourceTree = "<group>"; };
@@ -61,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4BEEF01A469FA5008AE929 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +108,7 @@
 		D89DB08F1A32DDA0002A1093 = {
 			isa = PBXGroup;
 			children = (
+				DC4BEEE11A469DAC008AE929 /* SwiftHTTP.xcodeproj */,
 				D89DB09A1A32DDA0002A1093 /* ImageVIewer */,
 				D89DB0B21A32DDA0002A1093 /* ImageVIewerTests */,
 				D89DB0991A32DDA0002A1093 /* Products */,
@@ -132,6 +164,17 @@
 				D89DB0B41A32DDA0002A1093 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC4BEEE21A469DAC008AE929 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC4BEEE91A469DAC008AE929 /* SwiftHTTP.framework */,
+				DC4BEEEB1A469DAC008AE929 /* SwiftHTTPTests.xctest */,
+				DC4BEEED1A469DAC008AE929 /* SwiftHTTPOSX.framework */,
+				DC4BEEEF1A469DAC008AE929 /* SwiftHTTPOSXTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		DCB3BF281A428EDE00E1CE4E /* resources */ = {
@@ -220,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D89DB0931A32DDA0002A1093 /* Build configuration list for PBXProject "ImageVIewer" */;
+			buildConfigurationList = D89DB0931A32DDA0002A1093 /* Build configuration list for PBXProject "ImageViewer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,6 +274,12 @@
 			mainGroup = D89DB08F1A32DDA0002A1093;
 			productRefGroup = D89DB0991A32DDA0002A1093 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DC4BEEE21A469DAC008AE929 /* Products */;
+					ProjectRef = DC4BEEE11A469DAC008AE929 /* SwiftHTTP.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D89DB0971A32DDA0002A1093 /* ImageVIewer */,
@@ -238,6 +287,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DC4BEEE91A469DAC008AE929 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = DC4BEEE81A469DAC008AE929 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC4BEEEB1A469DAC008AE929 /* SwiftHTTPTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPTests.xctest;
+			remoteRef = DC4BEEEA1A469DAC008AE929 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC4BEEED1A469DAC008AE929 /* SwiftHTTPOSX.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTPOSX.framework;
+			remoteRef = DC4BEEEC1A469DAC008AE929 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC4BEEEF1A469DAC008AE929 /* SwiftHTTPOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPOSXTests.xctest;
+			remoteRef = DC4BEEEE1A469DAC008AE929 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D89DB0961A32DDA0002A1093 /* Resources */ = {
@@ -400,6 +480,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ImageVIewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -413,6 +494,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ImageVIewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -456,7 +538,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D89DB0931A32DDA0002A1093 /* Build configuration list for PBXProject "ImageVIewer" */ = {
+		D89DB0931A32DDA0002A1093 /* Build configuration list for PBXProject "ImageViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D89DB0B71A32DDA0002A1093 /* Debug */,

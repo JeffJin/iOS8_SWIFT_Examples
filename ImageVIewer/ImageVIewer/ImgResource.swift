@@ -13,26 +13,32 @@ class ImgResource{
     var id: Int64
     var title: String = ""
     var url: String = ""
+    var image: UIImage?
     var description: String {
         return "The image resource title is \(title), "
     }
     var uiImage: UIImage {
-        //check persistent storage
-        var cachedUrl: AnyObject! = NSUserDefaults.standardUserDefaults().objectForKey(self.title)
-        if(cachedUrl != nil){
-            println("fetching url for \(self.title) from cache")
-            return UIImage(data: NSData(contentsOfURL: NSURL(string:  cachedUrl as String)!)!)!
+        get {
+            if let image = self.image{
+                return image
+            }
+            self.image = UIImage(data: NSData(contentsOfURL: NSURL(string:  self.url)!)!)!
+            return self.image!
         }
-        return UIImage(data: NSData(contentsOfURL: NSURL(string:  self.url)!)!)!
+        set(newImage) {
+            self.image = newImage
+        }
+        
+       
     }
     
-    init(url:String){
+    init(title:String){
         self.id = (Int64)(NSDate().timeIntervalSince1970)
-        self.url = url
+        self.title = title
     }
     
     convenience init(title:String, url:String){
-        self.init(url: url)
-        self.title = title
+        self.init(title: title)
+        self.url = url
     }
 }
