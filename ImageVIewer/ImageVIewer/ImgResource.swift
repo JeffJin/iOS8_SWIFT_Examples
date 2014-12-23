@@ -17,13 +17,14 @@ class ImgResource{
     var description: String {
         return "The image resource title is \(title), "
     }
-    var uiImage: UIImage {
+    var uiImage: UIImage? {
         get {
             if let image = self.image{
                 return image
             }
+            //synchronous version
             self.image = UIImage(data: NSData(contentsOfURL: NSURL(string:  self.url)!)!)!
-            return self.image!
+            return self.image
         }
         set(newImage) {
             self.image = newImage

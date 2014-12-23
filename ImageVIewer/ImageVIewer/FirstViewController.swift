@@ -46,7 +46,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
 
     override func viewWillAppear(animated: Bool) {
         
-        if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("toDoItems") {
+        if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("favImageList") {
             
             favImageList = []
             
@@ -67,7 +67,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             favImageList.removeAtIndex(indexPath.row)
             
             let fixedFavImageList = favImageList
-            NSUserDefaults.standardUserDefaults().setObject(fixedFavImageList, forKey: "fixedFavImageList")
+            NSUserDefaults.standardUserDefaults().setObject(fixedFavImageList, forKey: "favImageList")
             NSUserDefaults.standardUserDefaults().synchronize()
             
             imagesTable.reloadData()

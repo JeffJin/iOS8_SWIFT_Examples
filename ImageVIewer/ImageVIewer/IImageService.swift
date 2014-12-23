@@ -13,5 +13,7 @@ protocol IImageService {
     
     func getPlaceholderImage() -> UIImage
     
+    func addImageUrl(url:String) -> Bool
+    
     func getOnlineImages()-> Array<ImgResource>
 }

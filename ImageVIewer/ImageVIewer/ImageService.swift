@@ -18,6 +18,29 @@ class ImageService : IImageService{
         self.config = conf
     }
     
+    func addImageUrl(url:String) -> Bool{
+        var isNew = true
+        var storedItems : AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("favImageList")
+        if storedItems != nil {
+            favImageList = []
+            
+            for var i = 0; i < storedItems!.count; ++i {
+                if(storedItems![i] as NSString != url){
+                    favImageList.append(storedItems![i] as NSString)
+                }
+                else{
+                    isNew = false
+                }
+            }
+        }
+        favImageList.append(url as NSString)
+        let fixedFavImageList = favImageList
+        NSUserDefaults.standardUserDefaults().setObject(fixedFavImageList, forKey: "favImageList")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        return isNew
+    }
+    
     func getOnlineImages()-> Array<ImgResource> {
         var imgs = Array<ImgResource>()
         
@@ -36,7 +59,7 @@ class ImageService : IImageService{
     
     func downloadImage(url:String){
         var request = HTTPTask()
-        let downloadTask = request.download("http://upload.wikimedia.org/wikipedia/commons/b/b2/SNSD_Cooky_Phone.jpg", parameters: nil, progress: {(complete: Double) in
+        let downloadTask = request.download(url, parameters: nil, progress: {(complete: Double) in
             println("percent complete: \(complete)")
             }, success: {(response: HTTPResponse) in
                 println("download finished!")
@@ -64,5 +87,5 @@ class ImageService : IImageService{
     func randomNumber (lower: Int , upper: Int) -> Int {
         return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
     }
-
+    
 }

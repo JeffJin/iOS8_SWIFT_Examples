@@ -73,17 +73,39 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    var index:Int = 0;
+    
     //response to return key press
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         keywordTxt.resignFirstResponder()
         
-        var imageResults = imageService.getOnlineImages()
-        for (index, imgButton) in enumerate(imageButtonList){
-            imgButton.setBackgroundImage(imageResults[index].uiImage, forState: UIControlState.Normal)
+        var isNew = imageService.addImageUrl(keywordTxt.text)
+        if(!isNew || index > 5){
+            println("\(keywordTxt.text) is duplicated link")
+            return false
         }
         
+        // If the image does not exist, we need to download it
+        var imgURL: NSURL = NSURL(string: keywordTxt.text)!
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+            if error == nil {
+                var image = UIImage(data: data)
+                
+                // Store the image in to our cache
+                //imageCache[urlString] = self.image
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.imageButtonList[self.index].setBackgroundImage(image, forState: UIControlState.Normal)
+                    self.index++
+                    keywordTxt.text = ""
+                })
+            }
+            else {
+                println("Error: \(error.localizedDescription)")
+            }
+        })
+
         return true
-        
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
