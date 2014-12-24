@@ -20,6 +20,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zb4-rw-iQm">
                                 <rect key="frame" x="0.0" y="-7" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="gQw-sg-cvL"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="PPp-Cj-Syb"/>
+                                </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ImageNotFound.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CVI-HY-Ibf">
                                 <rect key="frame" x="0.0" y="292" width="600" height="259"/>
@@ -30,6 +34,7 @@
                             <constraint firstItem="CVI-HY-Ibf" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="275" id="13N-nD-xZE"/>
                             <constraint firstItem="CVI-HY-Ibf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="8rp-MF-SJ2"/>
                             <constraint firstItem="zb4-rw-iQm" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="LN8-4I-yb2"/>
+                            <constraint firstItem="zb4-rw-iQm" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="15" id="VRx-8Q-vMD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zb4-rw-iQm" secondAttribute="trailing" id="d5e-se-9Ld"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="CVI-HY-Ibf" secondAttribute="bottom" id="u6L-7i-Xtz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CVI-HY-Ibf" secondAttribute="trailing" id="woz-25-fTS"/>

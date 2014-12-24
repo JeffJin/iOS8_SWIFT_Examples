@@ -28,7 +28,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     }
 
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        
+        println("favImageList.count : \(favImageList.count)")
         return favImageList.count
         
     }
@@ -38,7 +38,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
         cell.textLabel?.text = favImageList[indexPath.row]
-        
+        println("favImageList[indexPath.row] : \(indexPath.row) \(favImageList[indexPath.row])")
         return cell
         
         
@@ -56,7 +56,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
                 
             }
         }
-        
+        println("favImageList.count : \(favImageList.count)")
         imagesTable.reloadData()
     }
     
