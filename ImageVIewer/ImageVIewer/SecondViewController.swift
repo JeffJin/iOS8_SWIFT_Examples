@@ -22,6 +22,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     var imageService:ImageService = ImageService(conf:"database connection")
     
+    var index:Int = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,13 +55,17 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     }
     
     func restoreImages(){
-        
+        println("restoring images")
+        self.index = 0
+        var placeHolderImg = imageService.getPlaceholderImage()
+        for var i = 0; i < imageButtonList.count; ++i {
+            self.imageButtonList[i].setBackgroundImage(placeHolderImg, forState: UIControlState.Normal)
+        }
         if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("favImageList") {
             
             favImageList = []
             
             for var i = 0; i < storedtoDoItems.count; ++i {
-                
                 favImageList.append(storedtoDoItems[i] as NSString)
                 loadImage(favImageList[i] as String)
             }
@@ -68,25 +74,31 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     
     func loadImage(url:String) -> Bool{
+        if((uiViewCache[url]) != nil){
+            println("load image from cache")
+            self.imageButtonList[self.index].setBackgroundImage(uiViewCache[url], forState: UIControlState.Normal)
+            self.index++
+        }
+        else{
+            // If the image does not exist, we need to download it
+            var imgURL: NSURL = NSURL(string: url)!
+            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                if error == nil {
+                    var image = UIImage(data: data)
+                    uiViewCache[url] = (image)
+                    
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.imageButtonList[self.index].setBackgroundImage(image, forState: UIControlState.Normal)
+                        self.index++
+                    })
+                }
+                else {
+                    println("Error: \(error.localizedDescription)")
+                }
+            })
+        }
         
-        // If the image does not exist, we need to download it
-        var imgURL: NSURL = NSURL(string: url)!
-        let request: NSURLRequest = NSURLRequest(URL: imgURL)
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
-            if error == nil {
-                var image = UIImage(data: data)
-                
-                // Store the image in to our cache
-                //imageCache[urlString] = self.image
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.imageButtonList[self.index].setBackgroundImage(image, forState: UIControlState.Normal)
-                    self.index++
-                })
-            }
-            else {
-                println("Error: \(error.localizedDescription)")
-            }
-        })
         return true
     }
     
@@ -110,8 +122,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    var index:Int = 0;
     
     //response to return key press
     func textFieldShouldReturn(textField: UITextField!) -> Bool {

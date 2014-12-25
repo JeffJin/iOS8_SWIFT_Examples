@@ -9,6 +9,7 @@
 import UIKit
 
 var favImageList:[String] = []
+var uiViewCache = Dictionary<String, UIImage>()
 
 class FirstViewController: UIViewController, UITableViewDelegate {
     
@@ -63,7 +64,8 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            
+            var url = favImageList[indexPath.row]
+            uiViewCache.removeValueForKey(url)
             favImageList.removeAtIndex(indexPath.row)
             
             let fixedFavImageList = favImageList
