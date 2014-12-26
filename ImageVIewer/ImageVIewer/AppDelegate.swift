@@ -8,14 +8,30 @@
 
 import UIKit
 
+
+var favImageList:[String] = []
+var uiViewCache = Dictionary<String, UIImage>()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let tabBarController = UITabBarController()
+        let tab1 = ImageSearchController()
+        let tab2 = ImageListController()
+        let tab3 = ImageListController()
+        let controllers = [tab1, tab2, tab3]
+        tabBarController.viewControllers = controllers
+        window?.rootViewController = tabBarController
+        let firstImage = UIImage(named: "Search")
+        let secondImage = UIImage(named: "List")
+        let thirdImage = UIImage(named: "Details")
+        tab1.tabBarItem = UITabBarItem(title: "Search", image: firstImage, tag: 1)
+        tab2.tabBarItem = UITabBarItem(title: "List", image: secondImage, tag:2)
+        tab2.tabBarItem = UITabBarItem(title: "Details", image: thirdImage, tag:3)
+        
         return true
     }
 

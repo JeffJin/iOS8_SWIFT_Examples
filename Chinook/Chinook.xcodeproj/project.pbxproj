@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC8AE0661A4D42740048ECA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE0651A4D42740048ECA7 /* AppDelegate.swift */; };
+		DC8AE0691A4D42740048ECA7 /* Chinook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE0671A4D42740048ECA7 /* Chinook.xcdatamodeld */; };
+		DC8AE06B1A4D42740048ECA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE06A1A4D42740048ECA7 /* ViewController.swift */; };
+		DC8AE06E1A4D42740048ECA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE06C1A4D42740048ECA7 /* Main.storyboard */; };
+		DC8AE0701A4D42740048ECA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE06F1A4D42740048ECA7 /* Images.xcassets */; };
+		DC8AE0731A4D42740048ECA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE0711A4D42740048ECA7 /* LaunchScreen.xib */; };
+		DC8AE07F1A4D42740048ECA7 /* ChinookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE07E1A4D42740048ECA7 /* ChinookTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC8AE0791A4D42740048ECA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC8AE0581A4D42740048ECA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC8AE05F1A4D42740048ECA7;
+			remoteInfo = Chinook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC8AE0601A4D42740048ECA7 /* Chinook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chinook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8AE0641A4D42740048ECA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC8AE0651A4D42740048ECA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC8AE0681A4D42740048ECA7 /* Chinook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chinook.xcdatamodel; sourceTree = "<group>"; };
+		DC8AE06A1A4D42740048ECA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC8AE06D1A4D42740048ECA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC8AE06F1A4D42740048ECA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC8AE0721A4D42740048ECA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DC8AE0781A4D42740048ECA7 /* ChinookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChinookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8AE07D1A4D42740048ECA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC8AE07E1A4D42740048ECA7 /* ChinookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinookTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC8AE05D1A4D42740048ECA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8AE0751A4D42740048ECA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC8AE0571A4D42740048ECA7 = {
+			isa = PBXGroup;
+			children = (
+				DC8AE0621A4D42740048ECA7 /* Chinook */,
+				DC8AE07B1A4D42740048ECA7 /* ChinookTests */,
+				DC8AE0611A4D42740048ECA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC8AE0611A4D42740048ECA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC8AE0601A4D42740048ECA7 /* Chinook.app */,
+				DC8AE0781A4D42740048ECA7 /* ChinookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC8AE0621A4D42740048ECA7 /* Chinook */ = {
+			isa = PBXGroup;
+			children = (
+				DC8AE0651A4D42740048ECA7 /* AppDelegate.swift */,
+				DC8AE06A1A4D42740048ECA7 /* ViewController.swift */,
+				DC8AE06C1A4D42740048ECA7 /* Main.storyboard */,
+				DC8AE06F1A4D42740048ECA7 /* Images.xcassets */,
+				DC8AE0711A4D42740048ECA7 /* LaunchScreen.xib */,
+				DC8AE0671A4D42740048ECA7 /* Chinook.xcdatamodeld */,
+				DC8AE0631A4D42740048ECA7 /* Supporting Files */,
+			);
+			path = Chinook;
+			sourceTree = "<group>";
+		};
+		DC8AE0631A4D42740048ECA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC8AE0641A4D42740048ECA7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC8AE07B1A4D42740048ECA7 /* ChinookTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC8AE07E1A4D42740048ECA7 /* ChinookTests.swift */,
+				DC8AE07C1A4D42740048ECA7 /* Supporting Files */,
+			);
+			path = ChinookTests;
+			sourceTree = "<group>";
+		};
+		DC8AE07C1A4D42740048ECA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC8AE07D1A4D42740048ECA7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC8AE05F1A4D42740048ECA7 /* Chinook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8AE0821A4D42740048ECA7 /* Build configuration list for PBXNativeTarget "Chinook" */;
+			buildPhases = (
+				DC8AE05C1A4D42740048ECA7 /* Sources */,
+				DC8AE05D1A4D42740048ECA7 /* Frameworks */,
+				DC8AE05E1A4D42740048ECA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chinook;
+			productName = Chinook;
+			productReference = DC8AE0601A4D42740048ECA7 /* Chinook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC8AE0771A4D42740048ECA7 /* ChinookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8AE0851A4D42740048ECA7 /* Build configuration list for PBXNativeTarget "ChinookTests" */;
+			buildPhases = (
+				DC8AE0741A4D42740048ECA7 /* Sources */,
+				DC8AE0751A4D42740048ECA7 /* Frameworks */,
+				DC8AE0761A4D42740048ECA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC8AE07A1A4D42740048ECA7 /* PBXTargetDependency */,
+			);
+			name = ChinookTests;
+			productName = ChinookTests;
+			productReference = DC8AE0781A4D42740048ECA7 /* ChinookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC8AE0581A4D42740048ECA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jeff Jin";
+				TargetAttributes = {
+					DC8AE05F1A4D42740048ECA7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = U8397397DT;
+					};
+					DC8AE0771A4D42740048ECA7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = DC8AE05F1A4D42740048ECA7;
+					};
+				};
+			};
+			buildConfigurationList = DC8AE05B1A4D42740048ECA7 /* Build configuration list for PBXProject "Chinook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC8AE0571A4D42740048ECA7;
+			productRefGroup = DC8AE0611A4D42740048ECA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC8AE05F1A4D42740048ECA7 /* Chinook */,
+				DC8AE0771A4D42740048ECA7 /* ChinookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC8AE05E1A4D42740048ECA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8AE06E1A4D42740048ECA7 /* Main.storyboard in Resources */,
+				DC8AE0731A4D42740048ECA7 /* LaunchScreen.xib in Resources */,
+				DC8AE0701A4D42740048ECA7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8AE0761A4D42740048ECA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC8AE05C1A4D42740048ECA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8AE06B1A4D42740048ECA7 /* ViewController.swift in Sources */,
+				DC8AE0661A4D42740048ECA7 /* AppDelegate.swift in Sources */,
+				DC8AE0691A4D42740048ECA7 /* Chinook.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8AE0741A4D42740048ECA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8AE07F1A4D42740048ECA7 /* ChinookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC8AE07A1A4D42740048ECA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC8AE05F1A4D42740048ECA7 /* Chinook */;
+			targetProxy = DC8AE0791A4D42740048ECA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC8AE06C1A4D42740048ECA7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC8AE06D1A4D42740048ECA7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC8AE0711A4D42740048ECA7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC8AE0721A4D42740048ECA7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC8AE0801A4D42740048ECA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		DC8AE0811A4D42740048ECA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC8AE0831A4D42740048ECA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Chinook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		DC8AE0841A4D42740048ECA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Chinook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		DC8AE0861A4D42740048ECA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChinookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chinook.app/Chinook";
+			};
+			name = Debug;
+		};
+		DC8AE0871A4D42740048ECA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChinookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chinook.app/Chinook";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC8AE05B1A4D42740048ECA7 /* Build configuration list for PBXProject "Chinook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8AE0801A4D42740048ECA7 /* Debug */,
+				DC8AE0811A4D42740048ECA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC8AE0821A4D42740048ECA7 /* Build configuration list for PBXNativeTarget "Chinook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8AE0831A4D42740048ECA7 /* Debug */,
+				DC8AE0841A4D42740048ECA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC8AE0851A4D42740048ECA7 /* Build configuration list for PBXNativeTarget "ChinookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8AE0861A4D42740048ECA7 /* Debug */,
+				DC8AE0871A4D42740048ECA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC8AE0671A4D42740048ECA7 /* Chinook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC8AE0681A4D42740048ECA7 /* Chinook.xcdatamodel */,
+			);
+			currentVersion = DC8AE0681A4D42740048ECA7 /* Chinook.xcdatamodel */;
+			path = Chinook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DC8AE0581A4D42740048ECA7 /* Project object */;
+}

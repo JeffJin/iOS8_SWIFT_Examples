@@ -8,10 +8,7 @@
 
 import UIKit
 
-var favImageList:[String] = []
-var uiViewCache = Dictionary<String, UIImage>()
-
-class FirstViewController: UIViewController, UITableViewDelegate {
+class ImageListController: UIViewController, UITableViewDelegate {
     
     
     @IBOutlet var imagesTable: UITableView!

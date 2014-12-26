@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITextFieldDelegate {
+class ImageSearchController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var keywordTxt: UITextField!
     
