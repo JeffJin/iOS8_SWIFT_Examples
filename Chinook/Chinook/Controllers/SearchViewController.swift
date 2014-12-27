@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet var keywords: UITextField!
     
     var imageButtonList:[UIButton] = []
@@ -24,26 +24,49 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         
         var placeHolderImg = imageService.getPlaceholderImage()
         
-        let width:CGFloat = 768
-        let height:CGFloat = 568
+        let width:CGFloat = 1024
+        let height:CGFloat = 768
         
-        var view:UIView = UIView(frame: CGRectMake(0, 100, width, height))
+        var view:UIView = UIView(frame: CGRectMake(15, 90, width, height))
         self.view.addSubview(view)
-        
-        for i in 0 ... 1{
-            for j in 0 ... 2{
-                var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-                button.frame = CGRectMake(0, 0, 155, 155)
-                button.center = CGPointMake(CGFloat(110 + 160 * i), CGFloat(90 + 160 * j))
-                button.setTitle("placeholder", forState: UIControlState.Normal)
-                button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
-                button.setBackgroundImage(placeHolderImg, forState: UIControlState.Normal)
-                button.addTarget(self, action: "addTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
-                button.tag = i
-                imageButtonList.append(button)
-                view.addSubview(button)
+        //if horizontal
+        if(UIDevice.currentDevice().orientation == UIDeviceOrientation.Portrait){
+            println("UIDevice.currentDevice().orientation: Portrait")
+            for i in 0 ... 3{
+                for j in 0 ... 2{
+                    var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+                    button.frame = CGRectMake(0, 0, 215, 215)
+                    button.center = CGPointMake(CGFloat(100 + 220 * i), CGFloat(90 + 220 * j))
+                    button.setTitle("placeholder", forState: UIControlState.Normal)
+                    button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
+                    button.setBackgroundImage(placeHolderImg, forState: UIControlState.Normal)
+                    button.addTarget(self, action: "addTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
+                    button.tag = i
+                    imageButtonList.append(button)
+                    view.addSubview(button)
+                }
             }
         }
+        else{
+            println("UIDevice.currentDevice().orientation: Landscape")
+            for i in 0 ... 2{
+                for j in 0 ... 3{
+                    var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+                    button.frame = CGRectMake(0, 0, 215, 215)
+                    button.center = CGPointMake(CGFloat(100 + 220 * i), CGFloat(90 + 220 * j))
+                    button.setTitle("placeholder", forState: UIControlState.Normal)
+                    button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
+                    button.setBackgroundImage(placeHolderImg, forState: UIControlState.Normal)
+                    button.addTarget(self, action: "addTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
+                    button.tag = i
+                    imageButtonList.append(button)
+                    view.addSubview(button)
+                }
+            }
+
+            
+        }
+        
         restoreImages()
     }
     
@@ -135,15 +158,15 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
