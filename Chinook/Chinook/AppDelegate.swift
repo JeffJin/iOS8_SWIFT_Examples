@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+var favImageList:[String] = []
+var uiViewCache = Dictionary<String, UIImage>()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let tabBarController = UITabBarController()
+        let tab1 = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        let tab2 = ListViewController(nibName: "ListViewController", bundle: nil)
+        let tab3 = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+        let controllers = [tab1, tab2, tab3]
+        tabBarController.viewControllers = controllers
+        window?.rootViewController = tabBarController
+        let firstImage = UIImage(named: "Search")
+        let secondImage = UIImage(named: "List")
+        let thirdImage = UIImage(named: "Details")
+        tab1.tabBarItem = UITabBarItem(title: "Search", image: firstImage, tag: 1)
+        tab2.tabBarItem = UITabBarItem(title: "List", image: secondImage, tag:2)
+        tab3.tabBarItem = UITabBarItem(title: "Details", image: thirdImage, tag:3)
+        
         return true
     }
 
