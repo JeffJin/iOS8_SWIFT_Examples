@@ -60,23 +60,3 @@ class FileService: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate {
             completionHandler(newRequest)
     }
 }
-
-//
-//
-//{
-//    func httpGet(request: NSURLRequest!, callback: (String, String?) -> Void) {
-//        var session = NSURLSession.sharedSession()
-//        var task = session.dataTaskWithRequest(request){
-//            (data, response, error) -> Void in
-//            if error != nil {
-//                callback("", error.localizedDescription)
-//            } else {
-//                var result = NSString(data: data, encoding:
-//                    NSASCIIStringEncoding)!
-//                callback(result, nil)
-//            }
-//        }
-//        task.resume()
-//    }
-//
-//}

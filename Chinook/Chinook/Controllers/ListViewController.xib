@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-El-0bM">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-El-0bM">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -25,6 +25,12 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="0.36556976009999997" green="0.24496186810000001" blue="0.16066557349999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mhW-El-0bM" secondAttribute="trailing" constant="1" id="1eQ-go-Z9B"/>
+                <constraint firstItem="mhW-El-0bM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="POK-FG-LA6"/>
+                <constraint firstItem="mhW-El-0bM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="WVx-7a-fjj"/>
+                <constraint firstAttribute="bottom" secondItem="mhW-El-0bM" secondAttribute="bottom" constant="1" id="v4n-EY-spK"/>
+            </constraints>
         </view>
     </objects>
 </document>

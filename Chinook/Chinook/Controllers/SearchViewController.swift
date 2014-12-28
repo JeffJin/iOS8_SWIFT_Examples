@@ -16,67 +16,81 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     var imageService:IImageService = ImageService(conf:"database connection")
     
-    var index:Int = 0;
+    var index:Int = 0
+    
+    var imageContainer:UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         keywords.delegate = self
         
-        var placeHolderImg = imageService.getPlaceholderImage()
-        
         let width:CGFloat = 1024
         let height:CGFloat = 768
         
-        var view:UIView = UIView(frame: CGRectMake(15, 90, width, height))
-        self.view.addSubview(view)
+        imageContainer = UIView(frame: CGRectMake(15, 75, width, height))
+        self.view.addSubview(imageContainer)
+        
+        //add observer for device orientation change
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "layoutImagePlaceHolders:", name:"UIDeviceOrientationChanged", object: nil)
+    }
+    
+    func layoutImagePlaceHolders(notification: NSNotification){
+        //Action to take on Notification
+        println("layoutImagePlaceHolders")
+        
+        restoreImages(imageContainer)
+    }
+    
+    func restoreImages(imageContainer: UIView){
+        println("restoring images")
+        //clean up existing image button list
+        for var i = 0; i < self.imageButtonList.count; ++i {
+            self.imageButtonList[i].removeFromSuperview()
+        }
+        //setup image buttons based on device orientation
+        var placeHolderImg = imageService.getPlaceholderImage()
         //if horizontal
-        if(UIDevice.currentDevice().orientation == UIDeviceOrientation.Portrait){
+        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation)){
             println("UIDevice.currentDevice().orientation: Portrait")
-            for i in 0 ... 3{
-                for j in 0 ... 2{
+            for i in 0 ... 2{
+                for j in 0 ... 3{
                     var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-                    button.frame = CGRectMake(0, 0, 215, 215)
-                    button.center = CGPointMake(CGFloat(100 + 220 * i), CGFloat(90 + 220 * j))
+                    button.frame = CGRectMake(0, 0, 250, 215)
+                    button.center = CGPointMake(CGFloat(114 + 255 * i), CGFloat(90 + 220 * j))
                     button.setTitle("placeholder", forState: UIControlState.Normal)
                     button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
-                    button.setBackgroundImage(placeHolderImg, forState: UIControlState.Normal)
                     button.addTarget(self, action: "addTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
                     button.tag = i
                     imageButtonList.append(button)
-                    view.addSubview(button)
+                    imageContainer.addSubview(button)
+                }
+            }
+        }
+        else if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)){
+            println("UIDevice.currentDevice().orientation: Landscape")
+            for i in 0 ... 3{
+                for j in 0 ... 2{
+                    var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+                    button.frame = CGRectMake(0, 0, 250, 215)
+                    button.center = CGPointMake(CGFloat(115 + 255 * i), CGFloat(90 + 220 * j))
+                    button.setTitle("placeholder", forState: UIControlState.Normal)
+                    button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
+                    button.addTarget(self, action: "addTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
+                    button.tag = i
+                    imageButtonList.append(button)
+                    imageContainer.addSubview(button)
                 }
             }
         }
         else{
-            println("UIDevice.currentDevice().orientation: Landscape")
-            for i in 0 ... 2{
-                for j in 0 ... 3{
-                    var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-                    button.frame = CGRectMake(0, 0, 215, 215)
-                    button.center = CGPointMake(CGFloat(100 + 220 * i), CGFloat(90 + 220 * j))
-                    button.setTitle("placeholder", forState: UIControlState.Normal)
-                    button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
-                    button.setBackgroundImage(placeHolderImg, forState: UIControlState.Normal)
-                    button.addTarget(self, action: "addTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
-                    button.tag = i
-                    imageButtonList.append(button)
-                    view.addSubview(button)
-                }
-            }
-
-            
+            NSLog("Invalid UIDevice Orientation")
         }
-        
-        restoreImages()
-    }
-    
-    func restoreImages(){
-        println("restoring images")
+        //setup default place holder images
         self.index = 0
-        var placeHolderImg = imageService.getPlaceholderImage()
         for var i = 0; i < imageButtonList.count; ++i {
             self.imageButtonList[i].setBackgroundImage(placeHolderImg, forState: UIControlState.Normal)
         }
+        //load images from local storage
         if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("favImageList") {
             
             favImageList = []
@@ -99,6 +113,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
             // If the image does not exist, we need to download it
             var imgURL: NSURL = NSURL(string: url)!
             let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            println("downloading image from \(url)")
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
                 if error == nil {
                     var image = UIImage(data: data)
@@ -110,7 +125,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                     })
                 }
                 else {
-                    println("Error: \(error.localizedDescription)")
+                    println("Load Image Error: \(error.localizedDescription)")
                 }
             })
         }

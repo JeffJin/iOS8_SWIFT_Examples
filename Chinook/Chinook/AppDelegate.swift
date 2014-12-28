@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             println("device rotated to portraight")
         }
-        
+        NSNotificationCenter.defaultCenter().postNotificationName("UIDeviceOrientationChanged", object: nil)
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -50,7 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //initializer 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
 
-        
         return true
     }
 

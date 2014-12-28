@@ -25,7 +25,8 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="an3-OI-WF2" secondAttribute="trailing" constant="5" id="B6k-uY-BFs"/>
                 <constraint firstItem="an3-OI-WF2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="LDb-D5-1Ii"/>
-                <constraint firstItem="an3-OI-WF2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="S8d-YY-aZs"/>
+                <constraint firstItem="an3-OI-WF2" firstAttribute="top" relation="lessThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="PF0-u0-DVX"/>
+                <constraint firstItem="an3-OI-WF2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="u43-e0-UOw"/>
             </constraints>
         </view>
     </objects>
