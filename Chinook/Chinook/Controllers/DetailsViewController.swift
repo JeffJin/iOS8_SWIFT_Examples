@@ -13,7 +13,26 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         println("DetailsViewController.viewDidLoad")
-        // Do any additional setup after loading the view.
+        
+//        var url = NSURL(string: "http://www.stackoverflow.com")
+//        
+//        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+//            
+//            println(NSString(data: data, encoding:NSUTF8StringEncoding))
+//            
+//        }
+//        task.resume()
+        var request = NSMutableURLRequest(URL: NSURL(string: "https://www.google.com")!)
+        var fileService = FileService()
+        fileService.httpGet(request){
+            (data, error) -> Void in
+            if error != nil {
+                println(error)
+            } else {
+                //println(data)
+            }
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

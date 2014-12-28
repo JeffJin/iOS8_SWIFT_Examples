@@ -17,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func rotated()
+    {
+        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
+        {
+            println("device rotated to landscape")
+        }
+        
+        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation))
+        {
+            println("device rotated to portraight")
+        }
+        
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -33,6 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tab1.tabBarItem = UITabBarItem(title: "Search", image: firstImage, tag: 1)
         tab2.tabBarItem = UITabBarItem(title: "List", image: secondImage, tag:2)
         tab3.tabBarItem = UITabBarItem(title: "Details", image: thirdImage, tag:3)
+        
+        //initializer 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
+
         
         return true
     }

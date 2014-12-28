@@ -35,6 +35,7 @@
 		DC8AE0DA1A4E75250048ECA7 /* Nylon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE0D01A4E75250048ECA7 /* Nylon.jpg */; };
 		DC8AE0DB1A4E75250048ECA7 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE0D11A4E75250048ECA7 /* Search.png */; };
 		DC8AE12A1A4E96610048ECA7 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8AE1231A4E95CE0048ECA7 /* SwiftHTTP.framework */; };
+		DC8AE12C1A4FE0570048ECA7 /* FileSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		DC8AE0D01A4E75250048ECA7 /* Nylon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Nylon.jpg; path = Images/Nylon.jpg; sourceTree = "<group>"; };
 		DC8AE0D11A4E75250048ECA7 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Search.png; path = Images/Search.png; sourceTree = "<group>"; };
 		DC8AE11B1A4E95CE0048ECA7 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
+		DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSevice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 			children = (
 				DC8AE0B01A4E6BBA0048ECA7 /* IImageService.swift */,
 				DC8AE0B11A4E6BBA0048ECA7 /* ImageService.swift */,
+				DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				DC8AE0661A4D42740048ECA7 /* AppDelegate.swift in Sources */,
 				DC8AE0691A4D42740048ECA7 /* Chinook.xcdatamodeld in Sources */,
 				DC8AE0A41A4E68530048ECA7 /* ListViewController.swift in Sources */,
+				DC8AE12C1A4FE0570048ECA7 /* FileSevice.swift in Sources */,
 				DC8AE09F1A4E65FA0048ECA7 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
