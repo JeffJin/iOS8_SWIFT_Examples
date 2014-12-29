@@ -34,8 +34,11 @@
 		DC8AE0D91A4E75250048ECA7 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE0CF1A4E75250048ECA7 /* List.png */; };
 		DC8AE0DA1A4E75250048ECA7 /* Nylon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE0D01A4E75250048ECA7 /* Nylon.jpg */; };
 		DC8AE0DB1A4E75250048ECA7 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE0D11A4E75250048ECA7 /* Search.png */; };
-		DC8AE12A1A4E96610048ECA7 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8AE1231A4E95CE0048ECA7 /* SwiftHTTP.framework */; };
 		DC8AE12C1A4FE0570048ECA7 /* FileSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */; };
+		DCD4403A1A51036500ACA749 /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440361A51036500ACA749 /* HTTPRequestSerializer.swift */; };
+		DCD4403B1A51036500ACA749 /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440371A51036500ACA749 /* HTTPResponseSerializer.swift */; };
+		DCD4403C1A51036500ACA749 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440381A51036500ACA749 /* HTTPTask.swift */; };
+		DCD4403D1A51036500ACA749 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440391A51036500ACA749 /* HTTPUpload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,34 +48,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = DC8AE05F1A4D42740048ECA7;
 			remoteInfo = Chinook;
-		};
-		DC8AE1221A4E95CE0048ECA7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC8AE11B1A4E95CE0048ECA7 /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
-			remoteInfo = SwiftHTTP;
-		};
-		DC8AE1241A4E95CE0048ECA7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC8AE11B1A4E95CE0048ECA7 /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
-			remoteInfo = SwiftHTTPTests;
-		};
-		DC8AE1261A4E95CE0048ECA7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC8AE11B1A4E95CE0048ECA7 /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D958025919E6EEEB003C8218;
-			remoteInfo = SwiftHTTPOSX;
-		};
-		DC8AE1281A4E95CE0048ECA7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC8AE11B1A4E95CE0048ECA7 /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D958026319E6EEEB003C8218;
-			remoteInfo = SwiftHTTPOSXTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -108,8 +83,11 @@
 		DC8AE0CF1A4E75250048ECA7 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = List.png; path = Images/List.png; sourceTree = "<group>"; };
 		DC8AE0D01A4E75250048ECA7 /* Nylon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Nylon.jpg; path = Images/Nylon.jpg; sourceTree = "<group>"; };
 		DC8AE0D11A4E75250048ECA7 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Search.png; path = Images/Search.png; sourceTree = "<group>"; };
-		DC8AE11B1A4E95CE0048ECA7 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSevice.swift; sourceTree = "<group>"; };
+		DCD440361A51036500ACA749 /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequestSerializer.swift; path = ../SwiftHTTP/HTTPRequestSerializer.swift; sourceTree = "<group>"; };
+		DCD440371A51036500ACA749 /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponseSerializer.swift; path = ../SwiftHTTP/HTTPResponseSerializer.swift; sourceTree = "<group>"; };
+		DCD440381A51036500ACA749 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPTask.swift; path = ../SwiftHTTP/HTTPTask.swift; sourceTree = "<group>"; };
+		DCD440391A51036500ACA749 /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPUpload.swift; path = ../SwiftHTTP/HTTPUpload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC8AE12A1A4E96610048ECA7 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +111,6 @@
 		DC8AE0571A4D42740048ECA7 = {
 			isa = PBXGroup;
 			children = (
-				DC8AE11B1A4E95CE0048ECA7 /* SwiftHTTP.xcodeproj */,
 				DC8AE0621A4D42740048ECA7 /* Chinook */,
 				DC8AE07B1A4D42740048ECA7 /* ChinookTests */,
 				DC8AE0611A4D42740048ECA7 /* Products */,
@@ -153,6 +129,7 @@
 		DC8AE0621A4D42740048ECA7 /* Chinook */ = {
 			isa = PBXGroup;
 			children = (
+				DCD440351A51035200ACA749 /* Http */,
 				DC8AE08A1A4E586A0048ECA7 /* Images */,
 				DC8AE0AB1A4E6A6B0048ECA7 /* Services */,
 				DC8AE0AA1A4E6A5B0048ECA7 /* Models */,
@@ -243,15 +220,15 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		DC8AE11C1A4E95CE0048ECA7 /* Products */ = {
+		DCD440351A51035200ACA749 /* Http */ = {
 			isa = PBXGroup;
 			children = (
-				DC8AE1231A4E95CE0048ECA7 /* SwiftHTTP.framework */,
-				DC8AE1251A4E95CE0048ECA7 /* SwiftHTTPTests.xctest */,
-				DC8AE1271A4E95CE0048ECA7 /* SwiftHTTPOSX.framework */,
-				DC8AE1291A4E95CE0048ECA7 /* SwiftHTTPOSXTests.xctest */,
+				DCD440361A51036500ACA749 /* HTTPRequestSerializer.swift */,
+				DCD440371A51036500ACA749 /* HTTPResponseSerializer.swift */,
+				DCD440381A51036500ACA749 /* HTTPTask.swift */,
+				DCD440391A51036500ACA749 /* HTTPUpload.swift */,
 			);
-			name = Products;
+			name = Http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,12 +299,6 @@
 			mainGroup = DC8AE0571A4D42740048ECA7;
 			productRefGroup = DC8AE0611A4D42740048ECA7 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = DC8AE11C1A4E95CE0048ECA7 /* Products */;
-					ProjectRef = DC8AE11B1A4E95CE0048ECA7 /* SwiftHTTP.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				DC8AE05F1A4D42740048ECA7 /* Chinook */,
@@ -335,37 +306,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		DC8AE1231A4E95CE0048ECA7 /* SwiftHTTP.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftHTTP.framework;
-			remoteRef = DC8AE1221A4E95CE0048ECA7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DC8AE1251A4E95CE0048ECA7 /* SwiftHTTPTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftHTTPTests.xctest;
-			remoteRef = DC8AE1241A4E95CE0048ECA7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DC8AE1271A4E95CE0048ECA7 /* SwiftHTTPOSX.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftHTTPOSX.framework;
-			remoteRef = DC8AE1261A4E95CE0048ECA7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DC8AE1291A4E95CE0048ECA7 /* SwiftHTTPOSXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftHTTPOSXTests.xctest;
-			remoteRef = DC8AE1281A4E95CE0048ECA7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DC8AE05E1A4D42740048ECA7 /* Resources */ = {
@@ -405,6 +345,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD4403C1A51036500ACA749 /* HTTPTask.swift in Sources */,
+				DCD4403D1A51036500ACA749 /* HTTPUpload.swift in Sources */,
 				DC8AE0A81A4E68B40048ECA7 /* SearchViewController.swift in Sources */,
 				DC8AE0AF1A4E6B500048ECA7 /* ImgResource.swift in Sources */,
 				DC8AE06B1A4D42740048ECA7 /* ViewController.swift in Sources */,
@@ -414,6 +356,8 @@
 				DC8AE0661A4D42740048ECA7 /* AppDelegate.swift in Sources */,
 				DC8AE0691A4D42740048ECA7 /* Chinook.xcdatamodeld in Sources */,
 				DC8AE0A41A4E68530048ECA7 /* ListViewController.swift in Sources */,
+				DCD4403B1A51036500ACA749 /* HTTPResponseSerializer.swift in Sources */,
+				DCD4403A1A51036500ACA749 /* HTTPRequestSerializer.swift in Sources */,
 				DC8AE12C1A4FE0570048ECA7 /* FileSevice.swift in Sources */,
 				DC8AE09F1A4E65FA0048ECA7 /* DetailsViewController.swift in Sources */,
 			);
@@ -542,6 +486,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = Chinook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,6 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Chinook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

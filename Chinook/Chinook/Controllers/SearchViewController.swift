@@ -60,7 +60,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                     button.setTitle("placeholder", forState: UIControlState.Normal)
                     button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
                     button.addTarget(self, action: "addTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
-                    button.tag = i
                     imageButtonList.append(button)
                     imageContainer.addSubview(button)
                 }
@@ -75,8 +74,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                     button.center = CGPointMake(CGFloat(115 + 255 * i), CGFloat(90 + 220 * j))
                     button.setTitle("placeholder", forState: UIControlState.Normal)
                     button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
-                    button.addTarget(self, action: "addTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
-                    button.tag = i
+                    button.addTarget(self, action: "selectTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
                     imageButtonList.append(button)
                     imageContainer.addSubview(button)
                 }
@@ -120,6 +118,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                     uiViewCache[url] = (image)
                     
                     dispatch_async(dispatch_get_main_queue(), {
+                        self.imageButtonList[self.index].tag = self.index
                         self.imageButtonList[self.index].setBackgroundImage(image, forState: UIControlState.Normal)
                         self.index++
                     })
@@ -133,19 +132,13 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func addTargetImage(sender:UIButton){
-        var button:UIButton = sender;
+    func selectTargetImage(sender:UIButton){
+        var button:UIButton = sender
+        selectedImageButton = button
         //animate the clicked button
         UIView.animateWithDuration(0.5, animations: { button.alpha = 0 }, completion:{_ in
             UIView.animateWithDuration(0.5, animations: { button.alpha = 1 })
         })
-        println("addTargetImage gets called")
-        //backgroundImageView.image =  imageResources[button.tag].uiImage
-        //animate background image
-        //        UIView.animateWithDuration(1, animations: { self.backgroundImageView.alpha = 0 }, completion:{_ in
-        //            self.backgroundImageView.image = self.imageResources[button.tag].uiImage
-        //            UIView.animateWithDuration(0.4, animations: { self.backgroundImageView.alpha = 1 })
-        //        })
     }
     
     //response to return key press

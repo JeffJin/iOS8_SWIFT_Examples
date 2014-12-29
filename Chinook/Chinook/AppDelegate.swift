@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 
 var favImageList:[String] = []
+
+var selectedImageButton:UIButton!
 var uiViewCache = Dictionary<String, UIImage>()
 
 @UIApplicationMain
