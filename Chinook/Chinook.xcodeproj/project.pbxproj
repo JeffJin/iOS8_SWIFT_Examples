@@ -35,6 +35,17 @@
 		DC8AE0DA1A4E75250048ECA7 /* Nylon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE0D01A4E75250048ECA7 /* Nylon.jpg */; };
 		DC8AE0DB1A4E75250048ECA7 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE0D11A4E75250048ECA7 /* Search.png */; };
 		DC8AE12C1A4FE0570048ECA7 /* FileSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */; };
+		DCB8DD391A5248AC00C506FD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8DD371A5248AC00C506FD /* MapViewController.swift */; };
+		DCB8DD3A1A5248AC00C506FD /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB8DD381A5248AC00C506FD /* MapViewController.xib */; };
+		DCB8DD3C1A52493D00C506FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB8DD3B1A52493D00C506FD /* MapKit.framework */; };
+		DCB8DD3E1A524B8300C506FD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB8DD3D1A524B8300C506FD /* CoreLocation.framework */; };
+		DCB8DD411A526B6700C506FD /* VerticalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8DD401A526B6700C506FD /* VerticalLayout.swift */; };
+		DCB8DD431A526BD800C506FD /* VerticalScreenLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8DD421A526BD800C506FD /* VerticalScreenLayout.swift */; };
+		DCB8DD451A526C0500C506FD /* HorizontalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8DD441A526C0500C506FD /* HorizontalLayout.swift */; };
+		DCB8DD471A526C2F00C506FD /* VerticalFitLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8DD461A526C2F00C506FD /* VerticalFitLayout.swift */; };
+		DCB8DD491A526D1500C506FD /* HorizontalFitLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8DD481A526D1500C506FD /* HorizontalFitLayout.swift */; };
+		DCB8DD4C1A526D4C00C506FD /* DynamicLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8DD4A1A526D4C00C506FD /* DynamicLayoutViewController.swift */; };
+		DCB8DD4D1A526D4C00C506FD /* DynamicLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB8DD4B1A526D4C00C506FD /* DynamicLayoutViewController.xib */; };
 		DCD4403A1A51036500ACA749 /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440361A51036500ACA749 /* HTTPRequestSerializer.swift */; };
 		DCD4403B1A51036500ACA749 /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440371A51036500ACA749 /* HTTPResponseSerializer.swift */; };
 		DCD4403C1A51036500ACA749 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440381A51036500ACA749 /* HTTPTask.swift */; };
@@ -84,6 +95,17 @@
 		DC8AE0D01A4E75250048ECA7 /* Nylon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Nylon.jpg; path = Images/Nylon.jpg; sourceTree = "<group>"; };
 		DC8AE0D11A4E75250048ECA7 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Search.png; path = Images/Search.png; sourceTree = "<group>"; };
 		DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSevice.swift; sourceTree = "<group>"; };
+		DCB8DD371A5248AC00C506FD /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Chinook/Controllers/MapViewController.swift; sourceTree = "<group>"; };
+		DCB8DD381A5248AC00C506FD /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = Chinook/Controllers/MapViewController.xib; sourceTree = "<group>"; };
+		DCB8DD3B1A52493D00C506FD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DCB8DD3D1A524B8300C506FD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DCB8DD401A526B6700C506FD /* VerticalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLayout.swift; sourceTree = "<group>"; };
+		DCB8DD421A526BD800C506FD /* VerticalScreenLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalScreenLayout.swift; sourceTree = "<group>"; };
+		DCB8DD441A526C0500C506FD /* HorizontalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLayout.swift; sourceTree = "<group>"; };
+		DCB8DD461A526C2F00C506FD /* VerticalFitLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalFitLayout.swift; sourceTree = "<group>"; };
+		DCB8DD481A526D1500C506FD /* HorizontalFitLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalFitLayout.swift; sourceTree = "<group>"; };
+		DCB8DD4A1A526D4C00C506FD /* DynamicLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicLayoutViewController.swift; path = Chinook/Controllers/DynamicLayoutViewController.swift; sourceTree = "<group>"; };
+		DCB8DD4B1A526D4C00C506FD /* DynamicLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DynamicLayoutViewController.xib; path = Chinook/Controllers/DynamicLayoutViewController.xib; sourceTree = "<group>"; };
 		DCD440361A51036500ACA749 /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequestSerializer.swift; path = ../SwiftHTTP/HTTPRequestSerializer.swift; sourceTree = "<group>"; };
 		DCD440371A51036500ACA749 /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponseSerializer.swift; path = ../SwiftHTTP/HTTPResponseSerializer.swift; sourceTree = "<group>"; };
 		DCD440381A51036500ACA749 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPTask.swift; path = ../SwiftHTTP/HTTPTask.swift; sourceTree = "<group>"; };
@@ -95,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB8DD3E1A524B8300C506FD /* CoreLocation.framework in Frameworks */,
+				DCB8DD3C1A52493D00C506FD /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +135,8 @@
 		DC8AE0571A4D42740048ECA7 = {
 			isa = PBXGroup;
 			children = (
+				DCB8DD3D1A524B8300C506FD /* CoreLocation.framework */,
+				DCB8DD3B1A52493D00C506FD /* MapKit.framework */,
 				DC8AE0621A4D42740048ECA7 /* Chinook */,
 				DC8AE07B1A4D42740048ECA7 /* ChinookTests */,
 				DC8AE0611A4D42740048ECA7 /* Products */,
@@ -129,6 +155,7 @@
 		DC8AE0621A4D42740048ECA7 /* Chinook */ = {
 			isa = PBXGroup;
 			children = (
+				DCB8DD3F1A526B3E00C506FD /* Views */,
 				DCD440351A51035200ACA749 /* Http */,
 				DC8AE08A1A4E586A0048ECA7 /* Images */,
 				DC8AE0AB1A4E6A6B0048ECA7 /* Services */,
@@ -196,6 +223,10 @@
 				DC8AE0A31A4E68530048ECA7 /* ListViewController.xib */,
 				DC8AE0A61A4E68B40048ECA7 /* SearchViewController.swift */,
 				DC8AE0A71A4E68B40048ECA7 /* SearchViewController.xib */,
+				DCB8DD371A5248AC00C506FD /* MapViewController.swift */,
+				DCB8DD381A5248AC00C506FD /* MapViewController.xib */,
+				DCB8DD4A1A526D4C00C506FD /* DynamicLayoutViewController.swift */,
+				DCB8DD4B1A526D4C00C506FD /* DynamicLayoutViewController.xib */,
 			);
 			name = Controllers;
 			path = ..;
@@ -218,6 +249,18 @@
 				DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		DCB8DD3F1A526B3E00C506FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCB8DD401A526B6700C506FD /* VerticalLayout.swift */,
+				DCB8DD421A526BD800C506FD /* VerticalScreenLayout.swift */,
+				DCB8DD441A526C0500C506FD /* HorizontalLayout.swift */,
+				DCB8DD461A526C2F00C506FD /* VerticalFitLayout.swift */,
+				DCB8DD481A526D1500C506FD /* HorizontalFitLayout.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		DCD440351A51035200ACA749 /* Http */ = {
@@ -281,6 +324,14 @@
 					DC8AE05F1A4D42740048ECA7 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = U8397397DT;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					DC8AE0771A4D42740048ECA7 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -318,11 +369,13 @@
 				DC8AE0DB1A4E75250048ECA7 /* Search.png in Resources */,
 				DC8AE0D61A4E75250048ECA7 /* girl4.jpg in Resources */,
 				DC8AE0D41A4E75250048ECA7 /* girl2.jpg in Resources */,
+				DCB8DD3A1A5248AC00C506FD /* MapViewController.xib in Resources */,
 				DC8AE0D71A4E75250048ECA7 /* ImageNotFound.jpg in Resources */,
 				DC8AE0A51A4E68530048ECA7 /* ListViewController.xib in Resources */,
 				DC8AE0DA1A4E75250048ECA7 /* Nylon.jpg in Resources */,
 				DC8AE06E1A4D42740048ECA7 /* Main.storyboard in Resources */,
 				DC8AE0731A4D42740048ECA7 /* LaunchScreen.xib in Resources */,
+				DCB8DD4D1A526D4C00C506FD /* DynamicLayoutViewController.xib in Resources */,
 				DC8AE0A91A4E68B40048ECA7 /* SearchViewController.xib in Resources */,
 				DC8AE0A01A4E65FA0048ECA7 /* DetailsViewController.xib in Resources */,
 				DC8AE0D91A4E75250048ECA7 /* List.png in Resources */,
@@ -347,6 +400,9 @@
 			files = (
 				DCD4403C1A51036500ACA749 /* HTTPTask.swift in Sources */,
 				DCD4403D1A51036500ACA749 /* HTTPUpload.swift in Sources */,
+				DCB8DD451A526C0500C506FD /* HorizontalLayout.swift in Sources */,
+				DCB8DD411A526B6700C506FD /* VerticalLayout.swift in Sources */,
+				DCB8DD431A526BD800C506FD /* VerticalScreenLayout.swift in Sources */,
 				DC8AE0A81A4E68B40048ECA7 /* SearchViewController.swift in Sources */,
 				DC8AE0AF1A4E6B500048ECA7 /* ImgResource.swift in Sources */,
 				DC8AE06B1A4D42740048ECA7 /* ViewController.swift in Sources */,
@@ -358,8 +414,12 @@
 				DC8AE0A41A4E68530048ECA7 /* ListViewController.swift in Sources */,
 				DCD4403B1A51036500ACA749 /* HTTPResponseSerializer.swift in Sources */,
 				DCD4403A1A51036500ACA749 /* HTTPRequestSerializer.swift in Sources */,
+				DCB8DD491A526D1500C506FD /* HorizontalFitLayout.swift in Sources */,
 				DC8AE12C1A4FE0570048ECA7 /* FileSevice.swift in Sources */,
+				DCB8DD4C1A526D4C00C506FD /* DynamicLayoutViewController.swift in Sources */,
+				DCB8DD471A526C2F00C506FD /* VerticalFitLayout.swift in Sources */,
 				DC8AE09F1A4E65FA0048ECA7 /* DetailsViewController.swift in Sources */,
+				DCB8DD391A5248AC00C506FD /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

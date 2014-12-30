@@ -41,6 +41,18 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         restoreImages(imageContainer)
     }
     
+    
+    func getImageButtonView(i:Int, j:Int)-> UIButton{
+        var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.frame = CGRectMake(0, 0, 250, 215)
+        button.center = CGPointMake(CGFloat(115 + 255 * i), CGFloat(90 + 220 * j))
+        button.setTitle("placeholder", forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
+        button.addTarget(self, action: "selectTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
+        return button
+    }
+
+    
     func restoreImages(imageContainer: UIView){
         println("restoring images")
         //clean up existing image button list
@@ -54,12 +66,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
             println("UIDevice.currentDevice().orientation: Portrait")
             for i in 0 ... 2{
                 for j in 0 ... 3{
-                    var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-                    button.frame = CGRectMake(0, 0, 250, 215)
-                    button.center = CGPointMake(CGFloat(114 + 255 * i), CGFloat(90 + 220 * j))
-                    button.setTitle("placeholder", forState: UIControlState.Normal)
-                    button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
-                    button.addTarget(self, action: "addTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
+                    var button = getImageButtonView(i, j: j)
                     imageButtonList.append(button)
                     imageContainer.addSubview(button)
                 }
@@ -69,12 +76,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
             println("UIDevice.currentDevice().orientation: Landscape")
             for i in 0 ... 3{
                 for j in 0 ... 2{
-                    var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-                    button.frame = CGRectMake(0, 0, 250, 215)
-                    button.center = CGPointMake(CGFloat(115 + 255 * i), CGFloat(90 + 220 * j))
-                    button.setTitle("placeholder", forState: UIControlState.Normal)
-                    button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
-                    button.addTarget(self, action: "selectTargetImage:", forControlEvents: UIControlEvents.TouchUpInside)
+                    var button = getImageButtonView(i, j: j)
                     imageButtonList.append(button)
                     imageContainer.addSubview(button)
                 }
