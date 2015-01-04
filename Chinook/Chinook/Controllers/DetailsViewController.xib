@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="Chinook" customModuleProvider="target">
             <connections>
+                <outlet property="backToList" destination="P3B-Oa-Lip" id="5Rc-Bt-aO1"/>
                 <outlet property="detailsImageView" destination="iDy-OI-hKq" id="3Ft-CW-Bt4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -15,11 +16,31 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iDy-OI-hKq">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iDy-OI-hKq">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
+                <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ksd-RL-a3U">
+                    <rect key="frame" x="0.0" y="17" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="Image Details" id="L1E-6N-zZK">
+                            <barButtonItem key="leftBarButtonItem" title="Back" id="P3B-Oa-Lip">
+                                <connections>
+                                    <action selector="gotBackToImageList:" destination="-1" id="8Jf-Og-QDU"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Share" id="1eT-Lv-CTx"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="0.61773989900000004" green="0.16296037669999999" blue="0.3110748793" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Ksd-RL-a3U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="054-nE-AXi"/>
+                <constraint firstItem="Ksd-RL-a3U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="3xJ-nF-PSE"/>
+                <constraint firstItem="iDy-OI-hKq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="gpH-10-uao"/>
+                <constraint firstAttribute="trailing" secondItem="Ksd-RL-a3U" secondAttribute="trailing" constant="1" id="nIg-gS-ta8"/>
+            </constraints>
+            <point key="canvasLocation" x="323" y="294"/>
         </view>
     </objects>
 </document>

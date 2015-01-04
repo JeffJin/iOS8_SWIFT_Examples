@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC4D322A1A53C06F001A8182 /* PuzzleTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4D32291A53C06F001A8182 /* PuzzleTile.swift */; };
 		DC8AE0661A4D42740048ECA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE0651A4D42740048ECA7 /* AppDelegate.swift */; };
 		DC8AE0691A4D42740048ECA7 /* Chinook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE0671A4D42740048ECA7 /* Chinook.xcdatamodeld */; };
-		DC8AE06B1A4D42740048ECA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE06A1A4D42740048ECA7 /* ViewController.swift */; };
 		DC8AE06E1A4D42740048ECA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE06C1A4D42740048ECA7 /* Main.storyboard */; };
 		DC8AE0701A4D42740048ECA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE06F1A4D42740048ECA7 /* Images.xcassets */; };
 		DC8AE0731A4D42740048ECA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8AE0711A4D42740048ECA7 /* LaunchScreen.xib */; };
@@ -63,11 +63,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC4D32291A53C06F001A8182 /* PuzzleTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleTile.swift; sourceTree = "<group>"; };
 		DC8AE0601A4D42740048ECA7 /* Chinook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chinook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8AE0641A4D42740048ECA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC8AE0651A4D42740048ECA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC8AE0681A4D42740048ECA7 /* Chinook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chinook.xcdatamodel; sourceTree = "<group>"; };
-		DC8AE06A1A4D42740048ECA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC8AE06D1A4D42740048ECA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC8AE06F1A4D42740048ECA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DC8AE0721A4D42740048ECA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -162,7 +162,6 @@
 				DC8AE0AA1A4E6A5B0048ECA7 /* Models */,
 				DC8AE0A11A4E660B0048ECA7 /* Controllers */,
 				DC8AE0651A4D42740048ECA7 /* AppDelegate.swift */,
-				DC8AE06A1A4D42740048ECA7 /* ViewController.swift */,
 				DC8AE06C1A4D42740048ECA7 /* Main.storyboard */,
 				DC8AE06F1A4D42740048ECA7 /* Images.xcassets */,
 				DC8AE0711A4D42740048ECA7 /* LaunchScreen.xib */,
@@ -237,6 +236,7 @@
 			children = (
 				DC8AE0AC1A4E6B500048ECA7 /* ImgeTableViewModel.swift */,
 				DC8AE0AD1A4E6B500048ECA7 /* ImgResource.swift */,
+				DC4D32291A53C06F001A8182 /* PuzzleTile.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -405,7 +405,6 @@
 				DCB8DD431A526BD800C506FD /* VerticalScreenLayout.swift in Sources */,
 				DC8AE0A81A4E68B40048ECA7 /* SearchViewController.swift in Sources */,
 				DC8AE0AF1A4E6B500048ECA7 /* ImgResource.swift in Sources */,
-				DC8AE06B1A4D42740048ECA7 /* ViewController.swift in Sources */,
 				DC8AE0B31A4E6BBA0048ECA7 /* ImageService.swift in Sources */,
 				DC8AE0AE1A4E6B500048ECA7 /* ImgeTableViewModel.swift in Sources */,
 				DC8AE0B21A4E6BBA0048ECA7 /* IImageService.swift in Sources */,
@@ -413,6 +412,7 @@
 				DC8AE0691A4D42740048ECA7 /* Chinook.xcdatamodeld in Sources */,
 				DC8AE0A41A4E68530048ECA7 /* ListViewController.swift in Sources */,
 				DCD4403B1A51036500ACA749 /* HTTPResponseSerializer.swift in Sources */,
+				DC4D322A1A53C06F001A8182 /* PuzzleTile.swift in Sources */,
 				DCD4403A1A51036500ACA749 /* HTTPRequestSerializer.swift in Sources */,
 				DCB8DD491A526D1500C506FD /* HorizontalFitLayout.swift in Sources */,
 				DC8AE12C1A4FE0570048ECA7 /* FileSevice.swift in Sources */,

@@ -36,28 +36,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let tabBarController = UITabBarController()
-        let tab1 = SearchViewController(nibName: "SearchViewController", bundle: nil)
-        let tab2 = ListViewController(nibName: "ListViewController", bundle: nil)
-        let tab3 = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
-        let tab4 = MapViewController(nibName: "MapViewController", bundle: nil)
-         let tab5 = DynamicLayoutViewController(nibName: "DynamicLayoutViewController", bundle: nil)
-        let controllers = [tab1, tab2, tab3, tab4, tab5]
-        tabBarController.viewControllers = controllers
-        window?.rootViewController = tabBarController
-        let firstImage = UIImage(named: "Search")
-        let secondImage = UIImage(named: "List")
-        let thirdImage = UIImage(named: "Details")
-        tab1.tabBarItem = UITabBarItem(title: "Search", image: firstImage, tag: 1)
-        tab2.tabBarItem = UITabBarItem(title: "List", image: secondImage, tag:2)
-        tab3.tabBarItem = UITabBarItem(title: "Details", image: thirdImage, tag:3)
-        tab4.tabBarItem = UITabBarItem(title: "Map", image: firstImage, tag:4)
-        tab5.tabBarItem = UITabBarItem(title: "Dynamic Layout", image: secondImage, tag:5)
+        setupTabController()
         
         //initializer 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
 
         return true
+    }
+    
+    func setupTabController(){
+        let tabBarController = UITabBarController()
+        let tab1 = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        let tab2 = ListViewController(nibName: "ListViewController", bundle: nil)
+        //        let tab3 = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+        let tab4 = MapViewController(nibName: "MapViewController", bundle: nil)
+        let tab5 = DynamicLayoutViewController(nibName: "DynamicLayoutViewController", bundle: nil)
+        let controllers = [tab1, tab2, tab4, tab5]
+        tabBarController.viewControllers = controllers
+        //setup roo controller
+        window?.rootViewController = tabBarController
+        
+        let firstImage = UIImage(named: "Search")
+        let secondImage = UIImage(named: "List")
+        let thirdImage = UIImage(named: "Details")
+        tab1.tabBarItem = UITabBarItem(title: "Search", image: firstImage, tag: 1)
+        tab2.tabBarItem = UITabBarItem(title: "List", image: secondImage, tag:2)
+        //        tab3.tabBarItem = UITabBarItem(title: "Details", image: thirdImage, tag:3)
+        tab4.tabBarItem = UITabBarItem(title: "Map", image: firstImage, tag:4)
+        tab5.tabBarItem = UITabBarItem(title: "Dynamic Layout", image: secondImage, tag:5)
+
     }
 
     func applicationWillResignActive(application: UIApplication) {

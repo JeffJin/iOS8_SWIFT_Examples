@@ -41,6 +41,21 @@ class ListViewController: UIViewController, UITableViewDelegate {
         
     }
     
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?{
+        println("row \(indexPath.row) selected")
+        
+        return indexPath
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        self.performSegueWithIdentifier("showDetails", sender: indexPath)
+        let detailsController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+        self.presentViewController(detailsController, animated: true) { () -> Void in
+            println("details view loaded")
+        }
+        
+    }
+    
     override func viewWillAppear(animated: Bool) {
         
         if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("favImageList") {

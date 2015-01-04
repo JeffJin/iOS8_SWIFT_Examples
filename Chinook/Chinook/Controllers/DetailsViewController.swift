@@ -11,6 +11,7 @@ import UIKit
 class DetailsViewController: UIViewController {
     
     @IBOutlet var detailsImageView: UIImageView!
+    @IBOutlet var backToList: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,9 @@ class DetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func gotBackToImageList(sender: AnyObject) {
+        println("return back to image list")
+    }
     
     /*
     // MARK: - Navigation

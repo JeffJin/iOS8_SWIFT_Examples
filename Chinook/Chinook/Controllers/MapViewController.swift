@@ -26,7 +26,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
-        var latitude:CLLocationDegrees = 43.8452792
+        var latitude:CLLocationDegrees = 42.8452792
         var longditude:CLLocationDegrees = -79.4895854
         
         var latDelta:CLLocationDegrees = 0.01
@@ -35,8 +35,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         
         var churchLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longditude)
-        
-        
         
         var theRegion:MKCoordinateRegion = MKCoordinateRegionMake(churchLocation, theSpan)
         
@@ -63,13 +61,38 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
-        println("locations = \(locations)")
+        println("locationManager :: didUpdateLocations = \(locations)")
+        var userLocation:CLLocation = locations[0] as CLLocation
+        var latitude:CLLocationDegrees = userLocation.coordinate.latitude
+        var longditude:CLLocationDegrees = userLocation.coordinate.longitude
+        
+        var latDelta:CLLocationDegrees = 0.01
+        var longDelta:CLLocationDegrees = 0.01
+        
+        var theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        
+        var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longditude)
+        
+        var theRegion:MKCoordinateRegion = MKCoordinateRegionMake(currentLocation, theSpan)
+        
+        mapView.setRegion(theRegion, animated: true)
+        var movingLocation = MKPointAnnotation()
+        
+        movingLocation.coordinate = currentLocation
+        
+        movingLocation.title = "We are heading to Vancouver"
+        
+        movingLocation.subtitle = "My X5"
+        
+        mapView.addAnnotation(movingLocation)
+
+
     }
     
     func locationManager(manager:CLLocationManager, didFailWithError error:NSError)
     {
         println(error)
-        println("test")
+        println("locationManager :: didFailWithError")
     }
     
     func longPressHandler(gestureRecognizer:UIGestureRecognizer) {
