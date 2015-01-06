@@ -11,11 +11,12 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var imageList: UITableView!
+    var viewService:ViewService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         println("ListViewController.viewDidLoad")
-
+        viewService = ViewService()
         // Do any additional setup after loading the view.
     }
 
@@ -49,7 +50,9 @@ class ListViewController: UIViewController, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //        self.performSegueWithIdentifier("showDetails", sender: indexPath)
-        let detailsController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+        
+        var detailsController = viewService.getDetailsViewController()
+        
         self.presentViewController(detailsController, animated: true) { () -> Void in
             println("details view loaded")
         }

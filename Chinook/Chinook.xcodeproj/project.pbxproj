@@ -50,6 +50,7 @@
 		DCD4403B1A51036500ACA749 /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440371A51036500ACA749 /* HTTPResponseSerializer.swift */; };
 		DCD4403C1A51036500ACA749 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440381A51036500ACA749 /* HTTPTask.swift */; };
 		DCD4403D1A51036500ACA749 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440391A51036500ACA749 /* HTTPUpload.swift */; };
+		DCD48EF11A5BB4F2004B2C72 /* ViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD48EF01A5BB4F2004B2C72 /* ViewService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		DCD440371A51036500ACA749 /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponseSerializer.swift; path = ../SwiftHTTP/HTTPResponseSerializer.swift; sourceTree = "<group>"; };
 		DCD440381A51036500ACA749 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPTask.swift; path = ../SwiftHTTP/HTTPTask.swift; sourceTree = "<group>"; };
 		DCD440391A51036500ACA749 /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPUpload.swift; path = ../SwiftHTTP/HTTPUpload.swift; sourceTree = "<group>"; };
+		DCD48EF01A5BB4F2004B2C72 /* ViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 				DC8AE0B01A4E6BBA0048ECA7 /* IImageService.swift */,
 				DC8AE0B11A4E6BBA0048ECA7 /* ImageService.swift */,
 				DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */,
+				DCD48EF01A5BB4F2004B2C72 /* ViewService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				DC8AE0AE1A4E6B500048ECA7 /* ImgeTableViewModel.swift in Sources */,
 				DC8AE0B21A4E6BBA0048ECA7 /* IImageService.swift in Sources */,
 				DC8AE0661A4D42740048ECA7 /* AppDelegate.swift in Sources */,
+				DCD48EF11A5BB4F2004B2C72 /* ViewService.swift in Sources */,
 				DC8AE0691A4D42740048ECA7 /* Chinook.xcdatamodeld in Sources */,
 				DC8AE0A41A4E68530048ECA7 /* ListViewController.swift in Sources */,
 				DCD4403B1A51036500ACA749 /* HTTPResponseSerializer.swift in Sources */,

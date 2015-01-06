@@ -13,14 +13,24 @@ class DetailsViewController: UIViewController {
     @IBOutlet var detailsImageView: UIImageView!
     @IBOutlet var backToList: UIBarButtonItem!
     
+    var viewService:ViewService!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         println("DetailsViewController.viewDidLoad")
+        setImage(selectedImageButton)
         
-        self.detailsImageView.image = selectedImageButton.backgroundImageForState(UIControlState.Normal)
+        viewService = ViewService()
+    }
+    
+    func setImage(imageButton:UIButton!){
+        if(imageButton == nil){
+            return;
+        }
+        self.detailsImageView.image = imageButton.backgroundImageForState(UIControlState.Normal)
         
         UIView.animateWithDuration(1, animations: { self.detailsImageView.alpha = 0.5 }, completion:{_ in
-            self.detailsImageView.image = selectedImageButton.backgroundImageForState(UIControlState.Normal)
+            self.detailsImageView.image = imageButton.backgroundImageForState(UIControlState.Normal)
             UIView.animateWithDuration(1, animations: { self.detailsImageView.alpha = 1 })
         })
         var x = self.detailsImageView.center.x
@@ -30,6 +40,7 @@ class DetailsViewController: UIViewController {
             }, completion:{_ in
                 self.detailsImageView.center = CGPointMake(512, 384)
         })
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,6 +50,10 @@ class DetailsViewController: UIViewController {
     
     @IBAction func gotBackToImageList(sender: AnyObject) {
         println("return back to image list")
+        var tabBarController = viewService.getTabController()
+        self.presentViewController(tabBarController, animated: true) { () -> Void in
+            println("tab view loaded")
+        }
     }
     
     /*
