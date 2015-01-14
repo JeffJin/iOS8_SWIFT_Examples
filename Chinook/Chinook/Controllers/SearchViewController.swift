@@ -51,7 +51,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         //Action to take on Notification
         println("layoutImagePlaceHolders")
         
-        restoreImages(imageContainer)
+        //restoreImages(imageContainer)
     }
     
     
@@ -147,6 +147,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    
+    
+   func searchImages(keywords:String){
+       imageService.searchImages(keywords)
+    }
+
     func selectTargetImage(sender:UIButton){
         var button:UIButton = sender
         selectedImageButton = button
@@ -159,15 +165,15 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     //response to return key press
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         keywords.resignFirstResponder()
-        var isNew = imageService.addImageUrl(keywords.text)
-        if(!isNew || index > 5){
-            println("\(keywords.text) is duplicated link")
-            return false
-        }
-        
-        var result = loadImage(keywords.text);
+//        var isNew = imageService.addImageUrl(keywords.text)
+//        if(!isNew || index > 5){
+//            println("\(keywords.text) is duplicated link")
+//            return false
+//        }
+//        
+        searchImages(keywords.text);
         self.keywords.text = ""
-        return result
+        return true
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

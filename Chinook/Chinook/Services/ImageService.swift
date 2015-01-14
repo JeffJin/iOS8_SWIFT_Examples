@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import SwiftHTTP
 
 class ImageService : IImageService{
     
@@ -41,21 +40,50 @@ class ImageService : IImageService{
         return isNew
     }
     
-    func getOnlineImages()-> Array<ImgResource> {
+    func searchImages(keywords: String)-> Array<ImgResource> {
         var imgs = Array<ImgResource>()
         
-        imgs.append(ImgResource(title:"Image 1", url: "http://upload.wikimedia.org/wikipedia/commons/b/b2/SNSD_Cooky_Phone.jpg"))
-        imgs.append(ImgResource(title:"Image 2", url: "http://bestkpopwallpaper.com/wp-content/uploads/2013/10/after-school-best-kpop-images.jpg"))
-        imgs.append(ImgResource(title:"Image 3", url: "http://3.bp.blogspot.com/-sg4RjBMhm9w/T5ZiWyHEZHI/AAAAAAAAKSQ/kNLljtod3T8/s1600/Kpop+star+120422_07.jpg"))
-        imgs.append(ImgResource(title:"Image 4", url: "http://www.mtviggy.com/wp-content/gallery/kpop-2000s-list/kpop_missacrop_0.jpg"))
-        imgs.append(ImgResource(title:"Image 5", url: "http://images6.fanpop.com/image/photos/33500000/-K-pop-kpop-4ever-33571582-1680-1050.jpg"))
-        imgs.append(ImgResource(title:"Image 6", url: "http://www.soompi.com/es/wp-content/blogs.dir/8/files/2012/12/SNSD.jpg"))
-        imgs.append(ImgResource(title:"Image 7", url: "http://www.beatnik.ca/seven/Girls_Generation_sailor_suits_colored.png"))
-        imgs.append(ImgResource(title:"Image 8", url: "http://images5.fanpop.com/image/photos/26100000/Secret-kpop-girl-power-26130791-640-441.jpg"))
-        imgs.append(ImgResource(title:"Image 9", url: "http://dliubb1xeg9ue.cloudfront.net/wp-content/uploads/2013/12/secretmadonna.jpg"))
-        
+        let urlPath = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=" + keywords.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        println("Image Search url: \(urlPath)")
+        let url: NSURL = NSURL(string: urlPath)!
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
+            println("Image Search completed")
+            if((error) != nil) {
+                // If there is an error in the web request, print it to the console
+                println(error.localizedDescription)
+            }
+            var err: NSError?
+            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
+            if(err != nil) {
+                // If there is an error parsing JSON, print it to the console
+                println("JSON Error \(err!.localizedDescription)")
+            } else {
+                var response = jsonResult["responseData"]  as NSDictionary
+                println(response["results"])
+                if let items =  response["results"] as? [[String:String]] {
+                    for item in items {
+                        let title = item["title"]
+                        let url = item["url"]
+                        println("title: \(title!), url: \(url!)")
+                        
+                        imgs.append(ImgResource(title: title!, url: url!))
+                    }
+                    
+                    //save image metadata into database
+                }
+            }
+            
+        })
+        task.resume()
+
+//        imgs.append(ImgResource(title:"Image 1", url: "http://upload.wikimedia.org/wikipedia/commons/b/b2/SNSD_Cooky_Phone.jpg"))
+
         return imgs
     }
+    
+    
+    
     
     func downloadImage(url:String){
         var request = HTTPTask()

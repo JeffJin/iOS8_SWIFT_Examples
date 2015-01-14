@@ -15,6 +15,6 @@ protocol IImageService {
     
     func addImageUrl(url:String) -> Bool
     
-    func getOnlineImages()-> Array<ImgResource>
+    func searchImages(keywords: String)-> Array<ImgResource> 
     
 }
