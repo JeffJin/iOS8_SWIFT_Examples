@@ -51,6 +51,9 @@
 		DCD4403C1A51036500ACA749 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440381A51036500ACA749 /* HTTPTask.swift */; };
 		DCD4403D1A51036500ACA749 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD440391A51036500ACA749 /* HTTPUpload.swift */; };
 		DCD48EF11A5BB4F2004B2C72 /* ViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD48EF01A5BB4F2004B2C72 /* ViewService.swift */; };
+		DCF33ECF1A64B6C1009C2290 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF33ECE1A64B6C1009C2290 /* MusicService.swift */; };
+		DCF33ED11A64B862009C2290 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF33ED01A64B862009C2290 /* AVFoundation.framework */; };
+		DCF33ED41A64B8FB009C2290 /* happiness.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCF33ED31A64B8FB009C2290 /* happiness.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,9 @@
 		DCD440381A51036500ACA749 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPTask.swift; path = ../SwiftHTTP/HTTPTask.swift; sourceTree = "<group>"; };
 		DCD440391A51036500ACA749 /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPUpload.swift; path = ../SwiftHTTP/HTTPUpload.swift; sourceTree = "<group>"; };
 		DCD48EF01A5BB4F2004B2C72 /* ViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewService.swift; sourceTree = "<group>"; };
+		DCF33ECE1A64B6C1009C2290 /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		DCF33ED01A64B862009C2290 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DCF33ED31A64B8FB009C2290 /* happiness.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = happiness.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF33ED11A64B862009C2290 /* AVFoundation.framework in Frameworks */,
 				DCB8DD3E1A524B8300C506FD /* CoreLocation.framework in Frameworks */,
 				DCB8DD3C1A52493D00C506FD /* MapKit.framework in Frameworks */,
 			);
@@ -137,6 +144,7 @@
 		DC8AE0571A4D42740048ECA7 = {
 			isa = PBXGroup;
 			children = (
+				DCF33ED01A64B862009C2290 /* AVFoundation.framework */,
 				DCB8DD3D1A524B8300C506FD /* CoreLocation.framework */,
 				DCB8DD3B1A52493D00C506FD /* MapKit.framework */,
 				DC8AE0621A4D42740048ECA7 /* Chinook */,
@@ -157,6 +165,7 @@
 		DC8AE0621A4D42740048ECA7 /* Chinook */ = {
 			isa = PBXGroup;
 			children = (
+				DCF33ED21A64B899009C2290 /* Resources */,
 				DCB8DD3F1A526B3E00C506FD /* Views */,
 				DCD440351A51035200ACA749 /* Http */,
 				DC8AE08A1A4E586A0048ECA7 /* Images */,
@@ -246,10 +255,12 @@
 		DC8AE0AB1A4E6A6B0048ECA7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DCF33ED31A64B8FB009C2290 /* happiness.mp3 */,
 				DC8AE0B01A4E6BBA0048ECA7 /* IImageService.swift */,
 				DC8AE0B11A4E6BBA0048ECA7 /* ImageService.swift */,
 				DC8AE12B1A4FE0570048ECA7 /* FileSevice.swift */,
 				DCD48EF01A5BB4F2004B2C72 /* ViewService.swift */,
+				DCF33ECE1A64B6C1009C2290 /* MusicService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -275,6 +286,13 @@
 				DCD440391A51036500ACA749 /* HTTPUpload.swift */,
 			);
 			name = Http;
+			sourceTree = "<group>";
+		};
+		DCF33ED21A64B899009C2290 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +386,7 @@
 			files = (
 				DC8AE0D21A4E75250048ECA7 /* Details.png in Resources */,
 				DC8AE0D51A4E75250048ECA7 /* girl3.jpg in Resources */,
+				DCF33ED41A64B8FB009C2290 /* happiness.mp3 in Resources */,
 				DC8AE0D81A4E75250048ECA7 /* Launch.jpg in Resources */,
 				DC8AE0DB1A4E75250048ECA7 /* Search.png in Resources */,
 				DC8AE0D61A4E75250048ECA7 /* girl4.jpg in Resources */,
@@ -408,6 +427,7 @@
 				DCB8DD431A526BD800C506FD /* VerticalScreenLayout.swift in Sources */,
 				DC8AE0A81A4E68B40048ECA7 /* SearchViewController.swift in Sources */,
 				DC8AE0AF1A4E6B500048ECA7 /* ImgResource.swift in Sources */,
+				DCF33ECF1A64B6C1009C2290 /* MusicService.swift in Sources */,
 				DC8AE0B31A4E6BBA0048ECA7 /* ImageService.swift in Sources */,
 				DC8AE0AE1A4E6B500048ECA7 /* ImgeTableViewModel.swift in Sources */,
 				DC8AE0B21A4E6BBA0048ECA7 /* IImageService.swift in Sources */,

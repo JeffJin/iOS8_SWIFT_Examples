@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SearchViewController: UIViewController, UITextFieldDelegate {
     
@@ -20,6 +21,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     var imageContainer:UIView!
     
+    var player:AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         keywords.delegate = self
@@ -32,6 +35,16 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         
         //add observer for device orientation change
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "layoutImagePlaceHolders:", name:"UIDeviceOrientationChanged", object: nil)
+        
+        
+        var audioPath = NSString(string: NSBundle.mainBundle().pathForResource("happiness", ofType: "mp3")!)
+        
+        println(audioPath)
+        
+        var error : NSError? = nil
+        player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
+        player.play()
+        
     }
     
     func layoutImagePlaceHolders(notification: NSNotification){

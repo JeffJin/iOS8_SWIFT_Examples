@@ -9,6 +9,14 @@
 import UIKit
 
 class DynamicLayoutViewController: UIViewController {
+//
+//    
+//    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+//        
+//        println("done")
+//        
+//        
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +40,7 @@ class DynamicLayoutViewController: UIViewController {
         vLayout.addSubview(view1)
         vLayout.addSubview(view2)
         vLayout.addSubview(view3)
-        vLayout.addSubview(view4)
-        
+        vLayout.addSubview(view4)        
     }
     
     func createHorizontalLayout(heightUnit:CGFloat, widthUnit:CGFloat, color: UIColor, index: Int) -> HorizontalLayout{
