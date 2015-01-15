@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class ImageService : IImageService{
     
@@ -65,24 +66,71 @@ class ImageService : IImageService{
                     for item in items {
                         let title = item["title"]
                         let url = item["url"]
+                        let content = item["content"]
                         println("title: \(title!), url: \(url!)")
-                        
-                        imgs.append(ImgResource(title: title!, url: url!))
+                        var img = ImgResource(title: title!, url: url!)
+                        img.description = content!
+                        imgs.append(img)
                     }
-                    
+                    self.saveImagesIntoDb(imgs)
                     //save image metadata into database
                 }
             }
             
         })
         task.resume()
-
-//        imgs.append(ImgResource(title:"Image 1", url: "http://upload.wikimedia.org/wikipedia/commons/b/b2/SNSD_Cooky_Phone.jpg"))
-
+        
         return imgs
     }
     
+    func saveImagesIntoDb(images: Array<ImgResource>) -> Int{
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        for imgResource in images{
+            var imgEntity = NSEntityDescription.insertNewObjectForEntityForName("Images", inManagedObjectContext: context) as NSManagedObject
+            
+            imgEntity.setValue(NSNumber(longLong: imgResource.id), forKey: "id")
+            
+            imgEntity.setValue(imgResource.url, forKey: "url")
+            
+            imgEntity.setValue(imgResource.title, forKey: "title")
+            
+            imgEntity.setValue(imgResource.description, forKey: "desc")
+        }
+        
+        context.save(nil)
+        
+        return 0
+    }
     
+    func loadImagesFromDb() -> Array<ImgResource>{
+        var imgs = Array<ImgResource>()
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        var request = NSFetchRequest(entityName: "Images")
+        
+        request.returnsObjectsAsFaults = false
+        
+        let results = context.executeFetchRequest(request, error: nil) as [NSManagedObject]?
+        
+        if results!.count > 0 {
+            for result: AnyObject in results! {
+                var id = result.valueForKey("id") as String
+                var title = result.valueForKey("title") as String
+                var desc = result.valueForKey("desc") as String
+                var url = result.valueForKey("url") as String
+                println("id: \(id), title: \(title), description: \(desc), url: \(url)")
+            }
+            
+        } else {
+            
+            println("No results")
+            
+        }
+        return imgs;
+    }
     
     
     func downloadImage(url:String){

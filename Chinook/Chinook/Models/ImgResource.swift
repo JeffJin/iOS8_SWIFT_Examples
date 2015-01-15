@@ -13,16 +13,14 @@ class ImgResource{
     var id: Int64
     var title: String = ""
     var url: String = ""
-    var description: String {
-        return "The image resource title is \(title), "
-    }
+    var description: String = ""
     var uiImage: UIImage {
         //check persistent storage
-        var cachedUrl: AnyObject! = NSUserDefaults.standardUserDefaults().objectForKey(self.title)
-        if(cachedUrl != nil){
-            println("fetching url for \(self.title) from cache")
-            return UIImage(data: NSData(contentsOfURL: NSURL(string:  cachedUrl as String)!)!)!
-        }
+//        var cachedUrl: AnyObject! = NSUserDefaults.standardUserDefaults().objectForKey(self.title)
+//        if(cachedUrl != nil){
+//            println("fetching url for \(self.title) from cache")
+//            return UIImage(data: NSData(contentsOfURL: NSURL(string:  cachedUrl as String)!)!)!
+//        }
         return UIImage(data: NSData(contentsOfURL: NSURL(string:  self.url)!)!)!
     }
     

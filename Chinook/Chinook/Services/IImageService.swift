@@ -17,4 +17,7 @@ protocol IImageService {
     
     func searchImages(keywords: String)-> Array<ImgResource> 
     
+    func saveImagesIntoDb(images: Array<ImgResource>) -> Int
+    
+    func loadImagesFromDb() -> Array<ImgResource>
 }

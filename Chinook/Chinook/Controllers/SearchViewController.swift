@@ -45,6 +45,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
         player.play()
         
+        imageService.loadImagesFromDb()
+        
     }
     
     func layoutImagePlaceHolders(notification: NSNotification){
