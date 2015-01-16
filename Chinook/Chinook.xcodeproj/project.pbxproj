@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC3229541A68D3D6006BB69C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3229531A68D3D6006BB69C /* Image.swift */; };
 		DC4D322A1A53C06F001A8182 /* PuzzleTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4D32291A53C06F001A8182 /* PuzzleTile.swift */; };
 		DC8AE0661A4D42740048ECA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE0651A4D42740048ECA7 /* AppDelegate.swift */; };
 		DC8AE0691A4D42740048ECA7 /* Chinook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC8AE0671A4D42740048ECA7 /* Chinook.xcdatamodeld */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC3229531A68D3D6006BB69C /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		DC4D32291A53C06F001A8182 /* PuzzleTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleTile.swift; sourceTree = "<group>"; };
 		DC8AE0601A4D42740048ECA7 /* Chinook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chinook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8AE0641A4D42740048ECA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC3229551A68D3EA006BB69C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DC3229531A68D3D6006BB69C /* Image.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		DC8AE0571A4D42740048ECA7 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		DC8AE0621A4D42740048ECA7 /* Chinook */ = {
 			isa = PBXGroup;
 			children = (
+				DC3229551A68D3EA006BB69C /* Entities */,
 				DCF33ED21A64B899009C2290 /* Resources */,
 				DCB8DD3F1A526B3E00C506FD /* Views */,
 				DCD440351A51035200ACA749 /* Http */,
@@ -444,6 +455,7 @@
 				DCB8DD471A526C2F00C506FD /* VerticalFitLayout.swift in Sources */,
 				DC8AE09F1A4E65FA0048ECA7 /* DetailsViewController.swift in Sources */,
 				DCB8DD391A5248AC00C506FD /* MapViewController.swift in Sources */,
+				DC3229541A68D3D6006BB69C /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

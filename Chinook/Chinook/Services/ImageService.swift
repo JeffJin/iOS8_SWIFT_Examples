@@ -68,8 +68,10 @@ class ImageService : IImageService{
                         let url = item["url"]
                         let content = item["content"]
                         println("title: \(title!), url: \(url!)")
-                        var img = ImgResource(title: title!, url: url!)
-                        img.description = content!
+                        var img = ImgResource()
+                        img.url = url!
+                        img.title = title!
+                        img.desc = content!
                         imgs.append(img)
                     }
                     self.saveImagesIntoDb(imgs)
@@ -88,15 +90,22 @@ class ImageService : IImageService{
         
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         for imgResource in images{
-            var imgEntity = NSEntityDescription.insertNewObjectForEntityForName("Images", inManagedObjectContext: context) as NSManagedObject
+//            var imgEntity = NSEntityDescription.insertNewObjectForEntityForName("Image", inManagedObjectContext: context) as NSManagedObject
+//            
+//            imgEntity.setValue(NSNumber(longLong: imgResource.id), forKey: "id")
+//            
+//            imgEntity.setValue(imgResource.url, forKey: "url")
+//            
+//            imgEntity.setValue(imgResource.title, forKey: "title")
+//            
+//            imgEntity.setValue(imgResource.desc, forKey: "desc")
             
-            imgEntity.setValue(NSNumber(longLong: imgResource.id), forKey: "id")
+            var imgEntity = NSEntityDescription.insertNewObjectForEntityForName("Image", inManagedObjectContext: context) as Image
             
-            imgEntity.setValue(imgResource.url, forKey: "url")
-            
-            imgEntity.setValue(imgResource.title, forKey: "title")
-            
-            imgEntity.setValue(imgResource.description, forKey: "desc")
+            imgEntity.id = NSNumber(longLong: imgResource.id)
+            imgEntity.url = imgResource.url
+            imgEntity.title = imgResource.title
+            imgEntity.desc = imgResource.desc
         }
         
         context.save(nil)
@@ -109,27 +118,50 @@ class ImageService : IImageService{
         var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         
         var context:NSManagedObjectContext = appDel.managedObjectContext!
-        var request = NSFetchRequest(entityName: "Images")
+        var request = NSFetchRequest(entityName: "Image")
         
         request.returnsObjectsAsFaults = false
         
-        let results = context.executeFetchRequest(request, error: nil) as [NSManagedObject]?
+        let results = context.executeFetchRequest(request, error: nil) as [Image]?
         
         if results!.count > 0 {
-            for result: AnyObject in results! {
-                var id = result.valueForKey("id") as String
-                var title = result.valueForKey("title") as String
-                var desc = result.valueForKey("desc") as String
-                var url = result.valueForKey("url") as String
-                println("id: \(id), title: \(title), description: \(desc), url: \(url)")
+            for result: Image in results! {
+                println("id: \(result.id), title: \(result.title), description: \(result.desc), url: \(result.url)")
             }
+            println("results!.count = \(results!.count)")
             
         } else {
             
             println("No results")
             
         }
-        return imgs;
+        
+        return imgs
+    }
+    
+    
+    func printImagesFromDb(){
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        var request = NSFetchRequest(entityName: "Image")
+        
+        request.returnsObjectsAsFaults = false
+        
+        let results = context.executeFetchRequest(request, error: nil) as [NSManagedObject]?
+        
+        if results!.count > 0 {
+            for result: NSManagedObject in results! {
+                var id:Int64 = (result.valueForKey("id")! as NSNumber).longLongValue
+                var title = result.valueForKey("title")! as String
+                var desc = result.valueForKey("desc")! as String
+                var url = result.valueForKey("url")! as String
+                println("id: \(id), title: \(title), description: \(desc), url: \(url)")
+            }
+            println("results!.count = \(results!.count)")
+        } else {
+            println("No results")
+        }
     }
     
     

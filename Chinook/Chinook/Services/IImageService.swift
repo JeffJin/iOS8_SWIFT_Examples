@@ -20,4 +20,6 @@ protocol IImageService {
     func saveImagesIntoDb(images: Array<ImgResource>) -> Int
     
     func loadImagesFromDb() -> Array<ImgResource>
+    
+    func printImagesFromDb()
 }

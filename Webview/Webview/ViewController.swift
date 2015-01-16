@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        midTxt.text = "9089"
-        tokenTxt.text = "1c0c7f65-1821-4929-9f1f-4b3be3b37215"
+        midTxt.text = "4444"
+        tokenTxt.text = "779a92a6-d0de-4efa-b60c-cfe163e017b3"
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    var baseUrl = "http://localhost:9000/"
+    var baseUrl = "https://qa.lumos.xyz/2.0/#/"
     
     @IBAction func loadSite(sender: AnyObject) {
         loadWebsite(tokenTxt.text, merchantId: midTxt.text)
@@ -34,9 +34,9 @@ class ViewController: UIViewController {
     
     
     func loadWebsite(token:NSString, merchantId:NSString){
+        //?token=8e1a80ae-9cda-4102-993d-78a2522dd78d&merchantId=9089
         
-        
-        var url = NSURL(string: baseUrl + "#/merchant?token=" + token + "&merchantId=" + merchantId)
+        var url = NSURL(string: baseUrl + "web-orders/new?token=" + token + "&merchantId=" + merchantId)
         
         var request = NSURLRequest(URL:url!)
         

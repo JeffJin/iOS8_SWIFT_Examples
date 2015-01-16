@@ -15,7 +15,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     var imageButtonList:[UIButton] = []
     
-    var imageService:IImageService = ImageService(conf:"database connection")
+    var imageService = ImageService(conf:"database connection")
     
     var index:Int = 0
     
