@@ -17,8 +17,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     var imageService = ImageService(conf:"database connection")
     
-    var index:Int = 0
-    
     var imageContainer:UIView!
     
     var player:AVAudioPlayer!
@@ -44,16 +42,17 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         var error : NSError? = nil
         player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
         player.play()
-        
-        imageService.loadImagesFromDb()
+        var images = imageService.loadImagesFromDb()
+        restoreImages(imageContainer, images: images)
         
     }
+    
     
     func layoutImagePlaceHolders(notification: NSNotification){
         //Action to take on Notification
         println("layoutImagePlaceHolders")
-        
-        //restoreImages(imageContainer)
+        var images = imageService.loadImagesFromDb()
+        restoreImages(imageContainer, images: images)
     }
     
     
@@ -68,7 +67,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
 
     
-    func restoreImages(imageContainer: UIView){
+    func restoreImages(imageContainer: UIView, images:Array<ImgResource>){
         println("restoring images")
         //clean up existing image button list
         for var i = 0; i < self.imageButtonList.count; ++i {
@@ -87,7 +86,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        else if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)){
+        else {
             println("UIDevice.currentDevice().orientation: Landscape")
             for i in 0 ... 3{
                 for j in 0 ... 2{
@@ -97,32 +96,24 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        else{
-            NSLog("Invalid UIDevice Orientation")
-        }
+        //TODO: if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)){
+        
         //setup default place holder images
-        self.index = 0
         for var i = 0; i < imageButtonList.count; ++i {
             self.imageButtonList[i].setBackgroundImage(placeHolderImg, forState: UIControlState.Normal)
         }
-        //load images from local storage
-        if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("favImageList") {
-            
-            favImageList = []
-            
-            for var i = 0; i < storedtoDoItems.count; ++i {
-                favImageList.append(storedtoDoItems[i] as NSString)
-                loadImage(favImageList[i] as String)
-            }
+        var count = images.count > 12 ? 12 : images.count
+        for var i = 0; i < count; i++ {
+            var temp = images[i]
+            loadImage(temp.url, imgButton: imageButtonList[i], id: i)
         }
     }
     
     
-    func loadImage(url:String) -> Bool{
+    func loadImage(url:String, imgButton: UIButton, id:Int) -> Bool{
         if((uiViewCache[url]) != nil){
             println("load image from cache")
-            self.imageButtonList[self.index].setBackgroundImage(uiViewCache[url], forState: UIControlState.Normal)
-            self.index++
+            imgButton.setBackgroundImage(uiViewCache[url], forState: UIControlState.Normal)
         }
         else{
             // If the image does not exist, we need to download it
@@ -135,9 +126,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                     uiViewCache[url] = (image)
                     
                     dispatch_async(dispatch_get_main_queue(), {
-                        self.imageButtonList[self.index].tag = self.index
-                        self.imageButtonList[self.index].setBackgroundImage(image, forState: UIControlState.Normal)
-                        self.index++
+                        imgButton.tag = id
+                        imgButton.setBackgroundImage(image, forState: UIControlState.Normal)
                     })
                 }
                 else {
@@ -152,6 +142,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     
    func searchImages(keywords:String){
+        //TODO use promise to chain
        imageService.searchImages(keywords)
     }
 
@@ -167,12 +158,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     //response to return key press
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         keywords.resignFirstResponder()
-//        var isNew = imageService.addImageUrl(keywords.text)
-//        if(!isNew || index > 5){
-//            println("\(keywords.text) is duplicated link")
-//            return false
-//        }
-//        
+        
         searchImages(keywords.text);
         self.keywords.text = ""
         return true

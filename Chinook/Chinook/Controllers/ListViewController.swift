@@ -9,17 +9,20 @@
 import UIKit
 
 class ListViewController: UIViewController, UITableViewDelegate {
-
+    
     @IBOutlet var imageList: UITableView!
     var viewService:ViewService!
+    var imageService = ImageService(conf:"database connection")
+    var favImageList:Array<ImgResource>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         println("ListViewController.viewDidLoad")
-        viewService = ViewService()
         // Do any additional setup after loading the view.
+        viewService =  ViewService()
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -35,7 +38,7 @@ class ListViewController: UIViewController, UITableViewDelegate {
         
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
-        cell.textLabel?.text = favImageList[indexPath.row]
+        cell.textLabel?.text = favImageList[indexPath.row].title
         println("favImageList[indexPath.row] : \(indexPath.row) \(favImageList[indexPath.row])")
         return cell
         
@@ -49,7 +52,7 @@ class ListViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.performSegueWithIdentifier("showDetails", sender: indexPath)
+        //        self.performSegueWithIdentifier("showDetails", sender: indexPath)
         
         var detailsController = viewService.getDetailsViewController()
         
@@ -61,16 +64,7 @@ class ListViewController: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         
-        if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("favImageList") {
-            
-            favImageList = []
-            
-            for var i = 0; i < storedtoDoItems.count; ++i {
-                
-                favImageList.append(storedtoDoItems[i] as NSString)
-                
-            }
-        }
+        favImageList = imageService.loadImagesFromDb()
         println("favImageList.count : \(favImageList.count)")
         imageList.reloadData()
     }
@@ -78,29 +72,24 @@ class ListViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            var url = favImageList[indexPath.row]
-            uiViewCache.removeValueForKey(url)
+            var img = favImageList[indexPath.row]
+            uiViewCache.removeValueForKey(img.url)
             favImageList.removeAtIndex(indexPath.row)
             
-            let fixedFavImageList = favImageList
-            NSUserDefaults.standardUserDefaults().setObject(fixedFavImageList, forKey: "favImageList")
-            NSUserDefaults.standardUserDefaults().synchronize()
-            
             imageList.reloadData()
-            
         }
         
         
     }
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

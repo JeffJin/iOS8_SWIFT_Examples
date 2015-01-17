@@ -12,9 +12,7 @@ import UIKit
 protocol IImageService {
     
     func getPlaceholderImage() -> UIImage
-    
-    func addImageUrl(url:String) -> Bool
-    
+
     func searchImages(keywords: String)-> Array<ImgResource> 
     
     func saveImagesIntoDb(images: Array<ImgResource>) -> Int

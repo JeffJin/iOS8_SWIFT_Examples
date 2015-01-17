@@ -18,28 +18,6 @@ class ImageService : IImageService{
         self.config = conf
     }
     
-    func addImageUrl(url:String) -> Bool{
-        var isNew = true
-        var storedItems : AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("favImageList")
-        if storedItems != nil {
-            favImageList = []
-            
-            for var i = 0; i < storedItems!.count; ++i {
-                if(storedItems![i] as NSString != url){
-                    favImageList.append(storedItems![i] as NSString)
-                }
-                else{
-                    isNew = false
-                }
-            }
-        }
-        favImageList.append(url as NSString)
-        let fixedFavImageList = favImageList
-        NSUserDefaults.standardUserDefaults().setObject(fixedFavImageList, forKey: "favImageList")
-        NSUserDefaults.standardUserDefaults().synchronize()
-        
-        return isNew
-    }
     
     func searchImages(keywords: String)-> Array<ImgResource> {
         var imgs = Array<ImgResource>()
@@ -64,18 +42,14 @@ class ImageService : IImageService{
                 println(response["results"])
                 if let items =  response["results"] as? [[String:String]] {
                     for item in items {
-                        let title = item["title"]
-                        let url = item["url"]
-                        let content = item["content"]
-                        println("title: \(title!), url: \(url!)")
                         var img = ImgResource()
-                        img.url = url!
-                        img.title = title!
-                        img.desc = content!
+                        img.url = item["url"]!
+                        img.title = item["title"]!
+                        img.desc = item["content"]!
                         imgs.append(img)
                     }
-                    self.saveImagesIntoDb(imgs)
                     //save image metadata into database
+                    self.saveImagesIntoDb(imgs)
                 }
             }
             
@@ -126,6 +100,14 @@ class ImageService : IImageService{
         
         if results!.count > 0 {
             for result: Image in results! {
+                var temp = ImgResource()
+                temp.id = result.id.longLongValue
+                temp.title = result.title
+                temp.desc = result.desc
+                temp.url = result.url
+                
+                imgs.append(temp)
+                
                 println("id: \(result.id), title: \(result.title), description: \(result.desc), url: \(result.url)")
             }
             println("results!.count = \(results!.count)")
