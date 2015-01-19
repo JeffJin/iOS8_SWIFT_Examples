@@ -37,8 +37,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         
         var audioPath = NSString(string: NSBundle.mainBundle().pathForResource("happiness", ofType: "mp3")!)
         
-        println(audioPath)
-        
         var error : NSError? = nil
         player = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
         player.play()
@@ -128,6 +126,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                     dispatch_async(dispatch_get_main_queue(), {
                         imgButton.tag = id
                         imgButton.setBackgroundImage(image, forState: UIControlState.Normal)
+                        println("setting background image for button with tag \(id), \(url)")
                     })
                 }
                 else {

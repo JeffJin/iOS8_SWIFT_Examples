@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 class ImageService : IImageService{
-    
+    let baseUrl:String = "https://www.googleapis.com/customsearch/v1?key=AIzaSyD3myoOn8_grWyGZdEWR6cjA1xgRIdx_iQ&cx=018356137325973862343:ta92dup97x4&searchType=image&num=10&start=1&imgSize=large&q="
     let config:String
     
     init(conf:String){
@@ -21,8 +21,8 @@ class ImageService : IImageService{
     
     func searchImages(keywords: String)-> Array<ImgResource> {
         var imgs = Array<ImgResource>()
-        
-        let urlPath = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=" + keywords.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        var query = keywords.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        let urlPath = baseUrl + query
         println("Image Search url: \(urlPath)")
         let url: NSURL = NSURL(string: urlPath)!
         let session = NSURLSession.sharedSession()
@@ -38,14 +38,14 @@ class ImageService : IImageService{
                 // If there is an error parsing JSON, print it to the console
                 println("JSON Error \(err!.localizedDescription)")
             } else {
-                var response = jsonResult["responseData"]  as NSDictionary
-                println(response["results"])
-                if let items =  response["results"] as? [[String:String]] {
-                    for item in items {
+                if let items = jsonResult["items"]  as?  [NSDictionary] {
+                    println(items)
+                    
+                    for item:NSDictionary in items {
                         var img = ImgResource()
-                        img.url = item["url"]!
-                        img.title = item["title"]!
-                        img.desc = item["content"]!
+                        img.url =  item.valueForKey("link") as String
+                        img.title = item.valueForKey("title") as String
+                        img.desc = item.valueForKey("mime") as String
                         imgs.append(img)
                     }
                     //save image metadata into database
