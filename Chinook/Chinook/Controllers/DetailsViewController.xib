@@ -28,7 +28,7 @@
                                     <action selector="gotBackToImageList:" destination="-1" id="8Jf-Og-QDU"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="Share" id="1eT-Lv-CTx"/>
+                            <barButtonItem key="rightBarButtonItem" title="Photos" id="1eT-Lv-CTx"/>
                         </navigationItem>
                     </items>
                 </navigationBar>

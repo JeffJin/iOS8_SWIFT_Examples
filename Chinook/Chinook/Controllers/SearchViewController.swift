@@ -9,9 +9,11 @@
 import UIKit
 import AVFoundation
 
-class SearchViewController: UIViewController, UITextFieldDelegate {
+class SearchViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var keywords: UITextField!
+    
+    @IBOutlet var loadPhotos: UIButton!
     
     var imageButtonList:[UIButton] = []
     
@@ -20,6 +22,15 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     var imageContainer:UIView!
     
     var player:AVAudioPlayer!
+    
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        println("Image selected")
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        var imgButton = imageButtonList[0]
+        imgButton.setBackgroundImage(image, forState: UIControlState.Normal)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +64,14 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         restoreImages(imageContainer, images: images)
     }
     
+    @IBAction func loadPhotosFromDevice(sender: AnyObject) {
+        var image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        image.allowsEditing = false
+        
+        self.presentViewController(image, animated: true, completion: nil)
+    }
     
     func getImageButtonView(i:Int, j:Int)-> UIButton{
         var button:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton

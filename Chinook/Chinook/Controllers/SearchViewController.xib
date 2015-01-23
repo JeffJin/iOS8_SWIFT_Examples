@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Chinook" customModuleProvider="target">
             <connections>
                 <outlet property="keywords" destination="an3-OI-WF2" id="gT6-cb-Nn2"/>
+                <outlet property="loadPhotos" destination="gu0-Af-Uyi" id="fXY-cf-AAe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,6 +21,15 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu0-Af-Uyi">
+                    <rect key="frame" x="8" y="4" width="202" height="30"/>
+                    <state key="normal" title="Load from Photos or Camera">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loadPhotosFromDevice:" destination="-1" eventType="touchUpInside" id="A3W-qA-puA"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.3421574637" green="0.62898334700000003" blue="0.35215212159999998" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
             <constraints>
