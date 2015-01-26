@@ -9,7 +9,8 @@
 import UIKit
 import CoreData
 
-var activeItem:String = ""
+var activeItem:BlogItem!
+var activeIndex:NSIndexPath!
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
@@ -166,11 +167,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             
             let indexPath = self.tableView.indexPathForSelectedRow()!  //append '!' at the end of line in order to convert optional to non-optional
             
-            
-            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as BlogItem
-            
-            activeItem = object.content  //append '!' befor description in order to convert optional to non-optional
-            
+            activeIndex = indexPath
+            activeItem = self.fetchedResultsController.objectAtIndexPath(indexPath) as BlogItem
             
             let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
             
@@ -258,7 +256,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             //println("Unresolved error \(error), \(error.userInfo)")
             abort()
         }
-        
+
         return _fetchedResultsController!
     }
   

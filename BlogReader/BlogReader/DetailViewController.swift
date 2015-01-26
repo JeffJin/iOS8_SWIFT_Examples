@@ -7,36 +7,68 @@
 //
 
 import UIKit
+import CoreData
 
-class DetailViewController: UIViewController {
-
+class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate {
+    
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    
     @IBOutlet var webview: UIWebView!
+    
+    var managedObjectContext: NSManagedObjectContext? = nil
     
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
-            self.configureView()
+            println("detailItem, \(activeIndex.row)")
+            self.loadNextView(activeIndex)
         }
     }
-
-    func configureView() {
+    
+    func loadView(blog:BlogItem!) {
+        if(blog == nil){
+            return;
+        }
         // Update the user interface for the detail item.
-        webview.loadHTMLString(activeItem, baseURL: nil)
-    }
+        self.title = blog.title
 
+        webview.loadHTMLString(blog.content, baseURL: nil)
+    }
+    
+    func loadNextView(indexPath:NSIndexPath){
+        activeIndex = NSIndexPath(index: (indexPath.row + 1))
+        activeItem = loadItem(activeIndex)
+        self.loadView(activeItem)
+    }
+    
+    func loadPreviousView(indexPath:NSIndexPath){
+        activeIndex = NSIndexPath(index: (indexPath.row - 1))
+        activeItem = loadItem(activeIndex)
+        self.loadView(activeItem)
+    }
+    
+    func loadItem(index:NSIndexPath) -> BlogItem! {
+      return activeItem
+    }
+    
+    var _fetchedResultsController: NSFetchedResultsController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
+        if(activeIndex == nil){
+            return;
+        }
+        println("viewDidLoad, \(activeIndex.row)")
+        self.loadNextView(activeIndex)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
+
 
