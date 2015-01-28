@@ -11,6 +11,7 @@ import CoreData
 
 var activeItem:BlogItem!
 var activeIndex:NSIndexPath!
+var blogCache:[(blog: BlogItem, prevItem: BlogItem, nextItem: BlogItem)] = []
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
@@ -30,7 +31,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
         loadBlogs("AIzaSyD3myoOn8_grWyGZdEWR6cjA1xgRIdx_iQ")
         
         if let split = self.splitViewController {
@@ -120,8 +120,23 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                     newBlogItem.datePublished = items[i]["publishedDate"]!
                     
                     context.save(nil)
-                    
+                    //TODO check if an item is already inserted
+                    blogCache += [(blog:newBlogItem, prevItem: newBlogItem, nextItem: newBlogItem)]
                 }
+                //build linked list
+                for var i = 0; i < blogCache.count; i++ {
+                    var prevIndex = i - 1
+                    var nextIndex = i + 1
+                    if(prevIndex < 0){
+                        prevIndex = blogCache.count - 1
+                    }
+                    if(nextIndex >= blogCache.count){
+                        nextIndex = 0
+                    }
+                    blogCache[i].prevItem = blogCache[prevIndex].blog
+                    blogCache[i].nextItem = blogCache[nextIndex].blog
+                }
+                println(blogCache)
                 
                 request = NSFetchRequest(entityName: "BlogItem")
                 
