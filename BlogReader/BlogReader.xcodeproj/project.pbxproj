@@ -19,6 +19,9 @@
 		DC48B7171A70A6A700C4DB89 /* blog2.png in Resources */ = {isa = PBXBuildFile; fileRef = DC48B7141A70A6A700C4DB89 /* blog2.png */; };
 		DC48B7181A70A6A700C4DB89 /* blog3.png in Resources */ = {isa = PBXBuildFile; fileRef = DC48B7151A70A6A700C4DB89 /* blog3.png */; };
 		DC48B71D1A70B7E700C4DB89 /* BlogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48B71C1A70B7E700C4DB89 /* BlogItem.swift */; };
+		DCE5DF301A7B2D3F00E7F7B4 /* BlogCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE5DF2F1A7B2D3F00E7F7B4 /* BlogCacheItem.swift */; };
+		DCE5DF341A7B476500E7F7B4 /* BlogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE5DF331A7B476500E7F7B4 /* BlogService.swift */; };
+		DCE5DF361A7B485E00E7F7B4 /* IBlogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE5DF351A7B485E00E7F7B4 /* IBlogService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		DC48B7141A70A6A700C4DB89 /* blog2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blog2.png; sourceTree = "<group>"; };
 		DC48B7151A70A6A700C4DB89 /* blog3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blog3.png; sourceTree = "<group>"; };
 		DC48B71C1A70B7E700C4DB89 /* BlogItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogItem.swift; sourceTree = "<group>"; };
+		DCE5DF2F1A7B2D3F00E7F7B4 /* BlogCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogCacheItem.swift; sourceTree = "<group>"; };
+		DCE5DF331A7B476500E7F7B4 /* BlogService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogService.swift; sourceTree = "<group>"; };
+		DCE5DF351A7B485E00E7F7B4 /* IBlogService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBlogService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 		DC48B6EB1A709B3100C4DB89 /* BlogReader */ = {
 			isa = PBXGroup;
 			children = (
+				DCE5DF321A7B409500E7F7B4 /* Services */,
 				DC48B7191A70A6B400C4DB89 /* Images */,
 				DC48B6EE1A709B3100C4DB89 /* AppDelegate.swift */,
 				DC48B6F31A709B3100C4DB89 /* MasterViewController.swift */,
@@ -99,6 +106,7 @@
 				DC48B6F01A709B3100C4DB89 /* BlogReader.xcdatamodeld */,
 				DC48B71C1A70B7E700C4DB89 /* BlogItem.swift */,
 				DC48B6EC1A709B3100C4DB89 /* Supporting Files */,
+				DCE5DF2F1A7B2D3F00E7F7B4 /* BlogCacheItem.swift */,
 			);
 			path = BlogReader;
 			sourceTree = "<group>";
@@ -136,6 +144,15 @@
 				DC48B7151A70A6A700C4DB89 /* blog3.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		DCE5DF321A7B409500E7F7B4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DCE5DF331A7B476500E7F7B4 /* BlogService.swift */,
+				DCE5DF351A7B485E00E7F7B4 /* IBlogService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +260,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC48B71D1A70B7E700C4DB89 /* BlogItem.swift in Sources */,
+				DCE5DF301A7B2D3F00E7F7B4 /* BlogCacheItem.swift in Sources */,
 				DC48B6F21A709B3100C4DB89 /* BlogReader.xcdatamodeld in Sources */,
+				DCE5DF361A7B485E00E7F7B4 /* IBlogService.swift in Sources */,
 				DC48B6EF1A709B3100C4DB89 /* AppDelegate.swift in Sources */,
 				DC48B6F41A709B3100C4DB89 /* MasterViewController.swift in Sources */,
+				DCE5DF341A7B476500E7F7B4 /* BlogService.swift in Sources */,
 				DC48B6F61A709B3100C4DB89 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +462,7 @@
 				DC48B70F1A709B3200C4DB89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC48B7101A709B3200C4DB89 /* Build configuration list for PBXNativeTarget "BlogReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +471,7 @@
 				DC48B7121A709B3200C4DB89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

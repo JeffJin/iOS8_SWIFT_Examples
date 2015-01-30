@@ -9,15 +9,11 @@
 import UIKit
 import CoreData
 
-var activeItem:BlogItem!
-var activeIndex:NSIndexPath!
-var blogCache:[(blog: BlogItem, prevItem: BlogItem, nextItem: BlogItem)] = []
-
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
-
+    var blogService = BlogService()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,6 +33,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+        
+        if event.subtype == UIEventSubtype.MotionShake {
+            
+            println("User Shook Their Device")
+            
+        }
+        
     }
     
     func loadBlogsFromGoogleBlogger(){
@@ -121,7 +127,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                     
                     context.save(nil)
                     //TODO check if an item is already inserted
-                    blogCache += [(blog:newBlogItem, prevItem: newBlogItem, nextItem: newBlogItem)]
+                    blogCache.append(BlogCacheItem(prev:newBlogItem, curr: newBlogItem, next: newBlogItem))
                 }
                 //build linked list
                 for var i = 0; i < blogCache.count; i++ {
@@ -133,8 +139,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                     if(nextIndex >= blogCache.count){
                         nextIndex = 0
                     }
-                    blogCache[i].prevItem = blogCache[prevIndex].blog
-                    blogCache[i].nextItem = blogCache[nextIndex].blog
+                    blogCache[i].prevItem = blogCache[prevIndex].currentItem
+                    blogCache[i].nextItem = blogCache[nextIndex].currentItem
                 }
                 println(blogCache)
                 
@@ -182,8 +188,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             
             let indexPath = self.tableView.indexPathForSelectedRow()!  //append '!' at the end of line in order to convert optional to non-optional
             
-            activeIndex = indexPath
-            activeItem = self.fetchedResultsController.objectAtIndexPath(indexPath) as BlogItem
+            var currentItem = self.fetchedResultsController.objectAtIndexPath(indexPath) as BlogItem
+            
+            activeItem = blogService.findCacheItem(currentItem)
+            //TODO set blog cache item
             
             let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
             

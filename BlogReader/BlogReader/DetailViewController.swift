@@ -9,21 +9,16 @@
 import UIKit
 import CoreData
 
-class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate {
-    
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+class DetailViewController: UIViewController {
     
     @IBOutlet var webview: UIWebView!
     
-    var managedObjectContext: NSManagedObjectContext? = nil
-    
     var detailItem: AnyObject? {
         didSet {
-            // Update the view.
-            println("detailItem, \(activeIndex.row)")
-            self.loadNextView(activeIndex)
         }
     }
+    
+    var blogService = BlogService()
     
     func loadView(blog:BlogItem!) {
         if(blog == nil){
@@ -31,37 +26,56 @@ class DetailViewController: UIViewController, NSFetchedResultsControllerDelegate
         }
         // Update the user interface for the detail item.
         self.title = blog.title
-
+        
         webview.loadHTMLString(blog.content, baseURL: nil)
     }
     
-    func loadNextView(indexPath:NSIndexPath){
-        activeIndex = NSIndexPath(index: (indexPath.row + 1))
-        activeItem = loadItem(activeIndex)
-        self.loadView(activeItem)
+    func loadNextView(){
+        self.loadView(activeItem.nextItem)
+        activeItem = blogService.findCacheItem(activeItem.nextItem)
     }
     
-    func loadPreviousView(indexPath:NSIndexPath){
-        activeIndex = NSIndexPath(index: (indexPath.row - 1))
-        activeItem = loadItem(activeIndex)
-        self.loadView(activeItem)
+    func loadPreviousView(){
+        self.loadView(activeItem.prevItem)
+        activeItem = blogService.findCacheItem(activeItem.prevItem)
     }
-    
-    func loadItem(index:NSIndexPath) -> BlogItem! {
-      return activeItem
-    }
-    
-    var _fetchedResultsController: NSFetchedResultsController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if(activeIndex == nil){
-            return;
+        if(activeItem != nil){
+            self.loadView(activeItem.currentItem)
         }
-        println("viewDidLoad, \(activeIndex.row)")
-        self.loadNextView(activeIndex)
+        //
+        
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swiped:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        var swipeLeft = UISwipeGestureRecognizer(target: self, action: "swiped:")
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeft)
+        
     }
+
+    func swiped(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+                
+            case UISwipeGestureRecognizerDirection.Right:
+                loadPreviousView()
+            case UISwipeGestureRecognizerDirection.Left:
+                loadNextView()
+            default:
+                break
+            }
+            
+        }
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
