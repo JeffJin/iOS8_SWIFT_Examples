@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+var dataAccess:NSManagedObjectContext!
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
@@ -111,6 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
         var managedObjectContext = NSManagedObjectContext()
         managedObjectContext.persistentStoreCoordinator = coordinator
+        dataAccess = managedObjectContext
         return managedObjectContext
     }()
 

@@ -11,5 +11,7 @@ import UIKit
 
 protocol IBlogService {
     func findCacheItem(item:BlogItem) -> BlogCacheItem!
-
+    func loadBlogsFromGoogleBlogger(key:String)
+    func loadBlogsFromCoreData() -> [BlogItem]
+    func saveBlogsToCoreData(items: [[String:String]])
 }
