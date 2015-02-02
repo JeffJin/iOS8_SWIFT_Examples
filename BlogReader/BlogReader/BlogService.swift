@@ -8,9 +8,11 @@
 
 import Foundation
 import CoreData
+import PromiseKit
 
 var activeItem:BlogCacheItem!
 var blogCache:[BlogCacheItem] = []
+
 
 class BlogService : IBlogService{
     
@@ -23,8 +25,9 @@ class BlogService : IBlogService{
         return nil
     }
     
-    func loadBlogsFromGoogleBlogger(key:String){
+    func loadBlogsFromGoogleBlogger(key:String) -> Promise<[[String:String]]>{
         
+        let (promise, fulfiller, _) = Promise<[[String:String]]>.defer()
         
         let urlPath = "https://www.googleapis.com/blogger/v3/blogs/3213900/posts?key=" + key
         
@@ -64,12 +67,12 @@ class BlogService : IBlogService{
                     
                     items[i]["author"] = authorDictionary["displayName"] as? NSString
                 }
-                
-                //TODO resolve jso results as [[String:String]]
-                
+                fulfiller(items)
             }
         })
         task.resume()
+        
+        return promise
     }
     
     

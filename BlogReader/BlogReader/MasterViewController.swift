@@ -23,6 +23,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             self.clearsSelectionOnViewWillAppear = false
             self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
         }
+        
+        let sheet = UIAlertView(title: "test title", message: "test message", delegate: self, cancelButtonTitle: "Cancel")
     }
     
     override func viewDidLoad() {
@@ -40,10 +42,17 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refresher.addTarget(self, action: "reload", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(self.refresher)
+   
+    }
+    
+    func timerUpdate(){
+        
+        self.refresher.endRefreshing()
     }
     
     func reload() {
         
+        var timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("timerUpdate"), userInfo: nil, repeats: false)
         println("reloading blogs from google blogger")
         
     }

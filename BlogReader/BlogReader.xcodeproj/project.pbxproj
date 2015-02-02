@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC3ACBAA1A7F3D8F00C318B8 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3ACBA51A7F3C0000C318B8 /* PromiseKit.framework */; };
 		DC48B6EF1A709B3100C4DB89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48B6EE1A709B3100C4DB89 /* AppDelegate.swift */; };
 		DC48B6F21A709B3100C4DB89 /* BlogReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC48B6F01A709B3100C4DB89 /* BlogReader.xcdatamodeld */; };
 		DC48B6F41A709B3100C4DB89 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48B6F31A709B3100C4DB89 /* MasterViewController.swift */; };
@@ -25,6 +26,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DC3ACBA41A7F3C0000C318B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 637D0F1119437D4C0059AD78;
+			remoteInfo = PromiseKit;
+		};
+		DC3ACBA61A7F3C0000C318B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 637D0F1219437D4C0059AD78;
+			remoteInfo = PromiseKitTests;
+		};
+		DC3ACBA81A7F3C0000C318B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 637D0F1019437D4C0059AD78;
+			remoteInfo = PMKDemo;
+		};
 		DC48B7041A709B3200C4DB89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DC48B6E11A709B3100C4DB89 /* Project object */;
@@ -35,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = PromiseKit/swift/PromiseKit.xcodeproj; sourceTree = "<group>"; };
 		DC48B6E91A709B3100C4DB89 /* BlogReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC48B6ED1A709B3100C4DB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC48B6EE1A709B3100C4DB89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3ACBAA1A7F3D8F00C318B8 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +98,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC3ACB7A1A7D75FD00C318B8 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		DC3ACB9F1A7F3C0000C318B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC3ACBA51A7F3C0000C318B8 /* PromiseKit.framework */,
+				DC3ACBA71A7F3C0000C318B8 /* PromiseKitTests.xctest */,
+				DC3ACBA91A7F3C0000C318B8 /* PMKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DC48B6E01A709B3100C4DB89 = {
 			isa = PBXGroup;
 			children = (
+				DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */,
+				DC3ACB7A1A7D75FD00C318B8 /* Library */,
 				DC48B6EB1A709B3100C4DB89 /* BlogReader */,
 				DC48B7061A709B3200C4DB89 /* BlogReaderTests */,
 				DC48B6EA1A709B3100C4DB89 /* Products */,
@@ -223,6 +266,12 @@
 			mainGroup = DC48B6E01A709B3100C4DB89;
 			productRefGroup = DC48B6EA1A709B3100C4DB89 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DC3ACB9F1A7F3C0000C318B8 /* Products */;
+					ProjectRef = DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DC48B6E81A709B3100C4DB89 /* BlogReader */,
@@ -230,6 +279,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DC3ACBA51A7F3C0000C318B8 /* PromiseKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PromiseKit.framework;
+			remoteRef = DC3ACBA41A7F3C0000C318B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC3ACBA71A7F3C0000C318B8 /* PromiseKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PromiseKitTests.xctest;
+			remoteRef = DC3ACBA61A7F3C0000C318B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC3ACBA91A7F3C0000C318B8 /* PMKDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PMKDemo.app;
+			remoteRef = DC3ACBA81A7F3C0000C318B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DC48B6E71A709B3100C4DB89 /* Resources */ = {
@@ -394,6 +467,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BlogReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -405,6 +482,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BlogReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
