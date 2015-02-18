@@ -27,7 +27,7 @@ class BlogService : IBlogService{
     
     func loadBlogsFromGoogleBlogger(key:String) -> Promise<[[String:String]]>{
         
-        let (promise, fulfiller, _) = Promise<[[String:String]]>.defer()
+        let (promise, resolve, reject) = Promise<[[String:String]]>.defer()
         
         let urlPath = "https://www.googleapis.com/blogger/v3/blogs/3213900/posts?key=" + key
         
@@ -39,6 +39,7 @@ class BlogService : IBlogService{
             
             if (error != nil) { //change 'error' to '(error != nil)'
                 println(error)
+                reject(error)
             } else {
                 
                 let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
@@ -67,7 +68,8 @@ class BlogService : IBlogService{
                     
                     items[i]["author"] = authorDictionary["displayName"] as? NSString
                 }
-                fulfiller(items)
+                
+                resolve(items)
             }
         })
         task.resume()

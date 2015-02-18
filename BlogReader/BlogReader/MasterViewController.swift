@@ -42,7 +42,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refresher.addTarget(self, action: "reload", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(self.refresher)
-   
+        
     }
     
     func timerUpdate(){
@@ -166,8 +166,20 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         //        })
         //
         //        task.resume()
-        var blogs = blogService.loadBlogsFromCoreData()
-        blogCache = blogService.buildCacheItems(blogs)
+        var futureBlogs = blogService.loadBlogsFromGoogleBlogger(key)
+        //var blogs = blogService.loadBlogsFromCoreData()
+        futureBlogs.then(body: {(result:[[String:String]]) -> Void in
+
+            self.blogService.saveBlogsToCoreData(result)
+            
+            var appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            var context: NSManagedObjectContext = appDel.managedObjectContext!
+            var request = NSFetchRequest(entityName: "BlogItem")
+                request.returnsObjectsAsFaults = false
+            
+            var results = context.executeFetchRequest(request, error: nil)!
+            println(results)
+        })
     }
     
     override func didReceiveMemoryWarning() {
