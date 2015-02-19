@@ -123,10 +123,10 @@ class BlogService : IBlogService{
             if(nextIndex >= count){
                 nextIndex = 0
             }
-            var blogCache = BlogCacheItem(item: items[i])
-            blogCache.prevItem = items[prevIndex]
-            blogCache.nextItem = items[nextIndex]
-            blogCacheList.append(blogCache)
+            var tempCache = BlogCacheItem(item: items[i])
+            tempCache.prevItem = items[prevIndex]
+            tempCache.nextItem = items[nextIndex]
+            blogCacheList.append(tempCache)
         }
         return blogCacheList
     }

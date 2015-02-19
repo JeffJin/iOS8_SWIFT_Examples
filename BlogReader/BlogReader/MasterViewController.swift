@@ -69,116 +69,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
     
     func loadBlogs(key:String){
-        //
-        //        var appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        //
-        //        var context: NSManagedObjectContext = appDel.managedObjectContext!
-        //
-        //        let urlPath = "https://www.googleapis.com/blogger/v3/blogs/3213900/posts?key=" + key
-        //
-        //        let url = NSURL(string: urlPath)
-        //
-        //        let session = NSURLSession.sharedSession()
-        //
-        //        let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
-        //
-        //            if (error != nil) { //change 'error' to '(error != nil)'
-        //                println(error)
-        //            } else {
-        //
-        //                var request = NSFetchRequest(entityName: "BlogItem")
-        //
-        //                request.returnsObjectsAsFaults = false
-        //
-        //                var results = context.executeFetchRequest(request, error: nil)! //append '!' at the end of line in order to convert optional to non-optional
-        //
-        //                for result in results {
-        //
-        //                    context.deleteObject(result as BlogItem)
-        //
-        //                    context.save(nil)
-        //
-        //                }
-        //
-        //
-        //                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-        //
-        //                var items = [[String:String]()]
-        //
-        //                var item:AnyObject
-        //
-        //                var authorDictionary:AnyObject
-        //
-        //                var newBlogItem:BlogItem
-        //
-        //                for var i = 0; i < jsonResult["items"]!.count; i++ {//append '!' after [] in order to convert optional to non-optional
-        //
-        //                    items.append([String:String]())
-        //
-        //                    item = jsonResult["items"]![i] as NSDictionary  //append '!' after [] in order to convert optional to non-optional
-        //
-        //                    items[i]["content"] = item["content"] as? NSString
-        //
-        //                    items[i]["title"] = item["title"] as? NSString
-        //
-        //                    items[i]["publishedDate"] = item["published"] as? NSString
-        //
-        //                    authorDictionary = item["author"] as NSDictionary
-        //
-        //                    items[i]["author"] = authorDictionary["displayName"] as? NSString
-        //
-        //
-        //                    newBlogItem = NSEntityDescription.insertNewObjectForEntityForName("BlogItem", inManagedObjectContext: context) as BlogItem
-        //
-        //                    newBlogItem.author = items[i]["author"]!
-        //
-        //                    newBlogItem.title = items[i]["title"]!
-        //
-        //                    newBlogItem.content = items[i]["content"]!
-        //
-        //                    newBlogItem.datePublished = items[i]["publishedDate"]!
-        //
-        //                    context.save(nil)
-        //                    //TODO check if an item is already inserted
-        //                    blogCache.append(BlogCacheItem(prev:newBlogItem, curr: newBlogItem, next: newBlogItem))
-        //                }
-        //                //build linked list
-        //                for var i = 0; i < blogCache.count; i++ {
-        //                    var prevIndex = i - 1
-        //                    var nextIndex = i + 1
-        //                    if(prevIndex < 0){
-        //                        prevIndex = blogCache.count - 1
-        //                    }
-        //                    if(nextIndex >= blogCache.count){
-        //                        nextIndex = 0
-        //                    }
-        //                    blogCache[i].prevItem = blogCache[prevIndex].currentItem
-        //                    blogCache[i].nextItem = blogCache[nextIndex].currentItem
-        //                }
-        //                println(blogCache)
-        //
-        //                request = NSFetchRequest(entityName: "BlogItem")
-        //
-        //                request.returnsObjectsAsFaults = false
-        //
-        //                results = context.executeFetchRequest(request, error: nil)!  //append '!' at the end of line in order to convert
-        //            }
-        //        })
-        //
-        //        task.resume()
         var futureBlogs = blogService.loadBlogsFromGoogleBlogger(key)
         //var blogs = blogService.loadBlogsFromCoreData()
         futureBlogs.then(body: {(result:[[String:String]]) -> Void in
-
+            //TODO check duplicated items
             self.blogService.saveBlogsToCoreData(result)
+        
+            var results = self.blogService.loadBlogsFromCoreData()
             
-            var appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-            var context: NSManagedObjectContext = appDel.managedObjectContext!
-            var request = NSFetchRequest(entityName: "BlogItem")
-                request.returnsObjectsAsFaults = false
+            blogCache = self.blogService.buildCacheItems(results)
             
-            var results = context.executeFetchRequest(request, error: nil)!
-            println(results)
         })
     }
     
@@ -354,6 +254,103 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // In the simplest, most efficient, case, reload the table view.
     self.tableView.reloadData()
     }
+    //
+    //        var appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    //
+    //        var context: NSManagedObjectContext = appDel.managedObjectContext!
+    //
+    //        let urlPath = "https://www.googleapis.com/blogger/v3/blogs/3213900/posts?key=" + key
+    //
+    //        let url = NSURL(string: urlPath)
+    //
+    //        let session = NSURLSession.sharedSession()
+    //
+    //        let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
+    //
+    //            if (error != nil) { //change 'error' to '(error != nil)'
+    //                println(error)
+    //            } else {
+    //
+    //                var request = NSFetchRequest(entityName: "BlogItem")
+    //
+    //                request.returnsObjectsAsFaults = false
+    //
+    //                var results = context.executeFetchRequest(request, error: nil)! //append '!' at the end of line in order to convert optional to non-optional
+    //
+    //                for result in results {
+    //
+    //                    context.deleteObject(result as BlogItem)
+    //
+    //                    context.save(nil)
+    //
+    //                }
+    //
+    //
+    //                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+    //
+    //                var items = [[String:String]()]
+    //
+    //                var item:AnyObject
+    //
+    //                var authorDictionary:AnyObject
+    //
+    //                var newBlogItem:BlogItem
+    //
+    //                for var i = 0; i < jsonResult["items"]!.count; i++ {//append '!' after [] in order to convert optional to non-optional
+    //
+    //                    items.append([String:String]())
+    //
+    //                    item = jsonResult["items"]![i] as NSDictionary  //append '!' after [] in order to convert optional to non-optional
+    //
+    //                    items[i]["content"] = item["content"] as? NSString
+    //
+    //                    items[i]["title"] = item["title"] as? NSString
+    //
+    //                    items[i]["publishedDate"] = item["published"] as? NSString
+    //
+    //                    authorDictionary = item["author"] as NSDictionary
+    //
+    //                    items[i]["author"] = authorDictionary["displayName"] as? NSString
+    //
+    //
+    //                    newBlogItem = NSEntityDescription.insertNewObjectForEntityForName("BlogItem", inManagedObjectContext: context) as BlogItem
+    //
+    //                    newBlogItem.author = items[i]["author"]!
+    //
+    //                    newBlogItem.title = items[i]["title"]!
+    //
+    //                    newBlogItem.content = items[i]["content"]!
+    //
+    //                    newBlogItem.datePublished = items[i]["publishedDate"]!
+    //
+    //                    context.save(nil)
+    //                    //TODO check if an item is already inserted
+    //                    blogCache.append(BlogCacheItem(prev:newBlogItem, curr: newBlogItem, next: newBlogItem))
+    //                }
+    //                //build linked list
+    //                for var i = 0; i < blogCache.count; i++ {
+    //                    var prevIndex = i - 1
+    //                    var nextIndex = i + 1
+    //                    if(prevIndex < 0){
+    //                        prevIndex = blogCache.count - 1
+    //                    }
+    //                    if(nextIndex >= blogCache.count){
+    //                        nextIndex = 0
+    //                    }
+    //                    blogCache[i].prevItem = blogCache[prevIndex].currentItem
+    //                    blogCache[i].nextItem = blogCache[nextIndex].currentItem
+    //                }
+    //                println(blogCache)
+    //
+    //                request = NSFetchRequest(entityName: "BlogItem")
+    //
+    //                request.returnsObjectsAsFaults = false
+    //
+    //                results = context.executeFetchRequest(request, error: nil)!  //append '!' at the end of line in order to convert
+    //            }
+    //        })
+    //
+    //        task.resume()
     */
     
 }
