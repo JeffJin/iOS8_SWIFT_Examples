@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC3ACBAA1A7F3D8F00C318B8 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3ACBA51A7F3C0000C318B8 /* PromiseKit.framework */; };
+		3A0E8C2C1A94579B008BFB2B /* OMGHTTPURLRQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E8C291A9456A9008BFB2B /* OMGHTTPURLRQ.framework */; };
+		3A0E8C2D1A94579B008BFB2B /* OMGHTTPURLRQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E8C291A9456A9008BFB2B /* OMGHTTPURLRQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A0E8C311A9457AA008BFB2B /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E8C1E1A945648008BFB2B /* PromiseKit.framework */; };
+		3A0E8C321A9457AA008BFB2B /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E8C1E1A945648008BFB2B /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A69BE771A9AE9C70086C9B9 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BE761A9AE9C70086C9B9 /* ApplicationAssembly.swift */; };
+		3A69BE791A9AEA3A0086C9B9 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A69BE781A9AEA3A0086C9B9 /* Configuration.plist */; };
+		3A69BE7B1A9AF1090086C9B9 /* CoreComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BE7A1A9AF1090086C9B9 /* CoreComponents.swift */; };
+		3A69BE971A9AFA580086C9B9 /* Typhoon-iOS.app in Resources */ = {isa = PBXBuildFile; fileRef = 3A69BE881A9AFA0E0086C9B9 /* Typhoon-iOS.app */; };
+		3A69BE9A1A9AFA580086C9B9 /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A69BE901A9AFA0E0086C9B9 /* Typhoon.framework */; };
+		3A69BE9B1A9AFA580086C9B9 /* Typhoon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A69BE901A9AFA0E0086C9B9 /* Typhoon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC48B6EF1A709B3100C4DB89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48B6EE1A709B3100C4DB89 /* AppDelegate.swift */; };
 		DC48B6F21A709B3100C4DB89 /* BlogReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC48B6F01A709B3100C4DB89 /* BlogReader.xcdatamodeld */; };
 		DC48B6F41A709B3100C4DB89 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48B6F31A709B3100C4DB89 /* MasterViewController.swift */; };
@@ -26,26 +35,124 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DC3ACBA41A7F3C0000C318B8 /* PBXContainerItemProxy */ = {
+		3A0E8C1D1A945648008BFB2B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */;
+			containerPortal = 3A0E8C171A945648008BFB2B /* PromiseKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 637D0F1119437D4C0059AD78;
 			remoteInfo = PromiseKit;
 		};
-		DC3ACBA61A7F3C0000C318B8 /* PBXContainerItemProxy */ = {
+		3A0E8C1F1A945648008BFB2B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */;
+			containerPortal = 3A0E8C171A945648008BFB2B /* PromiseKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 637D0F1219437D4C0059AD78;
 			remoteInfo = PromiseKitTests;
 		};
-		DC3ACBA81A7F3C0000C318B8 /* PBXContainerItemProxy */ = {
+		3A0E8C211A945648008BFB2B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */;
+			containerPortal = 3A0E8C171A945648008BFB2B /* PromiseKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 637D0F1019437D4C0059AD78;
 			remoteInfo = PMKDemo;
+		};
+		3A0E8C281A9456A9008BFB2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A0E8C231A9456A9008BFB2B /* OMGHTTPURLRQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63EDFE721A7FFD0E0030F974;
+			remoteInfo = OMGHTTPURLRQ;
+		};
+		3A0E8C2A1A9456A9008BFB2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A0E8C231A9456A9008BFB2B /* OMGHTTPURLRQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63EDFE7D1A7FFD0E0030F974;
+			remoteInfo = OMGTest;
+		};
+		3A0E8C2E1A94579B008BFB2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A0E8C231A9456A9008BFB2B /* OMGHTTPURLRQ.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 63EDFE711A7FFD0E0030F974;
+			remoteInfo = OMGHTTPURLRQ;
+		};
+		3A0E8C331A9457AA008BFB2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A0E8C171A945648008BFB2B /* PromiseKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 63BC394919422A9600D8CD9A;
+			remoteInfo = PromiseKit;
+		};
+		3A69BE871A9AFA0E0086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B076E5A1936F5850083714E;
+			remoteInfo = "Typhoon-iOS";
+		};
+		3A69BE891A9AFA0E0086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B076E7E1936F5850083714E;
+			remoteInfo = "Typhoon-iOSTests";
+		};
+		3A69BE8B1A9AFA0E0086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B07734619377EAA0083714E;
+			remoteInfo = "Typhoon-OSX";
+		};
+		3A69BE8D1A9AFA0E0086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B07736019377EAA0083714E;
+			remoteInfo = "Typhoon-OSXTests";
+		};
+		3A69BE8F1A9AFA0E0086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90ABC3EA1A36B09E008D8162;
+			remoteInfo = Typhoon;
+		};
+		3A69BE911A9AFA0E0086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90ABC3F41A36B09E008D8162;
+			remoteInfo = TyphoonTests;
+		};
+		3A69BE931A9AFA0E0086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90ABC4BB1A36BA53008D8162;
+			remoteInfo = TyphoonFrameworkSwiftExample;
+		};
+		3A69BE951A9AFA0E0086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90ABC4CF1A36BA53008D8162;
+			remoteInfo = TyphoonFrameworkSwiftExampleTests;
+		};
+		3A69BE981A9AFA580086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B076E591936F5850083714E;
+			remoteInfo = "Typhoon-iOS";
+		};
+		3A69BE9C1A9AFA580086C9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 90ABC3E91A36B09E008D8162;
+			remoteInfo = Typhoon;
 		};
 		DC48B7041A709B3200C4DB89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -56,8 +163,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3A0E8C301A94579B008BFB2B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A69BE9B1A9AFA580086C9B9 /* Typhoon.framework in Embed Frameworks */,
+				3A0E8C2D1A94579B008BFB2B /* OMGHTTPURLRQ.framework in Embed Frameworks */,
+				3A0E8C321A9457AA008BFB2B /* PromiseKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = PromiseKit/swift/PromiseKit.xcodeproj; sourceTree = "<group>"; };
+		3A0E8C171A945648008BFB2B /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = ../PromiseKit/swift/PromiseKit.xcodeproj; sourceTree = "<group>"; };
+		3A0E8C231A9456A9008BFB2B /* OMGHTTPURLRQ.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OMGHTTPURLRQ.xcodeproj; path = ../OMGHTTPURLRQ/OMGHTTPURLRQ.xcodeproj; sourceTree = "<group>"; };
+		3A69BE761A9AE9C70086C9B9 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		3A69BE781A9AEA3A0086C9B9 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		3A69BE7A1A9AF1090086C9B9 /* CoreComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreComponents.swift; sourceTree = "<group>"; };
+		3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Typhoon.xcodeproj; path = ../Typhoon/Typhoon.xcodeproj; sourceTree = "<group>"; };
 		DC48B6E91A709B3100C4DB89 /* BlogReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC48B6ED1A709B3100C4DB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC48B6EE1A709B3100C4DB89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +212,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC3ACBAA1A7F3D8F00C318B8 /* PromiseKit.framework in Frameworks */,
+				3A69BE9A1A9AFA580086C9B9 /* Typhoon.framework in Frameworks */,
+				3A0E8C2C1A94579B008BFB2B /* OMGHTTPURLRQ.framework in Frameworks */,
+				3A0E8C311A9457AA008BFB2B /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +228,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A0E8C181A945648008BFB2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A0E8C1E1A945648008BFB2B /* PromiseKit.framework */,
+				3A0E8C201A945648008BFB2B /* PromiseKitTests.xctest */,
+				3A0E8C221A945648008BFB2B /* PMKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A0E8C241A9456A9008BFB2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A0E8C291A9456A9008BFB2B /* OMGHTTPURLRQ.framework */,
+				3A0E8C2B1A9456A9008BFB2B /* OMGTest.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A69BE721A9AE8A50086C9B9 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				3A69BE7A1A9AF1090086C9B9 /* CoreComponents.swift */,
+				3A69BE781A9AEA3A0086C9B9 /* Configuration.plist */,
+				3A69BE761A9AE9C70086C9B9 /* ApplicationAssembly.swift */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		3A69BE7D1A9AFA0D0086C9B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A69BE881A9AFA0E0086C9B9 /* Typhoon-iOS.app */,
+				3A69BE8A1A9AFA0E0086C9B9 /* Typhoon-iOSTests.xctest */,
+				3A69BE8C1A9AFA0E0086C9B9 /* Typhoon-OSX.app */,
+				3A69BE8E1A9AFA0E0086C9B9 /* Typhoon-OSXTests.xctest */,
+				3A69BE901A9AFA0E0086C9B9 /* Typhoon.framework */,
+				3A69BE921A9AFA0E0086C9B9 /* TyphoonTests.xctest */,
+				3A69BE941A9AFA0E0086C9B9 /* TyphoonFrameworkSwiftExample.app */,
+				3A69BE961A9AFA0E0086C9B9 /* TyphoonFrameworkSwiftExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DC3ACB7A1A7D75FD00C318B8 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,20 +279,12 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
-		DC3ACB9F1A7F3C0000C318B8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DC3ACBA51A7F3C0000C318B8 /* PromiseKit.framework */,
-				DC3ACBA71A7F3C0000C318B8 /* PromiseKitTests.xctest */,
-				DC3ACBA91A7F3C0000C318B8 /* PMKDemo.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		DC48B6E01A709B3100C4DB89 = {
 			isa = PBXGroup;
 			children = (
-				DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */,
+				3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */,
+				3A0E8C231A9456A9008BFB2B /* OMGHTTPURLRQ.xcodeproj */,
+				3A0E8C171A945648008BFB2B /* PromiseKit.xcodeproj */,
 				DC3ACB7A1A7D75FD00C318B8 /* Library */,
 				DC48B6EB1A709B3100C4DB89 /* BlogReader */,
 				DC48B7061A709B3200C4DB89 /* BlogReaderTests */,
@@ -138,6 +304,7 @@
 		DC48B6EB1A709B3100C4DB89 /* BlogReader */ = {
 			isa = PBXGroup;
 			children = (
+				3A69BE721A9AE8A50086C9B9 /* Assembly */,
 				DCE5DF321A7B409500E7F7B4 /* Services */,
 				DC48B7191A70A6B400C4DB89 /* Images */,
 				DC48B6EE1A709B3100C4DB89 /* AppDelegate.swift */,
@@ -208,10 +375,15 @@
 				DC48B6E51A709B3100C4DB89 /* Sources */,
 				DC48B6E61A709B3100C4DB89 /* Frameworks */,
 				DC48B6E71A709B3100C4DB89 /* Resources */,
+				3A0E8C301A94579B008BFB2B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3A0E8C2F1A94579B008BFB2B /* PBXTargetDependency */,
+				3A0E8C341A9457AA008BFB2B /* PBXTargetDependency */,
+				3A69BE991A9AFA580086C9B9 /* PBXTargetDependency */,
+				3A69BE9D1A9AFA580086C9B9 /* PBXTargetDependency */,
 			);
 			name = BlogReader;
 			productName = BlogReader;
@@ -268,8 +440,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = DC3ACB9F1A7F3C0000C318B8 /* Products */;
-					ProjectRef = DC3ACB9E1A7F3C0000C318B8 /* PromiseKit.xcodeproj */;
+					ProductGroup = 3A0E8C241A9456A9008BFB2B /* Products */;
+					ProjectRef = 3A0E8C231A9456A9008BFB2B /* OMGHTTPURLRQ.xcodeproj */;
+				},
+				{
+					ProductGroup = 3A0E8C181A945648008BFB2B /* Products */;
+					ProjectRef = 3A0E8C171A945648008BFB2B /* PromiseKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 3A69BE7D1A9AFA0D0086C9B9 /* Products */;
+					ProjectRef = 3A69BE7C1A9AFA0D0086C9B9 /* Typhoon.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -281,25 +461,95 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		DC3ACBA51A7F3C0000C318B8 /* PromiseKit.framework */ = {
+		3A0E8C1E1A945648008BFB2B /* PromiseKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = PromiseKit.framework;
-			remoteRef = DC3ACBA41A7F3C0000C318B8 /* PBXContainerItemProxy */;
+			remoteRef = 3A0E8C1D1A945648008BFB2B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		DC3ACBA71A7F3C0000C318B8 /* PromiseKitTests.xctest */ = {
+		3A0E8C201A945648008BFB2B /* PromiseKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = PromiseKitTests.xctest;
-			remoteRef = DC3ACBA61A7F3C0000C318B8 /* PBXContainerItemProxy */;
+			remoteRef = 3A0E8C1F1A945648008BFB2B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		DC3ACBA91A7F3C0000C318B8 /* PMKDemo.app */ = {
+		3A0E8C221A945648008BFB2B /* PMKDemo.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = PMKDemo.app;
-			remoteRef = DC3ACBA81A7F3C0000C318B8 /* PBXContainerItemProxy */;
+			remoteRef = 3A0E8C211A945648008BFB2B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A0E8C291A9456A9008BFB2B /* OMGHTTPURLRQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OMGHTTPURLRQ.framework;
+			remoteRef = 3A0E8C281A9456A9008BFB2B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A0E8C2B1A9456A9008BFB2B /* OMGTest.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OMGTest.xctest;
+			remoteRef = 3A0E8C2A1A9456A9008BFB2B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A69BE881A9AFA0E0086C9B9 /* Typhoon-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Typhoon-iOS.app";
+			remoteRef = 3A69BE871A9AFA0E0086C9B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A69BE8A1A9AFA0E0086C9B9 /* Typhoon-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Typhoon-iOSTests.xctest";
+			remoteRef = 3A69BE891A9AFA0E0086C9B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A69BE8C1A9AFA0E0086C9B9 /* Typhoon-OSX.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Typhoon-OSX.app";
+			remoteRef = 3A69BE8B1A9AFA0E0086C9B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A69BE8E1A9AFA0E0086C9B9 /* Typhoon-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Typhoon-OSXTests.xctest";
+			remoteRef = 3A69BE8D1A9AFA0E0086C9B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A69BE901A9AFA0E0086C9B9 /* Typhoon.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Typhoon.framework;
+			remoteRef = 3A69BE8F1A9AFA0E0086C9B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A69BE921A9AFA0E0086C9B9 /* TyphoonTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TyphoonTests.xctest;
+			remoteRef = 3A69BE911A9AFA0E0086C9B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A69BE941A9AFA0E0086C9B9 /* TyphoonFrameworkSwiftExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TyphoonFrameworkSwiftExample.app;
+			remoteRef = 3A69BE931A9AFA0E0086C9B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3A69BE961A9AFA0E0086C9B9 /* TyphoonFrameworkSwiftExampleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TyphoonFrameworkSwiftExampleTests.xctest;
+			remoteRef = 3A69BE951A9AFA0E0086C9B9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -311,10 +561,12 @@
 			files = (
 				DC48B6F91A709B3100C4DB89 /* Main.storyboard in Resources */,
 				DC48B7161A70A6A700C4DB89 /* blog1.png in Resources */,
+				3A69BE791A9AEA3A0086C9B9 /* Configuration.plist in Resources */,
 				DC48B6FE1A709B3100C4DB89 /* LaunchScreen.xib in Resources */,
 				DC48B7171A70A6A700C4DB89 /* blog2.png in Resources */,
 				DC48B6FB1A709B3100C4DB89 /* Images.xcassets in Resources */,
 				DC48B7181A70A6A700C4DB89 /* blog3.png in Resources */,
+				3A69BE971A9AFA580086C9B9 /* Typhoon-iOS.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A69BE7B1A9AF1090086C9B9 /* CoreComponents.swift in Sources */,
 				DC48B71D1A70B7E700C4DB89 /* BlogItem.swift in Sources */,
 				DCE5DF301A7B2D3F00E7F7B4 /* BlogCacheItem.swift in Sources */,
 				DC48B6F21A709B3100C4DB89 /* BlogReader.xcdatamodeld in Sources */,
@@ -339,6 +592,7 @@
 				DC48B6EF1A709B3100C4DB89 /* AppDelegate.swift in Sources */,
 				DC48B6F41A709B3100C4DB89 /* MasterViewController.swift in Sources */,
 				DCE5DF341A7B476500E7F7B4 /* BlogService.swift in Sources */,
+				3A69BE771A9AE9C70086C9B9 /* ApplicationAssembly.swift in Sources */,
 				DC48B6F61A709B3100C4DB89 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +608,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3A0E8C2F1A94579B008BFB2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OMGHTTPURLRQ;
+			targetProxy = 3A0E8C2E1A94579B008BFB2B /* PBXContainerItemProxy */;
+		};
+		3A0E8C341A9457AA008BFB2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			targetProxy = 3A0E8C331A9457AA008BFB2B /* PBXContainerItemProxy */;
+		};
+		3A69BE991A9AFA580086C9B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Typhoon-iOS";
+			targetProxy = 3A69BE981A9AFA580086C9B9 /* PBXContainerItemProxy */;
+		};
+		3A69BE9D1A9AFA580086C9B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Typhoon;
+			targetProxy = 3A69BE9C1A9AFA580086C9B9 /* PBXContainerItemProxy */;
+		};
 		DC48B7051A709B3200C4DB89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DC48B6E81A709B3100C4DB89 /* BlogReader */;
@@ -465,6 +739,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BlogReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -480,6 +755,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BlogReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
