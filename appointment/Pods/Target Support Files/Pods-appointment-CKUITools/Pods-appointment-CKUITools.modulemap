@@ -1,0 +1,6 @@
+framework module CKUITools {
+  umbrella header "Pods-appointment-CKUITools-umbrella.h"
+
+  export *
+  module * { export * }
+}

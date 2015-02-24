@@ -1,0 +1,26 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '8.0'
+
+# flag makes all dependencies build as frameworks
+use_frameworks!
+
+target 'appointment', :exclusive => true do
+
+pod 'Typhoon', :git => 'https://github.com/appsquickly/Typhoon.git'
+
+pod 'CKUITools'
+pod 'ICLoader'
+pod 'NGAParallaxMotion'
+pod 'NSURL+QueryDictionary'
+pod 'OCLogTemplate'
+pod 'PaperFold', :git => 'https://github.com/jasperblues/PaperFold-for-iOS.git', :tag => '1.2-no-gesture-recognizers'
+pod 'PromiseKit/Swift'
+
+end
+
+target 'appointmentTests' do
+
+end
+
+
+inhibit_all_warnings!

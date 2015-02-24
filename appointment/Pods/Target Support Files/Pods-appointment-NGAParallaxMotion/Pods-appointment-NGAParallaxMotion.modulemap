@@ -1,0 +1,6 @@
+framework module NGAParallaxMotion {
+  umbrella header "Pods-appointment-NGAParallaxMotion-umbrella.h"
+
+  export *
+  module * { export * }
+}

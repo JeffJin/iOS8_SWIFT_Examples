@@ -1,0 +1,58 @@
+PODS:
+  - CKUITools (0.5.4)
+  - ICLoader (1.0.3):
+    - CKUITools
+  - NGAParallaxMotion (1.1.0)
+  - NSURL+QueryDictionary (1.0.3)
+  - OCLogTemplate (1.0.1)
+  - OMGHTTPURLRQ (2.1):
+    - OMGHTTPURLRQ/RQ (= 2.1)
+  - OMGHTTPURLRQ/FormURLEncode (2.1)
+  - OMGHTTPURLRQ/RQ (2.1):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (2.1)
+  - PaperFold (1.2)
+  - PromiseKit/Swift (1.3.0):
+    - OMGHTTPURLRQ
+  - Typhoon (3.0.1):
+    - Typhoon/no-arc (= 3.0.1)
+  - Typhoon/no-arc (3.0.1)
+
+DEPENDENCIES:
+  - CKUITools
+  - ICLoader
+  - NGAParallaxMotion
+  - NSURL+QueryDictionary
+  - OCLogTemplate
+  - PaperFold (from `https://github.com/jasperblues/PaperFold-for-iOS.git`, tag `1.2-no-gesture-recognizers`)
+  - PromiseKit/Swift
+  - Typhoon (from `https://github.com/appsquickly/Typhoon.git`)
+
+EXTERNAL SOURCES:
+  PaperFold:
+    :git: https://github.com/jasperblues/PaperFold-for-iOS.git
+    :tag: 1.2-no-gesture-recognizers
+  Typhoon:
+    :git: https://github.com/appsquickly/Typhoon.git
+
+CHECKOUT OPTIONS:
+  PaperFold:
+    :git: https://github.com/jasperblues/PaperFold-for-iOS.git
+    :tag: 1.2-no-gesture-recognizers
+  Typhoon:
+    :commit: a649cc29c907d5e526bcaa6237bf5130d1be6769
+    :git: https://github.com/appsquickly/Typhoon.git
+
+SPEC CHECKSUMS:
+  CKUITools: b7e352ba583531b8946f22319aef43ce5e258f33
+  ICLoader: fc21a5ad5ca6467dc897638fec533ef1516b7bdc
+  NGAParallaxMotion: 62644b783178f75a234f458270f416afee89877c
+  NSURL+QueryDictionary: 1ad81be60c10e3f4d80c5c4beb7125de96aaec5e
+  OCLogTemplate: e7ffb1c1d0590ac4fd04e16a7f18314138c97088
+  OMGHTTPURLRQ: f8c515dfd2f57a5d74c710978f600231f52afec5
+  PaperFold: 1cf0beee99261dfc2a85821e3e5f1b6d4a3c365d
+  PromiseKit: 4844db4448b4e387845e702b738cd87433fc02fd
+  Typhoon: 74bb056521d75f9c81fcf04109b0795e566b43d6
+
+COCOAPODS: 0.36.0.beta.2

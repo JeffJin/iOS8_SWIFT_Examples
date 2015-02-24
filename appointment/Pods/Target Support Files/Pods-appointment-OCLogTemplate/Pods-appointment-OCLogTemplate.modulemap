@@ -1,0 +1,6 @@
+framework module OCLogTemplate {
+  umbrella header "Pods-appointment-OCLogTemplate-umbrella.h"
+
+  export *
+  module * { export * }
+}
