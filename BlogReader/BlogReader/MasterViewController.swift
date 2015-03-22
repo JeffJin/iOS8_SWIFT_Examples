@@ -90,7 +90,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func insertNewObject(sender: AnyObject) {
         let context = self.fetchedResultsController.managedObjectContext
         let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as BlogItem
+        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! BlogItem
         
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
@@ -115,12 +115,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             
             let indexPath = self.tableView.indexPathForSelectedRow()!  //append '!' at the end of line in order to convert optional to non-optional
             
-            var currentItem = self.fetchedResultsController.objectAtIndexPath(indexPath) as BlogItem
+            var currentItem = self.fetchedResultsController.objectAtIndexPath(indexPath) as! BlogItem
             
             activeItem = blogService.findCacheItem(currentItem)
             //TODO set blog cache item
             
-            let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
             
             controller.navigationItem.leftBarButtonItem = self.splitViewController!.displayModeButtonItem()  //append '!' after splitViewController in order to convert optional to non-optional
             controller.navigationItem.leftItemsSupplementBackButton = true
@@ -134,12 +134,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = self.fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
+        let sectionInfo = self.fetchedResultsController.sections![section] as! NSFetchedResultsSectionInfo
         return sectionInfo.numberOfObjects
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
     }
@@ -152,7 +152,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let context = self.fetchedResultsController.managedObjectContext
-            var item = self.fetchedResultsController.objectAtIndexPath(indexPath) as BlogItem
+            var item = self.fetchedResultsController.objectAtIndexPath(indexPath) as! BlogItem
             context.deleteObject(item)
             
             var error: NSError? = nil
@@ -167,7 +167,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
     
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as BlogItem
+        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! BlogItem
         cell.textLabel!.text = object.title  //append '!' before description in order to convert optional to non-optional
         cell.detailTextLabel!.text = object.author  //append '!' before description in order to convert optional to non-optional
     }

@@ -42,7 +42,7 @@ class BlogService : IBlogService{
                 reject(error)
             } else {
                 
-                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
                 
                 var items = [[String:String]]()
                 
@@ -56,17 +56,17 @@ class BlogService : IBlogService{
                     
                     items.append([String:String]())
                     
-                    item = jsonResult["items"]![i] as NSDictionary  //append '!' after [] in order to convert optional to non-optional
+                    item = jsonResult["items"]![i] as! NSDictionary  //append '!' after [] in order to convert optional to non-optional
                     
-                    items[i]["content"] = item["content"] as? NSString
+                    items[i]["content"] = item["content"] as! String
                     
-                    items[i]["title"] = item["title"] as? NSString
+                    items[i]["title"] = item["title"] as! String
                     
-                    items[i]["publishedDate"] = item["published"] as? NSString
+                    items[i]["publishedDate"] = item["published"] as! String
                     
-                    authorDictionary = item["author"] as NSDictionary
+                    authorDictionary = item["author"] as! NSDictionary
                     
-                    items[i]["author"] = authorDictionary["displayName"] as? NSString
+                    items[i]["author"] = authorDictionary["displayName"] as! String
                 }
                 
                 resolve(items)
@@ -84,7 +84,7 @@ class BlogService : IBlogService{
         
         request.returnsObjectsAsFaults = false
         
-        var results = dataAccess.executeFetchRequest(request, error: nil)! as [BlogItem] //append '!' at the end of line in order to convert
+        var results = dataAccess.executeFetchRequest(request, error: nil)! as! [BlogItem] //append '!' at the end of line in order to convert
         
         return results
     }
@@ -95,7 +95,7 @@ class BlogService : IBlogService{
         
         for var i = 0; i < items.count; i++ {//append '!' after [] in order to convert optional to non-optional
             
-            var newBlogItem = NSEntityDescription.insertNewObjectForEntityForName("BlogItem", inManagedObjectContext: dataAccess) as BlogItem
+            var newBlogItem = NSEntityDescription.insertNewObjectForEntityForName("BlogItem", inManagedObjectContext: dataAccess) as! BlogItem
             
             newBlogItem.author = items[i]["author"]!
             

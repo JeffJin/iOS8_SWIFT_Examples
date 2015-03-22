@@ -1,0 +1,6 @@
+framework module ICLoader {
+  umbrella header "Pods-BlogReader-ICLoader-umbrella.h"
+
+  export *
+  module * { export * }
+}

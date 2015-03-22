@@ -1,0 +1,59 @@
+PODS:
+  - CKUITools (0.5.4)
+  - ICLoader (1.0.3):
+    - CKUITools
+  - NGAParallaxMotion (1.1.0)
+  - NSURL+QueryDictionary (1.0.3)
+  - OCLogTemplate (1.0.1)
+  - OMGHTTPURLRQ (2.1):
+    - OMGHTTPURLRQ/RQ (= 2.1)
+  - OMGHTTPURLRQ/FormURLEncode (2.1)
+  - OMGHTTPURLRQ/RQ (2.1):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (2.1)
+  - PaperFold (1.2)
+  - PromiseKit/Swift (1.3.0):
+    - OMGHTTPURLRQ
+  - Typhoon (HEAD based on 3.0.2):
+    - Typhoon/no-arc (= HEAD based on 3.0.2)
+  - Typhoon/no-arc (HEAD based on 3.0.2)
+
+DEPENDENCIES:
+  - CKUITools
+  - ICLoader
+  - NGAParallaxMotion
+  - NSURL+QueryDictionary
+  - OCLogTemplate
+  - PaperFold (from `https://github.com/jasperblues/PaperFold-for-iOS.git`, tag `1.2-no-gesture-recognizers`)
+  - PromiseKit/Swift (from `https://github.com/mxcl/PromiseKit.git`, branch `swift-1.2`)
+  - Typhoon (HEAD)
+
+EXTERNAL SOURCES:
+  PaperFold:
+    :git: https://github.com/jasperblues/PaperFold-for-iOS.git
+    :tag: 1.2-no-gesture-recognizers
+  PromiseKit:
+    :branch: swift-1.2
+    :git: https://github.com/mxcl/PromiseKit.git
+
+CHECKOUT OPTIONS:
+  PaperFold:
+    :git: https://github.com/jasperblues/PaperFold-for-iOS.git
+    :tag: 1.2-no-gesture-recognizers
+  PromiseKit:
+    :commit: 5b7ed599811060e4f97d9a4509ec057d10b1e784
+    :git: https://github.com/mxcl/PromiseKit.git
+
+SPEC CHECKSUMS:
+  CKUITools: b7e352ba583531b8946f22319aef43ce5e258f33
+  ICLoader: fc21a5ad5ca6467dc897638fec533ef1516b7bdc
+  NGAParallaxMotion: 62644b783178f75a234f458270f416afee89877c
+  NSURL+QueryDictionary: 1ad81be60c10e3f4d80c5c4beb7125de96aaec5e
+  OCLogTemplate: e7ffb1c1d0590ac4fd04e16a7f18314138c97088
+  OMGHTTPURLRQ: f8c515dfd2f57a5d74c710978f600231f52afec5
+  PaperFold: 1cf0beee99261dfc2a85821e3e5f1b6d4a3c365d
+  PromiseKit: 85998f2936f9da909e251d373be5ee056f4b564b
+  Typhoon: 41c79941e0235c0177457a8f272953d922f47d74
+
+COCOAPODS: 0.36.0
